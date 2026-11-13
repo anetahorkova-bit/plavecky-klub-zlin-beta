@@ -26,8 +26,8 @@
 /* Plavecké dráhy */
 .lanes-head { padding: 80px var(--pad) 64px; display: flex; flex-direction: column; gap: 16px; }
 .lanes { position: relative; }
-.lane-rope { height: 0; border-top: 2px dashed var(--seda-300); position: relative; overflow: hidden; }
-.lane-rope::after { content: ""; position: absolute; inset: -2px 0 0; border-top: 2px dashed var(--modra-300); clip-path: inset(0 100% 0 0); transition: clip-path 1.4s var(--ease-out); }
+.lane-rope { height: 2px; background: var(--dash) ; position: relative; overflow: hidden; }
+.lane-rope::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, var(--modra-300) 0 16px, transparent 16px 28px); clip-path: inset(0 100% 0 0); transition: clip-path 1.4s var(--ease-out); }
 .lane-rope.is-in::after { clip-path: inset(0 0 0 0); }
 .lane { display: flex; align-items: center; gap: 48px; padding: 40px var(--pad); position: relative; transition: background-color .4s var(--ease); }
 .lane:hover { background: none; }
@@ -134,7 +134,7 @@
 .pg-top .t-perex { max-width: 720px; }
 .pg-top .filters { margin-top: 8px; }
 .nrows { margin-top: 32px; }
-.nrows .lane-rope, .nrows .lane-rope::after { border-top-width: 1px; }
+
 .nrow { display: grid; grid-template-columns: 200px 1fr 342px; gap: 48px; align-items: center; padding: 32px 0; }
 .nrow[hidden] { display: none; }
 .nrow-d { font-size: 56px; font-weight: 500; line-height: 1; color: var(--modra-300); white-space: nowrap; transition: color .3s var(--ease); }

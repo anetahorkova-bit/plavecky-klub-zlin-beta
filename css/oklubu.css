@@ -7,8 +7,8 @@
 
 .ok-body { display: flex; gap: clamp(40px, 5vw, 96px); padding: 0 var(--pad) 80px; align-items: flex-start; }
 .ok-side { width: 240px; flex: none; position: sticky; top: 120px; }
-.ok-side a { display: flex; align-items: center; gap: 12px; padding: 24px 16px; border-bottom: 2px dashed var(--seda-300); font-weight: 600; color: var(--seda-600); position: relative; transition: color .3s var(--ease), padding .35s var(--ease-out); }
-.ok-side a:first-child { border-top: 2px dashed var(--seda-300); }
+.ok-side a { display: flex; align-items: center; gap: 12px; padding: 24px 16px; border: 0; background: var(--dash) left bottom / 100% 2px no-repeat; font-weight: 600; color: var(--seda-600); position: relative; transition: color .3s var(--ease), padding .35s var(--ease-out); }
+.ok-side a:first-child { background: var(--dash) left top / 100% 2px no-repeat, var(--dash) left bottom / 100% 2px no-repeat; }
 .ok-side a::before { content: ""; position: absolute; left: 0; top: 50%; width: 4px; height: 0; border-radius: 4px; background: var(--oranzova-500); transform: translateY(-50%); transition: height .35s var(--ease-out); }
 .ok-side a:hover { color: var(--navy-900); }
 .ok-side a.is-active { color: var(--navy-900); padding-left: 24px; }
@@ -58,8 +58,8 @@
 .person .desc p { font-size: 14px; }
 
 /* Trenéři v drahách */
-.coach-lane { display: flex; flex-wrap: wrap; gap: 32px 24px; padding: 32px 0; border-bottom: 1px dashed var(--seda-200); }
-.coach-lane:first-child { border-top: 1px dashed var(--seda-200); }
+.coach-lane { display: flex; flex-wrap: wrap; gap: 32px 24px; padding: 32px 0; background: var(--dash) left bottom / 100% 2px no-repeat; }
+.coach-lane:first-child { background: var(--dash) left top / 100% 2px no-repeat, var(--dash) left bottom / 100% 2px no-repeat; }
 .coach-group { width: 196px; height: 273px; border-radius: var(--r-md); padding: 20px; display: flex; flex-direction: column; justify-content: space-between; color: var(--navy-900); transition: transform .4s var(--ease-out), box-shadow .4s var(--ease-out); }
 .coach-group:hover { }
 .coach-group .t-h3 { transition: transform .4s var(--ease-out); }

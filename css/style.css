@@ -285,3 +285,10 @@ button:focus:not(:focus-visible) { outline: none; }
   .faq-split .faq-panel { grid-column: 1; grid-row: 2; margin-top: 48px; }
   .faq-split .faq-list { grid-column: 2; grid-row: 1 / span 2; }
 }
+/* FAQ: svislá linka přesně na výšku otázek */
+@media (min-width: 901px) {
+  .faq-split .faq-panel { border-right: 0; padding-right: 0; }
+  .faq-split .faq-list { position: relative; }
+  .faq-split .faq-list::before { content: ""; position: absolute; left: -64px; top: 0; bottom: 0; width: 1px; background: var(--seda-200); }
+  .faq-wave.faq-split .faq-list::before { background: rgba(255,255,255,.18); }
+}

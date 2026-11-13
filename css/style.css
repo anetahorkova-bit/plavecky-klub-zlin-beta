@@ -246,3 +246,27 @@ button:focus:not(:focus-visible) { outline: none; }
 .btn-ghost:hover { background: var(--modra-100); }
 .btn-link { height: auto; padding: 0; color: var(--navy-900); text-decoration: underline; text-underline-offset: 3px; }
 .btn-link:hover { color: var(--navy-950); }
+
+/* FAQ split (podle Figmy): odpověď vlevo, otázky vpravo */
+.faq.faq-split { display: flex; flex-direction: column; align-items: stretch; gap: 48px; }
+.faq-head { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.faq-head .faq-sub { color: var(--seda-600); }
+.faq-head .btn { margin-top: 4px; }
+.faq-body { display: grid; grid-template-columns: 1fr 704px; gap: 0 64px; align-items: start; }
+.faq-panel { border-right: 1px solid var(--seda-200); padding: 24px 64px 24px 0; align-self: stretch; display: flex; flex-direction: column; gap: 16px; }
+.faq-panel .faq-count { font-size: 13px; font-weight: 500; color: var(--seda-600); }
+.faq-panel .t-h3 { color: var(--modra-300); max-width: 560px; }
+.faq-panel p { max-width: 560px; color: var(--navy-900); }
+.faq-split .faq-list { width: auto; border-top: 1px solid var(--seda-200); }
+.faq-split .faq-n { font-size: 13px; font-weight: 500; color: var(--seda-600); width: 24px; flex: none; }
+.faq-split .faq-q { justify-content: flex-start; }
+.faq-split .faq-q .pm { margin-left: auto; }
+.faq-split .faq-item.is-open .faq-q { color: var(--modra-300); }
+@media (min-width: 901px) { .faq-split .faq-a { display: none; } }
+@media (max-width: 900px) { .faq-body { grid-template-columns: 1fr; } .faq-panel { display: none; } }
+/* tmavá varianta na podstránkách */
+.faq-wave.faq-split .faq-head .faq-sub, .faq-wave .faq-n, .faq-wave .faq-count { color: rgba(255,255,255,.6); }
+.faq-wave .faq-panel { border-color: rgba(255,255,255,.18); }
+.faq-wave .faq-panel p { color: var(--bila); }
+.faq-wave.faq-split .faq-list { border-color: rgba(255,255,255,.18); }
+.faq-wave .faq-item { border-color: rgba(255,255,255,.18); }

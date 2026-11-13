@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/program.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
 <body data-page="home">
@@ -46,14 +47,16 @@
     <div class="home-kurzy-head reveal">
       <h2 class="t-h1">Plavecké kurzy</h2>
     </div>
-    <div class="home-chips">
-      <img class="home-chips-waves" src="assets/vlny-kurzy.svg" alt="">
-      <div class="home-chips-inner">
-      <a class="chip chip-1 reveal-scale" style="--d:.05s" href="pripravka.html">Přípravka <img src="assets/chip-arrow-1.svg" alt=""></a>
-      <a class="chip chip-2 reveal-scale" style="--d:.15s" href="klubove-plavani.html">Klubové plavání <img src="assets/chip-arrow-2.svg" alt=""></a>
-      <a class="chip chip-3 reveal-scale" style="--d:.25s" href="sportovni-tridy.html">Sportovní třídy <img src="assets/chip-arrow-3.svg" alt=""></a>
-      <a class="chip chip-4 reveal-scale" style="--d:.35s" href="vrcholove-plavani.html">Vrcholové plavání <img src="assets/chip-arrow-4.svg" alt=""></a>
-      </div>
+    <div class="home-lanes">
+      <div class="lane-rope reveal"></div>
+      <div class="hl-lane"><span class="hl-n t-eyebrow">01</span><span class="hl-axis"></span><a class="chip chip-1 reveal-scale" style="--d:.1s;left:22%" href="pripravka.html">Přípravka <img src="assets/chip-arrow-1.svg" alt=""></a></div>
+      <div class="lane-rope reveal"></div>
+      <div class="hl-lane"><span class="hl-n t-eyebrow">02</span><span class="hl-axis"></span><a class="chip chip-2 reveal-scale" style="--d:.2s;left:44%" href="klubove-plavani.html">Klubové plavání <img src="assets/chip-arrow-2.svg" alt=""></a></div>
+      <div class="lane-rope reveal"></div>
+      <div class="hl-lane"><span class="hl-n t-eyebrow">03</span><span class="hl-axis"></span><a class="chip chip-3 reveal-scale" style="--d:.3s;left:10%" href="sportovni-tridy.html">Sportovní třídy <img src="assets/chip-arrow-3.svg" alt=""></a></div>
+      <div class="lane-rope reveal"></div>
+      <div class="hl-lane"><span class="hl-n t-eyebrow">04</span><span class="hl-axis"></span><a class="chip chip-4 reveal-scale" style="--d:.4s;left:40%" href="vrcholove-plavani.html">Vrcholové plavání <img src="assets/chip-arrow-4.svg" alt=""></a></div>
+      <div class="lane-rope reveal"></div>
     </div>
   </section>
 
@@ -102,7 +105,7 @@
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Můžu být u lekce s dítětem? <span class="pm">+</span></button>
         <div class="faq-a"><div><p>Odpověď zatím není v návrhu, doplní klub.</p></div></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Lze platit ve splátkách? <span class="pm">+</span></button>
-        <div class="faq-a"><div><p>Odpověď zatím není v návrhu, doplní klub.</p></div></div></div>
+        <div class="faq-a"><div><p>Příspěvek můžete zaplatit najednou za celý rok, nebo ve dvou splátkách za pololetí.</p></div></div></div>
     </div>
   </section>
 
@@ -110,31 +113,9 @@
   <section class="section" id="aktuality">
     <div class="section-head reveal" style="margin-bottom:32px">
       <h2 class="t-h2">Aktuality</h2>
-      <a class="btn btn-m btn-outline" href="#" data-todo>Všechny aktuality</a>
+      <a class="btn btn-m btn-outline" href="aktuality.html">Všechny aktuality</a>
     </div>
-    <div class="news" data-stagger=".1">
-      <a class="news-card" href="#" data-todo>
-        <div class="ph"><img src="assets/news-1.png" alt=""></div>
-        <p class="t-maly-s date">20. 10. 2026</p>
-        <h3 class="t-karta">Mikulášské závody: přihlášky do 30. 11.</h3>
-        <p class="t-telo">Přihlášky na předvánoční závody přípravky posílejte trenérům do konce listopadu.</p>
-        <span class="icon-btn more" aria-hidden="true"></span>
-      </a>
-      <a class="news-card" href="#" data-todo>
-        <div class="ph"><img src="assets/news-2.png" alt=""></div>
-        <p class="t-maly-s date">12. 10. 2026</p>
-        <h3 class="t-karta">Neplavci mají za sebou první měsíc</h3>
-        <p class="t-telo">Nejmenší si zvykli na vodu a zvládli první splývání.</p>
-        <span class="icon-btn more" aria-hidden="true"></span>
-      </a>
-      <a class="news-card" href="#" data-todo>
-        <div class="ph"><img src="assets/news-3.png" alt=""></div>
-        <p class="t-maly-s date">28. 9. 2026</p>
-        <h3 class="t-karta">Plavání s rodiči: termíny na podzim</h3>
-        <p class="t-telo">Vypsali jsme nové termíny lekcí, kde rodiče plavou spolu s dětmi.</p>
-        <span class="icon-btn more" aria-hidden="true"></span>
-      </a>
-    </div>
+    <div class="nrows"><div class="lane-rope reveal"></div><a class="nrow reveal" href="aktualita.html" data-tags="pripravka klubove"><span class="nrow-d">26. 10.</span><div class="nrow-t"><span class="t-eyebrow muted">2026</span><h3 class="t-h3">Prázdniny, neplaveme!</h3><p class="t-telo muted">O podzimních prázdninách 28. až 30. 10. přípravka ani klubové plavání neplavou.</p></div><div class="nrow-ph"><img src="assets/news-1.png" alt=""></div></a><div class="lane-rope reveal"></div><a class="nrow reveal" href="aktualita.html" data-tags="sportovni vrcholove"><span class="nrow-d">19. 10.</span><div class="nrow-t"><span class="t-eyebrow muted">2026</span><h3 class="t-h3">Zlínská plavecká smršť v Prostějově</h3><p class="t-telo muted">Dálkaři zabojovali na podzimním krajském přeboru v Prostějově.</p></div><div class="nrow-ph"><img src="assets/news-2.png" alt=""></div></a><div class="lane-rope reveal"></div><a class="nrow reveal" href="aktualita.html" data-tags="klub"><span class="nrow-d">13. 10.</span><div class="nrow-t"><span class="t-eyebrow muted">2026</span><h3 class="t-h3">Šmelina Cup 2027</h3><p class="t-telo muted">Novinky k dalšímu ročníku memoriálu Hanky Martinkové.</p></div><div class="nrow-ph"><img src="assets/news-3.png" alt=""></div></a><div class="lane-rope reveal"></div></div>
   </section>
 
   <div data-footer></div>

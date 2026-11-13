@@ -128,3 +128,26 @@
 [class^="cal-sec-"] { gap: 16px !important; }
 .month { display: contents; }
 .event[hidden], .month[hidden] { display: none !important; }
+
+/* Stránky aktualit a detail akce */
+.pg-top { padding: 40px var(--pad) 48px; display: flex; flex-direction: column; gap: 16px; }
+.pg-top .t-perex { max-width: 720px; }
+.pg-top .filters { margin-top: 8px; }
+.nrows { margin-top: 32px; }
+.nrows .lane-rope, .nrows .lane-rope::after { border-top-width: 1px; }
+.nrow { display: grid; grid-template-columns: 200px 1fr 342px; gap: 48px; align-items: center; padding: 32px 0; }
+.nrow[hidden] { display: none; }
+.nrow-d { font-size: 56px; font-weight: 500; line-height: 1; color: var(--modra-300); white-space: nowrap; transition: color .3s var(--ease); }
+.nrow-t { display: flex; flex-direction: column; gap: 8px; max-width: 640px; }
+.nrow-t .t-h3 { color: var(--navy-900); transition: color .3s var(--ease); }
+.nrow-ph { height: 200px; border-radius: var(--r-md); overflow: hidden; opacity: 0; transform: translateX(-16px) scale(.97); transition: opacity .35s var(--ease), transform .5s var(--ease-out); }
+.nrow-ph img { width: 100%; height: 100%; object-fit: cover; }
+.nrow:hover .nrow-ph, .nrow:focus-visible .nrow-ph { opacity: 1; transform: none; }
+.nrow:hover .nrow-d { color: var(--modra-500); }
+@media (max-width: 900px) { .nrow { grid-template-columns: 1fr; gap: 12px; } .nrow-d { font-size: 32px; } .nrow-ph { display: none; } }
+.art-hero { padding: 0 var(--pad) 56px; }
+.art-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r-lg); }
+.art-body { padding: 0 var(--pad) 64px; display: flex; flex-direction: column; gap: 20px; }
+.art-body p { max-width: 760px; color: var(--navy-900); }
+.contact-box { background: var(--modra-100); border-radius: var(--r-lg); padding: 32px 40px; display: flex; flex-direction: column; gap: 8px; }
+.contact-box a:hover { text-decoration: underline; }

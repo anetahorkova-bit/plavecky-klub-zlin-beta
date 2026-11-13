@@ -32,7 +32,7 @@
         </div>
         <a class="nav-link" href="#" data-todo>Tábory</a>
         <a class="nav-link${active('oklubu')}" href="o-klubu.html">O Klubu</a>
-        <a class="nav-link" href="index.html#aktuality">Aktuality</a>
+        <a class="nav-link" href="aktuality.html">Aktuality</a>
         <a class="nav-link" href="#kontakt">Kontakt</a>
         <a class="btn btn-l btn-cta" href="prihlaska.html">Přihláška</a>
       </nav>
@@ -132,6 +132,24 @@
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach((el) => countIO.observe(el));
+
+  /* ---------- FAQ split: odpověď vlevo, otázky vpravo ---------- */
+  document.querySelectorAll('section.faq').forEach((sec) => {
+    const h2 = sec.querySelector('h2'); const list = sec.querySelector('.faq-list'); if (!h2 || !list) return;
+    sec.classList.add('faq-split');
+    const head = document.createElement('div'); head.className = 'faq-head reveal';
+    head.innerHTML = '<p class="t-perex faq-sub">Nenašli jste odpověď? Napište nám.</p><a class="btn btn-m ' + (sec.classList.contains('faq-wave') ? 'btn-cta' : 'btn-outline') + '" href="#kontakt">Kontaktovat</a>';
+    h2.removeAttribute('style'); head.prepend(h2);
+    const body = document.createElement('div'); body.className = 'faq-body';
+    const panel = document.createElement('div'); panel.className = 'faq-panel'; panel.setAttribute('aria-live', 'polite');
+    const items = [...list.querySelectorAll('.faq-item')]; const total = String(items.length).padStart(2, '0');
+    items.forEach((it, i) => { const q = it.querySelector('.faq-q'); const n = document.createElement('span'); n.className = 'faq-n'; n.textContent = String(i + 1).padStart(2, '0'); q.prepend(n); });
+    const show = (it) => { const i = items.indexOf(it); const q = it.querySelector('.faq-q').childNodes; const text = [...q].filter((x) => x.nodeType === 3).map((x) => x.textContent).join('').trim();
+      panel.innerHTML = '<span class="faq-count">' + String(i + 1).padStart(2, '0') + ' / ' + total + '</span><h3 class="t-h3">' + text + '</h3><p class="t-telo">' + it.querySelector('.faq-a p').innerHTML + '</p>'; };
+    sec.insertBefore(head, list); sec.insertBefore(body, list); body.append(panel, list);
+    show(items.find((x) => x.classList.contains('is-open')) || items[0]);
+    items.forEach((it) => it.querySelector('.faq-q').addEventListener('click', () => { if (matchMedia('(min-width: 901px)').matches) { setTimeout(() => { items.forEach((x) => { x.classList.toggle('is-open', x === it); x.querySelector('.faq-q').setAttribute('aria-expanded', String(x === it)); }); show(it); }, 0); } }));
+  });
 
   /* ---------- FAQ ---------- */
   document.querySelectorAll('.faq-item').forEach((item) => {

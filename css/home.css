@@ -110,3 +110,11 @@
 .home-lanes .chip { position: relative; top: auto; translate: none; margin-left: var(--x, 20%); }
 .home-lanes .chip:hover { translate: 8px 0; }
 @media (max-width: 760px) { .hl-lane { height: 110px; } .home-lanes .chip { margin-left: calc(var(--pad) + 40px); } }
+/* oprava: zrušit staré left/top čipů, sekce se vejde na jednu obrazovku */
+.home-lanes .chip { left: auto !important; top: auto !important; }
+.home-kurzy { padding-top: 64px; }
+.home-kurzy-head { margin-bottom: 32px; }
+.home-kurzy-head .t-h1 { font-size: clamp(56px, 6vw, 96px); }
+.hl-lane { height: clamp(96px, calc((100svh - 300px) / 4), 160px); }
+.home-lanes { padding-bottom: 96px; }
+.home-lanes .chip { height: clamp(56px, 6.5svh, 76px); font-size: clamp(24px, 3svh, 36px); }

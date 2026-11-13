@@ -106,14 +106,20 @@
 .faq-wave .bg { object-fit: cover; object-position: center; }
 .faq-wave { min-height: 39.5vw; }
 
-/* Jak se přihlásit (styl jako Úspěchy) */
-.pr-steps { max-width: 1280px; margin: 0 auto; padding: 120px var(--pad) 0; }
-.pr-steps .ok-head { margin-bottom: 40px; }
-.pr-steps .person { cursor: pointer; outline: none; }
-.pr-steps .person .nm span { font-size: 40px; }
-.pr-steps .people { gap: 16px; padding-right: 480px; }
-.pr-steps .person { position: static; }
-.pr-steps .person .nm { width: auto; }
-.pr-steps .person .wave { flex: none; width: 96px; }
-.pr-steps .person .desc { position: absolute; top: 8px; right: 0; width: 420px; display: flex; flex-direction: column; gap: 6px; }
-@media (max-width: 1000px) { .pr-steps .people { padding-right: 0; } .pr-steps .person .desc { display: none; } .pr-steps .person.on .desc { display: flex; position: static; } .pr-steps .person { flex-wrap: wrap; } }
+/* Jak se přihlásit: čísla + dlaždice */
+.pr-steps { padding: 80px var(--pad) 0; }
+.pr-steps .t-h2 { margin-bottom: 32px; }
+.steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 48px; }
+.step { display: grid; grid-template-columns: 200px 420px 1fr; gap: 40px; align-items: center; cursor: pointer; outline: none; }
+.step-n { font-size: 140px; font-weight: 300; line-height: 1; color: var(--oranzova-200); transition: color .35s var(--ease); }
+.step-t { color: var(--oranzova-200); transition: color .35s var(--ease); }
+.step-d { display: flex; align-items: center; gap: 16px; opacity: 0; transform: translateX(-12px); transition: opacity .35s var(--ease), transform .45s var(--ease-out); }
+.step-d img { width: 120px; height: 6px; object-fit: cover; object-position: left; flex: none; }
+.step-d p { max-width: 400px; color: var(--navy-900); }
+.step.on .step-n, .step.on .step-t { color: var(--oranzova-500); }
+.step.on .step-d { opacity: 1; transform: none; }
+.info-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.info-row .c-card { width: auto; height: auto; min-height: 340px; }
+.info-row .c-card.info-y { background: var(--zluta-500); }
+@media (max-width: 1100px) { .step { grid-template-columns: 120px 1fr; } .step-n { font-size: 96px; } .step-d { grid-column: 1 / -1; display: none; } .step.on .step-d { display: flex; } .info-row { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .info-row { grid-template-columns: 1fr; } .info-row .c-card { min-height: 0; } }

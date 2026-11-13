@@ -116,3 +116,5 @@
 .home-hero-photo, .home-hero-photo img { height: calc(var(--ph) - 64px); }
 .home-hero-strip { top: calc(var(--ph) * .6); }
 .marquee { top: calc(var(--ph) - 52px); }
+/* podvodní fotka: vlnu u spodního okraje bere z masky původního hero obrázku */
+.home-hero-photo img { -webkit-mask: url(../assets/hero-voda.png) center bottom / cover no-repeat; mask: url(../assets/hero-voda.png) center bottom / cover no-repeat; object-position: center 40%; }

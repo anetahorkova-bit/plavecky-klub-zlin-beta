@@ -137,9 +137,9 @@
   document.querySelectorAll('section.faq').forEach((sec) => {
     const h2 = sec.querySelector('h2'); const list = sec.querySelector('.faq-list'); if (!h2 || !list) return;
     sec.classList.add('faq-split');
-    const head = document.createElement('div'); head.className = 'faq-head reveal';
+    const head = document.createElement('div'); head.className = 'faq-head';
     head.innerHTML = '<p class="t-perex faq-sub">Nenašli jste odpověď? Napište nám.</p><a class="btn btn-m ' + (sec.classList.contains('faq-wave') ? 'btn-cta' : 'btn-outline') + '" href="#kontakt">Kontaktovat</a>';
-    h2.removeAttribute('style'); head.prepend(h2);
+    h2.removeAttribute('style'); h2.classList.remove('reveal', 'is-in'); head.prepend(h2);
     const body = document.createElement('div'); body.className = 'faq-body';
     const panel = document.createElement('div'); panel.className = 'faq-panel'; panel.setAttribute('aria-live', 'polite');
     const items = [...list.querySelectorAll('.faq-item')]; const total = String(items.length).padStart(2, '0');

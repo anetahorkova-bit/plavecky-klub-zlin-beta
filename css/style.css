@@ -276,3 +276,12 @@ button:focus:not(:focus-visible) { outline: none; }
 .faq-wave .faq-panel p { color: var(--bila); }
 .faq-wave.faq-split .faq-list { border-color: rgba(255,255,255,.18); }
 .faq-wave .faq-item { border-color: rgba(255,255,255,.18); }
+
+/* FAQ: nadpis vlevo zarovnaný s otázkami vpravo, odpověď pod nadpisem */
+@media (min-width: 901px) {
+  .faq.faq-split { display: grid; grid-template-columns: 1fr 704px; grid-template-rows: auto 1fr; column-gap: 64px; row-gap: 0; align-items: start; }
+  .faq-split .faq-body { display: contents; }
+  .faq-split .faq-head { grid-column: 1; grid-row: 1; }
+  .faq-split .faq-panel { grid-column: 1; grid-row: 2; margin-top: 48px; }
+  .faq-split .faq-list { grid-column: 2; grid-row: 1 / span 2; }
+}

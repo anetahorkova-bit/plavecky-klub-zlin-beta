@@ -219,7 +219,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .faq-wave .bg { position: absolute; inset: 0; z-index: -1; }
 .faq-wave .faq-item { border-color: rgba(255, 255, 255, .25); }
 .faq-wave .faq-a p { color: rgba(255, 255, 255, .8); }
-.faq-wave .faq-q:hover { color: var(--zluta-500); }
+.faq-wave .faq-q:hover { color: var(--modra-300); }
+.btn-light { background: var(--modra-100); color: var(--navy-900); }
+.btn-light:hover { background: var(--modra-150); }
 
 /* ---------- Aktuality ---------- */
 .news { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }

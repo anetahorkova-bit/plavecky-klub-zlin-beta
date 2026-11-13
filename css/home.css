@@ -95,26 +95,18 @@
 }
 
 /* Kurzy v plaveckých drahách (varianta B z Figmy) */
-.home-lanes { padding: 0 0 120px; }
-.hl-lane { position: relative; height: clamp(110px, 9.4vw, 150px); }
+.home-kurzy { padding-top: 96px; }
+.home-kurzy-head { margin-bottom: 40px; }
+.home-lanes { padding-bottom: 96px; }
+.hl-lane { position: relative; height: clamp(120px, calc((100svh - 330px) / 4), 160px); display: flex; align-items: center; padding: 0 var(--pad) 0 calc(var(--pad) + 72px); }
 .hl-n { position: absolute; left: var(--pad); top: 50%; translate: 0 -50%; color: var(--seda-600); }
-.hl-axis { position: absolute; left: calc(var(--pad) + 56px); right: var(--pad); top: 50%; height: 4px; translate: 0 -50%; background: var(--modra-150); border-radius: 2px; }
+.hl-axis { position: absolute; left: calc(var(--pad) + 40px); right: var(--pad); top: 50%; height: 4px; translate: 0 -50%; background: var(--modra-150); border-radius: 2px; }
 .hl-axis::before, .hl-axis::after { content: ""; position: absolute; top: 50%; width: 4px; height: 28px; translate: 0 -50%; background: var(--modra-150); border-radius: 2px; }
 .hl-axis::before { left: 0; } .hl-axis::after { right: 0; }
-.home-lanes .chip { top: 50%; translate: 0 -50%; position: absolute; }
+.home-lanes .chip { position: relative; left: auto; top: auto; translate: none; margin-left: var(--x, 20%); }
 .home-lanes .chip.is-in { animation: none; }
-.home-lanes .chip:hover { translate: 8px -50%; }
-@media (max-width: 760px) { .home-lanes .chip { left: calc(var(--pad) + 40px) !important; font-size: 22px; height: 56px; } .hl-axis { left: calc(var(--pad) + 32px); } }
-/* oprava: čip vždy na středu dráhy, větší dráhy */
-.hl-lane { height: clamp(140px, 11vw, 190px); display: flex; align-items: center; }
-.home-lanes .chip { position: relative; top: auto; translate: none; margin-left: var(--x, 20%); }
 .home-lanes .chip:hover { translate: 8px 0; }
-@media (max-width: 760px) { .hl-lane { height: 110px; } .home-lanes .chip { margin-left: calc(var(--pad) + 40px); } }
-/* oprava: zrušit staré left/top čipů, sekce se vejde na jednu obrazovku */
-.home-lanes .chip { left: auto !important; top: auto !important; }
-.home-kurzy { padding-top: 64px; }
-.home-kurzy-head { margin-bottom: 32px; }
-.home-kurzy-head .t-h1 { font-size: clamp(56px, 6vw, 96px); }
-.hl-lane { height: clamp(96px, calc((100svh - 300px) / 4), 160px); }
-.home-lanes { padding-bottom: 96px; }
-.home-lanes .chip { height: clamp(56px, 6.5svh, 76px); font-size: clamp(24px, 3svh, 36px); }
+@media (max-width: 760px) {
+  .hl-lane { height: 104px; padding-left: calc(var(--pad) + 48px); }
+  .home-lanes .chip { margin-left: 0; font-size: 22px; height: 56px; padding: 0 24px; }
+}

@@ -61,9 +61,14 @@
       </a>
       <div class="lane-rope reveal"></div>
   </section>
+  <section class="pr-steps">
+    <div class="ok-head reveal"><p class="t-eyebrow">Krok 3</p><h2 class="t-h2">Jak se přihlásit</h2></div>
+    <div class="people" data-steps><div class="person on" tabindex="0"><div class="nm"><span>Vyplňte přihlášku</span><div class="wave"><img src="assets/vlnka-vzor.svg" alt=""></div></div><div class="desc"><p class="t-telo-s">Elektronicky přes klubový e-shop</p><p class="t-maly">Při první přihlášce se nejdřív zaregistrujete, pak dítě přihlásíte do vybrané skupiny.</p></div></div><div class="person" tabindex="0"><div class="nm"><span>Zaplaťte příspěvek</span><div class="wave"><img src="assets/vlnka-vzor.svg" alt=""></div></div><div class="desc"><p class="t-telo-s">Účet 4449157540/5500 (Raiffeisenbank)</p><p class="t-maly">Variabilní symbol je rodné číslo dítěte. Klubové plavání 7 200 Kč za rok nebo 3 700 Kč za pololetí.</p></div></div><div class="person" tabindex="0"><div class="nm"><span>Sleva pro sourozence</span><div class="wave"><img src="assets/vlnka-vzor.svg" alt=""></div></div><div class="desc"><p class="t-telo-s">2. sourozenec −20 %</p><p class="t-maly">Sleva se počítá z ročního i pololetního příspěvku. Za rok 5 760 Kč místo 7 200 Kč, za pololetí 2 960 Kč místo 3 700 Kč.</p></div></div><div class="person" tabindex="0"><div class="nm"><span>Doneste potvrzení od lékaře</span><div class="wave"><img src="assets/vlnka-vzor.svg" alt=""></div></div><div class="desc"><p class="t-telo-s">Že dítě může pravidelně sportovat</p><p class="t-maly">Platí i potvrzení pro tábor. Každý lékař může mít vlastní formulář.</p></div></div></div>
+  </section>
   <div style="height:120px"></div>
   <div data-footer></div>
 </div>
 <script src="js/app.js"></script>
+<script>document.querySelectorAll('[data-steps]').forEach(l=>l.querySelectorAll('.person').forEach(p=>{const on=()=>l.querySelectorAll('.person').forEach(x=>x.classList.toggle('on',x===p));p.addEventListener('mouseenter',on);p.addEventListener('focus',on);p.addEventListener('click',on);}));</script>
 </body>
 </html>

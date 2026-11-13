@@ -105,3 +105,9 @@
 
 .faq-wave .bg { object-fit: cover; object-position: center; }
 .faq-wave { min-height: 39.5vw; }
+
+/* Jak se přihlásit (styl jako Úspěchy) */
+.pr-steps { max-width: 1280px; margin: 0 auto; padding: 120px var(--pad) 0; }
+.pr-steps .ok-head { margin-bottom: 40px; }
+.pr-steps .person { cursor: pointer; outline: none; }
+.pr-steps .person .nm span { font-size: 40px; }

@@ -77,3 +77,19 @@
 .home-kurzy-head { justify-content: center; text-align: center; }
 .home-kurzy-head .t-h1 { color: var(--navy-900); }
 @media (max-width: 760px) { .home-kurzy-head .t-h1 { font-size: 56px; } }
+
+/* Kurzy: volnější rozložení čipů */
+.home-chips { height: clamp(560px, 50vw, 780px); }
+.home-chips-inner { width: min(1600px, 100%); }
+.chip { height: clamp(64px, 5.2vw, 84px); padding: 0 clamp(28px, 3vw, 48px); font-size: clamp(28px, 2.6vw, 42px); }
+.chip img { width: clamp(34px, 3vw, 44px); height: auto; }
+.chip-1 { left: 22%; top: 4%; }
+.chip-2 { left: 50%; top: 27%; }
+.chip-3 { left: 12%; top: 50%; }
+.chip-4 { left: 46%; top: 73%; }
+@media (max-width: 760px) {
+  .home-chips { height: auto; padding: 24px var(--pad) 64px; }
+  .home-chips-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .chip { position: relative; left: auto; top: auto; }
+  .chip-2, .chip-4 { align-self: flex-end; }
+}

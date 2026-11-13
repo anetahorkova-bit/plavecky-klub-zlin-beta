@@ -107,9 +107,9 @@
 .faq-wave { min-height: 39.5vw; }
 
 /* Jak se přihlásit: čísla + dlaždice */
-.pr-steps { padding: 80px var(--pad) 0; }
-.pr-steps .t-h2 { margin-bottom: 32px; }
-.steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 48px; }
+.pr-steps { padding: 120px var(--pad) 40px; }
+.pr-steps .t-h2 { margin-bottom: 64px; }
+.steps { display: flex; flex-direction: column; gap: 24px; margin-bottom: 64px; }
 .step { display: grid; grid-template-columns: 200px 420px 1fr; gap: 40px; align-items: center; cursor: pointer; outline: none; }
 .step-n { font-size: 140px; font-weight: 300; line-height: 1; color: var(--oranzova-200); transition: color .35s var(--ease); }
 .step-t { color: var(--oranzova-200); transition: color .35s var(--ease); }

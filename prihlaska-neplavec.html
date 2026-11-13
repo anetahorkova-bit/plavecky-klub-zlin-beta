@@ -7,9 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1794580643">
-  <link rel="stylesheet" href="css/program.css?v=1794580643">
-  <link rel="stylesheet" href="css/oklubu.css?v=1794580643">
+  <link rel="stylesheet" href="css/style.css?v=1794581726">
+  <link rel="stylesheet" href="css/program.css?v=1794581726">
+  <link rel="stylesheet" href="css/oklubu.css?v=1794581726">
   <style>
     .pr-intro { padding: 48px var(--pad) 80px; position: relative; min-height: 330px; }
     .pr-intro .ok-hero-text { width: 640px; }
@@ -23,8 +23,8 @@
     .pr-meta { font-size: 13px; font-weight: 500; display: flex; gap: 12px; align-items: baseline; }
     .pr-meta .k { color: var(--seda-600); text-transform: uppercase; letter-spacing: .04em; }
     .pr-hero-ilu { position: absolute; right: calc(var(--pad) + 40px); top: 40px; max-width: none; animation: float 7s ease-in-out infinite; }
-    .slot { display: flex; align-items: center; padding: 28px var(--pad); gap: 24px; transition: background-color .3s; }
-    .slot:hover { background: linear-gradient(90deg, rgba(227,242,253,.6), rgba(227,242,253,0)); }
+    .slot { display: flex; align-items: center; padding: 48px var(--pad); gap: 24px; transition: background-color .3s; }
+    .slot:hover .day, .slot:hover .time, .slot:hover .grp, .slot:hover .grp * { color: var(--modra-300); } .slot .day, .slot .time, .slot .grp, .slot .grp * { transition: color .3s; }
     .slot .day { width: 224px; } .slot .time { width: 324px; }
     .slot .grp { flex: 1; display: flex; flex-direction: column; gap: 2px; }
     .slot.full .day, .slot.full .time, .slot.full .grp, .slot.full .grp .muted { color: #9ea8bd; }
@@ -32,7 +32,7 @@
     .st.ok { background: var(--tyrkys-200); color: var(--navy-900); } .st.no { background: #f0f0f5; color: #9ea8bd; }
     .infos { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; padding: 80px var(--pad) 120px; }
     .infos > div { background: var(--modra-100); border-radius: var(--r-md); padding: 32px; display: flex; flex-direction: column; gap: 8px; }
-    .pr-top { padding: 40px var(--pad) 48px; display: flex; flex-direction: column; gap: 12px; }
+    .pr-top { padding: 72px var(--pad) 80px; display: flex; flex-direction: column; gap: 16px; }
     .pr-top .crumbs { margin-bottom: 8px; }
   </style>
 </head>
@@ -66,7 +66,7 @@
   <div style="height:120px"></div>
   <div data-footer></div>
 </div>
-<script src="js/app.js?v=1794580643"></script>
+<script src="js/app.js?v=1794581726"></script>
 <script>document.querySelectorAll('[data-steps]').forEach(l=>l.querySelectorAll('.step').forEach(p=>{const on=()=>l.querySelectorAll('.step').forEach(x=>x.classList.toggle('on',x===p));p.addEventListener('mouseenter',on);p.addEventListener('focus',on);p.addEventListener('click',on);}));</script>
 </body>
 </html>

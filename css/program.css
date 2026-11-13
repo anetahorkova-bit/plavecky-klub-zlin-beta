@@ -153,3 +153,6 @@
 .contact-box a:hover { text-decoration: underline; }
 .nrow:hover .nrow-d { color: var(--modra-300); }
 .nrow:hover .nrow-t .t-h3 { color: var(--modra-300); }
+.filter.is-active { height: 40px; padding: 0 20px; font-size: 14px; }
+.filter:not(.is-active):hover { background: var(--modra-100); border-color: var(--seda-200); }
+.filters-sticky { position: sticky; top: 88px; z-index: 5; background: var(--bila); padding: 16px 0; margin: 0; }

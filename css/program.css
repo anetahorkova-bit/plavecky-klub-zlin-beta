@@ -35,7 +35,7 @@
 .lane-animal img { max-width: none; transition: transform .6s var(--ease-out); }
 .lane.is-in .lane-animal img { animation: swim-in 1.1s var(--ease-out) both; }
 .lane:hover .lane-animal img { transform: translateX(12px); }
-@keyframes swim-in { from { opacity: 0; transform: translateX(-80px); } to { opacity: 1; transform: none; } }
+@keyframes swim-in { from { opacity: 0; } to { opacity: 1; } }
 .lane-text { width: 700px; display: flex; flex-direction: column; gap: 12px; }
 .lane-text .tags { display: flex; gap: 8px; padding-top: 4px; flex-wrap: wrap; }
 .lane-terms { display: flex; gap: 12px; align-items: center; }
@@ -162,3 +162,8 @@
 /* Dráhy kurzů: hover jako u aktualit, texty světle modré */
 .lane-text > h3, .lane-text > p, .lane-terms, .lane-terms *, .lane-price, .lane-price * { transition: color .3s var(--ease); }
 .lane:hover .lane-text > h3, .lane:hover .lane-text > p, .lane:hover .lane-terms, .lane:hover .lane-terms *, .lane:hover .lane-price, .lane:hover .lane-price * { color: var(--modra-300); }
+
+/* Zvířátka v drahách: vyrovnaná optická velikost */
+.lane-animal img[src*="zvire-zelva"] { width: 184px !important; height: auto !important; }
+.lane-animal img[src*="zvire-ryba"] { width: 160px !important; height: auto !important; }
+.lane-animal img[src*="zvire-bobr"] { width: 170px !important; height: auto !important; }

@@ -74,3 +74,6 @@
 .home-join-art .maska { position: absolute; left: 846px; top: 193px; width: 173px; height: 177px; }
 .home-join-text { position: absolute; left: 271px; top: 221px; width: 529px; display: flex; flex-direction: column; gap: 12px; }
 .home-join-text > div { margin-top: 12px; }
+.home-kurzy-head { justify-content: center; text-align: center; }
+.home-kurzy-head .t-h1 { color: var(--navy-900); }
+@media (max-width: 760px) { .home-kurzy-head .t-h1 { font-size: 56px; } }

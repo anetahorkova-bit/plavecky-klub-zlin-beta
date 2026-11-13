@@ -105,3 +105,8 @@
 .home-lanes .chip.is-in { animation: none; }
 .home-lanes .chip:hover { translate: 8px -50%; }
 @media (max-width: 760px) { .home-lanes .chip { left: calc(var(--pad) + 40px) !important; font-size: 22px; height: 56px; } .hl-axis { left: calc(var(--pad) + 32px); } }
+/* oprava: čip vždy na středu dráhy, větší dráhy */
+.hl-lane { height: clamp(140px, 11vw, 190px); display: flex; align-items: center; }
+.home-lanes .chip { position: relative; top: auto; translate: none; margin-left: var(--x, 20%); }
+.home-lanes .chip:hover { translate: 8px 0; }
+@media (max-width: 760px) { .hl-lane { height: 110px; } .home-lanes .chip { margin-left: calc(var(--pad) + 40px); } }

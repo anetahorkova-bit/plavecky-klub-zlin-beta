@@ -151,3 +151,5 @@
 .art-body p { max-width: 760px; color: var(--navy-900); }
 .contact-box { background: var(--modra-100); border-radius: var(--r-lg); padding: 32px 40px; display: flex; flex-direction: column; gap: 8px; }
 .contact-box a:hover { text-decoration: underline; }
+.nrow:hover .nrow-d { color: var(--modra-300); }
+.nrow:hover .nrow-t .t-h3 { color: var(--modra-300); }

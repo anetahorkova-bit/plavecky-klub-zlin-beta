@@ -174,7 +174,7 @@
       const max = track.scrollWidth - track.clientWidth;
       const p = max > 0 ? track.scrollLeft / max : 0;
       if (bar) { const w = Math.max(12, (track.clientWidth / track.scrollWidth) * 100); bar.style.width = `${w}%`; bar.style.transform = `translateX(${p * (100 / w * (100 - w))}%)`; }
-      if (dots) { const n = dots.children.length; const idx = Math.min(n - 1, Math.round(p * (n - 1))); [...dots.children].forEach((d, i) => d.classList.toggle('on', i === idx)); }
+      if (dots) { const vis = track.scrollWidth ? track.clientWidth / track.scrollWidth : 1; dots.style.setProperty('--p', Math.min(1, vis + p * (1 - vis)).toFixed(3)); const n = dots.children.length; const idx = Math.min(n - 1, Math.round(p * (n - 1))); [...dots.children].forEach((d, i) => d.classList.toggle('on', i === idx)); }
       if (prev) prev.disabled = track.scrollLeft < 4;
       if (next) next.disabled = track.scrollLeft > max - 4;
     };

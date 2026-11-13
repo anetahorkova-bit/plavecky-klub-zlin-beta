@@ -58,9 +58,9 @@
 .c-card.photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease-out); }
 .c-card.photo:hover img { transform: scale(1.06); }
 .c-card.ilu-only { background: none; align-items: center; justify-content: center; }
-.dots { display: flex; align-items: center; gap: 0; height: 8px; margin-top: 32px; }
-.dots span { height: 8px; width: 48px; background: var(--seda-300); -webkit-mask: url(../assets/vlnka-dlazdice.svg) left center / 24px 8px repeat-x; mask: url(../assets/vlnka-dlazdice.svg) left center / 24px 8px repeat-x; transition: background-color .4s var(--ease); }
-.dots span.on { background: var(--modra-300); }
+.dots { position: relative; display: flex; height: 10px; margin-top: 32px; background: var(--seda-200); -webkit-mask: url(../assets/vlnka-dlazdice.svg) left center / 24px 10px repeat-x; mask: url(../assets/vlnka-dlazdice.svg) left center / 24px 10px repeat-x; width: var(--w, 240px); }
+.dots::after { content: ""; position: absolute; inset: 0 auto 0 0; width: calc(var(--p, 0) * 100%); background: var(--modra-300); transition: width .2s linear; }
+.dots span { flex: 1; }
 
 /* Info leták */
 .leaflet-sec { padding: 80px var(--pad); }

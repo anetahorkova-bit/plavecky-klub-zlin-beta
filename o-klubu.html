@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O klubu · Plavecký klub Zlín</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/program.css">
+  <link rel="stylesheet" href="css/oklubu.css">
+</head>
+<body data-page="oklubu">
+<div data-nav></div>
+<div class="page" style="overflow-x:clip">
+
+  <section class="ok-hero">
+    <img class="p-hero-wave" src="assets/hero-vlna.svg" alt="">
+    <div class="ok-hero-text">
+      <nav class="crumbs" aria-label="Drobečková navigace"><a href="index.html">Úvod</a><span class="sep">›</span><span class="cur">O klubu</span></nav>
+      <h1 class="t-h1"><span class="w"><span>Plavání nás baví!</span></span></h1>
+      <p class="t-perex perex">Od prvních temp až po olympijské úspěchy. Už od roku 1939 vychováváme ve Zlíně nové generace plavců, spojujeme lidi se stejnou vášní a ukazujeme, že plavání je víc než jen sport.</p>
+    </div>
+  </section>
+
+  <div class="ok-body">
+    <nav class="ok-side" aria-label="Obsah stránky">
+      <a href="#kdo-jsme" class="is-active">Kdo jsme</a>
+      <a href="#historie">Historie</a>
+      <a href="#uspechy">Úspěchy a osobnosti</a>
+      <a href="#treneri">Trenéři</a>
+      <a href="#zavody">Naše závody</a>
+      <a href="#partneri">Partneři</a>
+      <a href="#dokumenty">Dokumenty</a>
+    </nav>
+
+    <div class="ok-sections">
+      <!-- Kdo jsme -->
+      <section id="kdo-jsme">
+        <div class="ok-head reveal"><p class="t-eyebrow">Kdo jsme</p><h2 class="t-h2">Ve vodě jsme doma.</h2></div>
+        <div class="story t-perex reveal">
+          <p>Jsme Plavecký klub Zlín. Místo, kde se potkávají začínající plavci, mladé talenty i zkušení závodníci.</p>
+          <p>Plavání se věnujeme už od roku 1939. Za tu dobu jsme vychovali řadu úspěšných sportovců a reprezentantů, ale naší největší motivací zůstává radost z pohybu a chuť posouvat se dál.</p>
+          <p>Dětem pomáháme získat jistotu ve vodě, rozvíjet své schopnosti a objevovat kouzlo sportu. Pokročilým plavcům vytváříme podmínky pro další sportovní růst.</p>
+          <p>Věříme v týmového ducha, vytrvalost, fair play a přátelství, která často vydrží i dlouho po posledním tréninku.</p>
+        </div>
+        <div class="stats" data-stagger=".12">
+          <div class="stat" style="background:var(--oranzova-500)"><img class="ilu" src="assets/ok-ilu-bryle.svg" alt=""><span class="t-cislo" data-count="1939">1939</span><p class="t-telo">Rok, kdy se začal psát příběh organizovaného plavání ve Zlíně.</p></div>
+          <div class="stat" style="background:var(--tyrkys-200)"><img class="ilu" src="assets/ok-ilu-stopky.svg" alt=""><span class="t-cislo" data-count="179">179</span><p class="t-telo">Československých a českých rekordů v kategorii dospělých podle historické evidence klubu.</p></div>
+          <div class="stat" style="background:var(--modra-300)"><img class="ilu" src="assets/ok-ilu-stupne.svg" alt=""><span class="t-cislo">2× 5.</span><p class="t-telo">Místo Daniela Málka na olympijských hrách v Sydney 2000.</p></div>
+        </div>
+      </section>
+
+      <!-- Historie -->
+      <section id="historie">
+        <div class="ok-head reveal" style="max-width:721px"><p class="t-eyebrow">Historie</p><h2 class="t-h2">Už od roku 1939 plaveme spolu.</h2><p class="t-perex perex">Začínali jsme s velkým nadšením a jedním bazénem. Dnes máme za sebou desítky let sportovních úspěchů a generace plavců, kteří zanechali stopu v historii českého plavání.</p></div>
+                <div class="tl reveal">
+          <div class="tl-rail"><img class="wave" src="assets/vlnka-osa.svg" alt=""><div id="tl-years"></div></div>
+          <div class="tl-content tl-swap" id="tl-content">
+            <span class="tl-year" id="tl-year">1939</span>
+            <div class="tl-text"><h3 class="t-h3" id="tl-title"></h3><p class="t-telo" id="tl-desc"></p></div>
+          </div>
+        </div>
+        <div class="tl-ctrl reveal">
+          <div class="prog"><span id="tl-count">01 / 07</span><div class="bar"><span id="tl-bar"></span></div><span class="muted" style="font-weight:400">Klikněte na rok nebo použijte šipky</span></div>
+          <div class="carousel-ctrl"><button class="icon-btn prev" id="tl-prev" aria-label="Předchozí rok"></button><button class="icon-btn" id="tl-next" aria-label="Další rok"></button></div>
+        </div>
+      </section>
+
+      <!-- Úspěchy -->
+      <section id="uspechy">
+        <div class="ok-head reveal" style="width:634px"><p class="t-eyebrow">Úspěchy a osobnosti</p><h2 class="t-h2">Malý bazén? Velké úspěchy.</h2><p class="t-perex perex">Zlínské plavání má za sebou úspěchy na domácí i světové scéně. Od mistrovských titulů přes české rekordy až po účast na olympijských hrách.
+
+Za každým výsledkem stojí hodiny tréninku, odhodlání a lidé, kteří plavání věnovali velkou část svého života.</p></div>
+        <div class="people" id="people" data-stagger=".06"></div>
+        <a class="btn btn-m btn-outline reveal" href="klubove-rekordy.html">Klubové rekordy</a>
+      </section>
+
+      <!-- Trenéři -->
+      <section id="treneri">
+        <div class="ok-head reveal" style="width:835px"><p class="t-eyebrow">Trenéři</p><h2 class="t-h2">Za každým plavcem stojí skvělý tým.</h2><p class="t-perex perex">Trenéři, kteří předávají své zkušenosti, podporují nové talenty a pomáhají plavcům překonávat vlastní hranice.
+
+Na dlouholeté úspěšné trenérské tradici klubu dnes staví hlavní trenér dorostu a dospělých Mgr. Zdeněk Kasálek společně s trenéry jednotlivých plaveckých skupin.
+
+Ať už jde o první plavecké krůčky, nebo přípravu na významné závody, naším cílem je vytvářet prostředí, kde se plavci mohou rozvíjet a kde je sport především baví.</p></div>
+        <div id="coach-lanes"></div>
+      </section>
+
+      <!-- Naše závody -->
+      <section id="zavody">
+        <div class="ok-head reveal"><p class="t-eyebrow">Naše závody</p><h2 class="t-h2">Naše závody</h2></div>
+        <div class="races" data-stagger=".12">
+          <a class="news-card" href="#" data-todo><div class="ph"><img src="assets/zavod-vanocni.jpg" alt=""></div><p class="t-maly-s date">Mezinárodní závody · 62. ročník</p><h3 class="t-karta">Vánoční cena města Zlína</h3><p class="t-telo">Nejstarší mezinárodní plavecké závody svého druhu u nás. Propozice, výsledky a rekordy.</p><span class="icon-btn more" aria-hidden="true"></span></a>
+          <a class="news-card" href="#" data-todo><div class="ph"><img src="assets/zavod-smelina.jpg" alt=""></div><p class="t-maly-s date">9. 1. 2027 · 8. ročník</p><h3 class="t-karta">Šmelina Cup</h3><p class="t-telo">Memoriál Hanky Martinkové pro všechny generace. Výtěžek jde domácímu hospici Most k domovu.</p><span class="icon-btn more" aria-hidden="true"></span></a>
+        </div>
+      </section>
+
+      <!-- Partneři -->
+      <section id="partneri">
+        <div class="ok-head reveal"><p class="t-eyebrow">Partneři</p><h2 class="t-h2">Děkujeme partnerům</h2></div>
+        <div class="logos" id="logos" data-stagger=".04"></div>
+      </section>
+
+      <!-- Dokumenty -->
+      <section id="dokumenty">
+        <div class="ok-head reveal"><p class="t-eyebrow">Dokumenty</p><h2 class="t-h2">Dokumenty ke stažení</h2><p class="t-telo muted" style="margin-top:8px">Stanovy, směrnice, ročenky a další podklady klubu.</p></div>
+        <div class="docs reveal" id="docs"></div>
+      </section>
+    </div>
+  </div>
+
+  <div data-footer></div>
+</div>
+
+<script>
+(() => {
+  /* Časová osa: texty z Figmy */
+  const TL = [
+    ['1939', 'Tady to všechno začalo', 'Otevřením padesátimetrového bazénu u Baťovy továrny vznikly nové možnosti pro sportovní plavání. Ve stejném roce byl založen plavecký oddíl SK Baťa.'],
+    ['1967', 'První velký týmový triumf', 'Ženské družstvo poprvé získalo titul mistryň Československa v nejvyšší plavecké soutěži.'],
+    ['1980', 'Poprvé na olympiádě', 'Radek Havel se stal prvním plavcem zlínského oddílu, který reprezentoval na olympijských hrách. Startoval v Moskvě.'],
+    ['1984', 'Nový domov zlínského plavání', 'Slavnostní otevření krytého padesátimetrového bazénu přineslo nové možnosti pro trénink i pořádání závodů.'],
+    ['1997', 'Historické zlato mužů', 'Zlínské mužské družstvo poprvé zvítězilo v nejvyšší plavecké soutěži.'],
+    ['2000', 'Zlín na olympijském vrcholu', 'Daniel Málek vybojoval na olympijských hrách v Sydney dvě pátá místa v disciplínách 100 a 200 metrů prsa.'],
+    ['2023', 'Další kapitola rekordů', 'Do klubové historické evidence přibylo 11 českých rekordů Miroslava Knedly.'],
+  ];
+  const yrs = document.getElementById('tl-years');
+  yrs.innerHTML = TL.map((t, i) => `<button data-i="${i}">${t[0]}</button>`).join('');
+  const box = document.getElementById('tl-content');
+  let cur = -1;
+  const show = (i) => {
+    i = (i + TL.length) % TL.length; if (i === cur) return;
+    const first = cur === -1; cur = i;
+    yrs.querySelectorAll('button').forEach((b, k) => b.classList.toggle('on', k === i));
+    document.getElementById('tl-count').textContent = `${String(i + 1).padStart(2, '0')} / ${String(TL.length).padStart(2, '0')}`;
+    document.getElementById('tl-bar').style.width = `${((i + 1) / TL.length) * 100}%`;
+    const put = () => { document.getElementById('tl-year').textContent = TL[i][0]; document.getElementById('tl-title').textContent = TL[i][1]; document.getElementById('tl-desc').textContent = TL[i][2]; };
+    if (first) { put(); return; }
+    box.classList.add('out');
+    setTimeout(() => { put(); box.classList.remove('out'); }, 300);
+  };
+  yrs.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) show(+b.dataset.i); });
+  document.getElementById('tl-prev').onclick = () => show(cur - 1);
+  document.getElementById('tl-next').onclick = () => show(cur + 1);
+  show(0);
+
+  /* Osobnosti: při najetí se ukáže popis a vlnka */
+  const P = [
+    ['Daniel Málek', 'Olympionik a mistr Evropy', 'Jeden z nejúspěšnějších zlínských plavců. Trojnásobný účastník olympijských her a držitel dvou pátých míst ze Sydney 2000.'],
+    ['Marcela Kubalčíková', null, null], ['Marie Kočendová', null, null], ['Radek Havel', null, null], ['Lukáš Urbánek', null, null], ['Petr Veselý', null, null],
+  ];
+  const people = document.getElementById('people');
+  people.innerHTML = P.map(([n, t, d], i) => `
+    <div class="person${i === 0 ? ' on' : ''}">
+      <div class="nm"><span>${n}</span><div class="wave"><img src="assets/vlnka-vzor.svg" alt=""></div></div>
+      <div class="desc"><p class="t-telo-s">${t || 'Popis doplní klub'}</p><p class="t-maly">${d || 'Text k této osobnosti zatím v návrhu není.'}</p></div>
+    </div>`).join('');
+  people.querySelectorAll('.person').forEach((p) => p.addEventListener('mouseenter', () => {
+    people.querySelectorAll('.person').forEach((x) => x.classList.toggle('on', x === p));
+  }));
+
+  /* Trenéři v drahách (fotky a ořezy z Figmy) */
+  const STD = 'width:112%;height:134.4%;left:-6%;top:-4.03%';
+  const SHORT = 'width:112%;height:115.61%;left:-6%;top:-3.47%';
+  const WIDE = 'width:209.28%;height:112%;left:-54.64%;top:-3.36%';
+  const LANES = [
+    ['01', 'Přípravka', 'var(--zluta-500)', 'pripravka.html', [['Dita Knedlová', 'tr-knedlova.jpg', STD], ['Olga Ambrožová', 'tr-ambrozova.jpg', STD], ['Dana Cedidlová', 'tr-cedidlova.jpg', STD], ['Anna Marie Fišerová', 'tr-fiserova.jpg', STD], ['Lucie Michaela Hrdinová', 'tr-hrdinova.jpg', STD], ['Dorota Klímková', 'tr-klimkova.jpg', STD]]],
+    ['02', 'Klubové plavání', 'var(--modra-300)', 'klubove-plavani.html', [['Jiří Šup', 'tr-sup.jpg', WIDE], ['Petr Veselý st.', 'tr-vesely.jpg', STD], ['Lukáš Kouřil', 'tr-kouril.jpg', STD], ['Martina Pavelková', 'tr-pavelkova.jpg', STD]]],
+    ['03', 'Sportovní třídy', 'var(--tyrkys-200)', 'sportovni-tridy.html', [['Mgr. Alena Martinková', 'tr-martinkova.jpg', SHORT]]],
+    ['04', 'Vrcholové plavání', 'var(--oranzova-500)', 'vrcholove-plavani.html', [['Mgr. Zdeněk Kasálek', 'tr-kasalek.jpg', SHORT], ['PaedDr. Petr Přikryl', 'tr-prikryl.jpg', STD]]],
+  ];
+  document.getElementById('coach-lanes').innerHTML = LANES.map(([n, t, c, href, cs]) => `
+    <div class="coach-lane" data-stagger=".05">
+      <a class="coach-group" href="${href}" style="background:${c}"><span class="t-stitek">${n}</span><span class="t-h3">${t}</span></a>
+      ${cs.map(([nm, img, st]) => `<div class="coach-sm"><div class="ph"><img src="assets/${img}" alt="${nm}" style="${st}"></div><p class="t-telo-s">${nm}</p></div>`).join('')}
+    </div>`).join('');
+
+  /* Partneři */
+  const LOGOS = ['zlinsky-kraj', 'mesto-zlin', 'msmt', 'nsa', 'csps', 'zs-zatopka', 'greiner-packaging', 'greiner-assistec', 'zlinprojekt', 'vitar', 'teplo-zlin', 'strabag', 'noventis', 'sykora', 'panska-moda-sykora', 'swimaholic'];
+  document.getElementById('logos').innerHTML = LOGOS.map((l) => `<div class="logo-box"><img src="assets/partneri/${l}.png" alt="${l}"></div>`).join('');
+
+  /* Dokumenty */
+  const ROC = [['2021', '1,64 MB'], ['2019', '2,63 MB'], ['2018', '3,18 MB'], ['2017', '2,14 MB'], ['2016', '6,31 MB'], ['2015', '1,58 MB'], ['2014', '1,79 MB'], ['2013', '1,84 MB'], ['2012', '1,78 MB'], ['2011', '1,25 MB'], ['2010', '52 kB'], ['2009', '76 kB'], ['2008', '79 kB'], ['2007', '73 kB'], ['2006', '76 kB'], ['2005', '75 kB'], ['2002', '93 kB'], ['2001', '86 kB'], ['2000', '87 kB'], ['1999', '73 kB'], ['1998', '71 kB']];
+  const G = [['Klubové dokumenty', '4 soubory', null], ['Ročenky', '21 souborů', ROC.map(([y, s]) => [`Ročenka ${y}`, `PDF · ${s}`])], ['Přípravka', '1 soubor', null], ['Zdravotní dokumenty', '1 soubor', null], ['Logomanuál', '1 soubor', null]];
+  document.getElementById('docs').innerHTML = G.map(([t, c, files], i) => `
+    <div class="doc-group${i === 1 ? ' is-open' : ''}">
+      <button class="doc-head"><span class="t-karta">${t}</span><span class="tag">${c}</span><span class="count"></span><span class="pm">+</span></button>
+      <div class="doc-body"><div><div class="doc-list">${(files || [[t, 'Seznam souborů doplní klub']]).map(([n, m]) => `<a class="doc" href="#" data-todo><span class="t-telo-s">${n}</span><span class="meta"><span class="t-stitek muted">${m}</span><span class="dl"></span></span></a>`).join('')}</div></div></div>
+    </div>`).join('');
+  document.querySelectorAll('.doc-head').forEach((h) => h.addEventListener('click', () => h.parentElement.classList.toggle('is-open')));
+
+  /* Boční navigace: zvýraznění aktivní sekce */
+  const links = [...document.querySelectorAll('.ok-side a')];
+  const spy = new IntersectionObserver((en) => {
+    en.forEach((e) => { if (e.isIntersecting) links.forEach((l) => l.classList.toggle('is-active', l.getAttribute('href') === '#' + e.target.id)); });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('.ok-sections > section').forEach((s) => spy.observe(s));
+})();
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>

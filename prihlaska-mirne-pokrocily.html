@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mírně pokročilý · Přihláška · Plavecký klub Zlín</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/program.css">
+  <link rel="stylesheet" href="css/oklubu.css">
+  <style>
+    .pr-intro { padding: 48px var(--pad) 80px; position: relative; min-height: 330px; }
+    .pr-intro .ok-hero-text { width: 640px; }
+    .pr-intro .perex { width: 420px; }
+    .pr-head { padding: 0 var(--pad) 64px; }
+    .pr-lane { gap: 24px; }
+    .pr-lane .lane-text { width: 560px; }
+    .pr-lane .lane-text .t-h3 { transition: color .3s; }
+    .pr-lane .lane-price { width: 220px; }
+    .pr-note { padding: 40px var(--pad) 96px; display: flex; flex-direction: column; gap: 8px; }
+    .pr-meta { font-size: 13px; font-weight: 500; display: flex; gap: 12px; align-items: baseline; }
+    .pr-meta .k { color: var(--seda-600); text-transform: uppercase; letter-spacing: .04em; }
+    .pr-hero-ilu { position: absolute; right: calc(var(--pad) + 40px); top: 40px; max-width: none; animation: float 7s ease-in-out infinite; }
+    .slot { display: flex; align-items: center; padding: 28px var(--pad); gap: 24px; transition: background-color .3s; }
+    .slot:hover { background: linear-gradient(90deg, rgba(227,242,253,.6), rgba(227,242,253,0)); }
+    .slot .day { width: 224px; } .slot .time { width: 324px; }
+    .slot .grp { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .slot.full .day, .slot.full .time, .slot.full .grp, .slot.full .grp .muted { color: #9ea8bd; }
+    .st { height: 28px; padding: 0 12px; border-radius: var(--r-full); display: inline-flex; align-items: center; font-size: 13px; font-weight: 500; }
+    .st.ok { background: #e5f7e5; color: #1a8040; } .st.no { background: #f0f0f5; color: #9ea8bd; }
+    .infos { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; padding: 80px var(--pad) 120px; }
+    .infos > div { background: var(--modra-100); border-radius: var(--r-md); padding: 32px; display: flex; flex-direction: column; gap: 8px; }
+    .pr-top { padding: 40px var(--pad) 48px; display: flex; flex-direction: column; gap: 12px; }
+    .pr-top .crumbs { margin-bottom: 8px; }
+  </style>
+</head>
+<body data-page="prihlaska">
+<div data-nav></div>
+<div class="page" style="overflow-x:clip">
+  <section class="pr-top">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="prihlaska.html">Přihláška</a> <span class="sep">›</span> <a href="prihlaska-pripravka.html">Plavecká přípravka</a> <span class="sep">›</span> <span class="cur">Mírně pokročilý</span></nav>
+    <span class="t-eyebrow">Krok 3</span>
+    <h1 class="t-h2">Vyberte termín</h1>
+    <div class="tags" style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag">Mírně pokročilý</span><span class="tag">25 m bazén, šířky</span><span class="tag">2× týdně</span><span class="tag">5 600 Kč / rok</span></div>
+  </section>
+  <section class="lanes">
+      <div class="lane-rope reveal"></div>
+      <div class="slot reveal"><span class="t-h3 day">Středa</span><span class="t-h3 time">18:00 až 19:00</span><div class="grp"><span class="t-telo-s">25 m bazén, šířky</span></div><span class="st ok">Volná místa</span><a class="btn btn-m btn-cta" href="#" data-todo>Vybrat termín</a></div>
+      <div class="lane-rope reveal"></div>
+      <div class="slot reveal"><span class="t-h3 day">Pátek</span><span class="t-h3 time">16:00 až 17:00</span><div class="grp"><span class="t-telo-s">25 m bazén, šířky</span></div><span class="st ok">Volná místa</span><a class="btn btn-m btn-cta" href="#" data-todo>Vybrat termín</a></div>
+      <div class="lane-rope reveal"></div>
+  </section>
+  <section class="infos reveal">
+    <div><h3 class="t-karta">Začátek kurzu</h3><p class="t-maly">1. část začíná první týden v září, 2. část první týden v únoru.</p></div>
+    <div><h3 class="t-karta">Zameškané hodiny</h3><p class="t-maly">Můžete je nahradit v jiné skupině po domluvě s trenérem.</p></div>
+    <div><h3 class="t-karta">Máte dotaz?</h3><p class="t-maly">Dita Knedlová · <a href="tel:+420731621637">731 621 637</a> · <a href="mailto:pripravka@zlinswim.cz">pripravka@zlinswim.cz</a></p></div>
+  </section>
+  <div data-footer></div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

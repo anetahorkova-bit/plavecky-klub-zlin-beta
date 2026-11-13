@@ -1,0 +1,76 @@
+/* Homepage */
+.home-hero { --ph: max(785px, 49.0625vw); position: relative; height: calc(var(--ph) + 92px); overflow: hidden; }
+.home-hero-strip { position: absolute; left: 0; right: 0; top: calc(var(--ph) * .7); bottom: 0; background: var(--zluta-500); }
+.home-hero-photo { position: absolute; inset: 0 0 auto 0; height: var(--ph); overflow: hidden; }
+.home-hero-photo img { width: 100%; height: var(--ph); object-fit: cover; object-position: center bottom; animation: hero-zoom 14s var(--ease-out) both; transform-origin: 60% 40%; }
+@keyframes hero-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+.home-hero .nav { z-index: 5; }
+.home-hero-content { position: absolute; left: var(--pad); top: 120px; height: calc(var(--ph) - 251px); width: 661px; display: flex; flex-direction: column; justify-content: center; z-index: 2; }
+.home-hero-title { font-size: 96px; font-weight: 800; line-height: .99; text-transform: uppercase; color: #fffffa; text-shadow: 0 0 10px rgba(0, 47, 148, .39); }
+.home-hero-title .line { display: block; overflow: hidden; padding-bottom: 4px; }
+.home-hero-title .line > span { display: inline-block; transform: translateY(105%); animation: line-up .9s var(--ease-out) forwards; }
+.home-hero-title .line:nth-child(2) > span { animation-delay: .12s; }
+.home-hero-title .line:nth-child(3) > span { animation-delay: .24s; }
+.home-hero-title i { font-style: normal; color: #ffe34d; display: inline-block; animation: dot-pop .6s .9s var(--ease-out) both; }
+@keyframes line-up { to { transform: none; } }
+@keyframes dot-pop { 0% { transform: scale(0); } 60% { transform: scale(1.5); } 100% { transform: scale(1); } }
+.home-hero-sub { padding-top: 24px; font-size: 28px; font-weight: 600; line-height: 1.2; color: #fff; text-shadow: 0 0 10px rgba(0, 47, 148, .36); animation: fade-up .8s .45s var(--ease-out) both; }
+.home-hero-btn { margin-top: 32px; align-self: flex-start; animation: fade-up .8s .6s var(--ease-out) both; }
+@keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+.marquee { position: absolute; left: 0; right: 0; top: var(--ph); height: 92px; display: flex; align-items: center; overflow: hidden; z-index: 2; }
+.marquee-track { display: flex; align-items: center; gap: 40px; width: max-content; animation: marquee 28s linear infinite; padding-left: 40px; }
+.marquee-track span { font-size: 28px; font-weight: 600; line-height: 1.2; white-space: nowrap; }
+.marquee-track img { height: auto; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Kurzy */
+.home-kurzy { padding-top: 130px; }
+.home-kurzy-head { display: flex; align-items: flex-end; justify-content: space-between; padding: 0 var(--pad); margin-bottom: 48px; }
+.home-kurzy { position: relative; overflow: hidden; }
+.home-kurzy-head { position: relative; z-index: 1; }
+.home-chips { position: relative; height: max(638px, 39.875vw); }
+.home-chips-inner { position: relative; z-index: 1; width: 1600px; height: 100%; margin: 0 auto; }
+.home-chips-waves { position: absolute; left: 50%; top: min(-898px, -56.125vw); width: max(1600px, 100%); height: auto; max-width: none; pointer-events: none; translate: -50% 0; }
+.chip {
+  position: absolute; height: 93px; padding: 0 58px; gap: 12.6px; display: inline-flex; align-items: center;
+  border-radius: var(--r-full); font-size: 48px; font-weight: 500; line-height: 1.1; white-space: nowrap;
+  filter: drop-shadow(0 4px 4px rgba(0, 47, 148, .25));
+  transition: translate .35s var(--ease-out), transform .4s var(--ease-out), opacity .8s var(--ease-out);
+}
+.chip img { width: 50.5px; height: 50.5px; transition: transform .4s var(--ease-out); }
+.chip:hover img { transform: translateX(6px); }
+.chip-1 { left: 396px; top: 14px; background: var(--zluta-500); color: var(--navy-900); }
+.chip-2 { left: 750px; top: 144px; background: var(--modra-300); color: #fff; }
+.chip-3 { left: 203px; top: 294px; background: var(--tyrkys-200); color: var(--navy-900); }
+.chip-4 { left: 750px; top: 435px; background: var(--oranzova-500); color: #fff; }
+.chip.is-in { animation: float 6s ease-in-out infinite; }
+.chip-2.is-in { animation-delay: -1.5s; }
+.chip-3.is-in { animation-delay: -3s; }
+.chip-4.is-in { animation-delay: -4.5s; }
+
+/* 130 let */
+.home-130 { height: 547px; display: flex; align-items: center; gap: 160px; padding-left: calc(var(--pad) + 117px); }
+.home-130-drop { position: relative; width: 373px; height: 426px; flex: none; }
+.home-130-drop img { position: absolute; left: 32.5px; top: 0; width: 331px; height: 426px; }
+.home-130-drop.is-in img { animation: drop-wobble 5s ease-in-out infinite; transform-origin: 50% 100%; }
+@keyframes drop-wobble { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.02, .985); } }
+.home-130-drop .uz, .home-130-drop .let { position: absolute; left: 196px; transform: translateX(-50%); font-size: 28px; font-weight: 600; line-height: 1.2; text-align: center; }
+.home-130-drop .uz { top: 133px; }
+.home-130-drop .let { top: 298px; width: 221px; }
+.home-130-drop .num { position: absolute; left: 90px; top: 151px; width: 250px; text-align: left; font-size: 124px; font-weight: 500; line-height: 142px; font-variant-numeric: tabular-nums; }
+.home-130-text { display: flex; flex-direction: column; gap: 16px; }
+.home-130-text .t-h2 { margin-bottom: 8px; }
+.home-130-text > div { margin-top: 8px; }
+
+/* Přidejte se */
+.home-join { position: relative; height: max(627px, 39.1875vw); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.home-join-inner { position: relative; width: 1600px; height: 627px; flex: none; }
+.home-join-panel { position: absolute; left: 0; top: max(18px, 1.125vw); width: 100%; height: auto; max-width: none; }
+.home-join-art { position: absolute; inset: 0; pointer-events: none; }
+.home-join-art .kruh { position: absolute; left: 970px; top: 160px; width: 322px; height: 320px; }
+.home-join-art .vydra { position: absolute; left: 868px; top: 133px; width: 536px; height: 362px; animation: bob 4.5s ease-in-out infinite; }
+.home-join-art .maska { position: absolute; left: 846px; top: 193px; width: 173px; height: 177px; }
+.home-join-text { position: absolute; left: 271px; top: 221px; width: 529px; display: flex; flex-direction: column; gap: 12px; }
+.home-join-text > div { margin-top: 12px; }

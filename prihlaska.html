@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Přihláška · Plavecký klub Zlín</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/program.css">
+  <link rel="stylesheet" href="css/oklubu.css">
+  <style>
+    .pr-intro { padding: 48px var(--pad) 80px; position: relative; min-height: 330px; }
+    .pr-intro .ok-hero-text { width: 640px; }
+    .pr-intro .perex { width: 420px; }
+    .pr-head { padding: 0 var(--pad) 64px; }
+    .pr-lane { gap: 24px; }
+    .pr-lane .lane-text { width: 560px; }
+    .pr-lane .lane-text .t-h3 { transition: color .3s; }
+    .pr-lane .lane-price { width: 220px; }
+    .pr-note { padding: 40px var(--pad) 96px; display: flex; flex-direction: column; gap: 8px; }
+  </style>
+</head>
+<body data-page="prihlaska">
+<div data-nav></div>
+<div class="page" style="overflow-x:clip">
+
+  <section class="pr-intro ok-hero">
+    <img class="p-hero-wave" src="assets/hero-vlna.svg" alt="">
+    <div class="ok-hero-text">
+      <nav class="crumbs" aria-label="Drobečková navigace"><span class="cur">Přihláška</span></nav>
+      <h1 class="t-h1"><span class="w"><span>Přihláška</span></span></h1>
+      <p class="t-telo perex">Vyberte kurz podle věku dítěte. Na stránce kurzu najdete úrovně, termíny a ceny a odtud dítě přihlásíte.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="pr-head reveal" style="display:flex;flex-direction:column;gap:8px"><span class="t-eyebrow">Krok 1</span><h2 class="t-h2">Vyberte kurz</h2></div>
+    <div class="lanes">
+      <div class="lane-rope reveal"></div>
+      <a class="lane pr-lane reveal" href="prihlaska-pripravka.html">
+        <div class="lane-animal"><img src="assets/zvire-zaba.svg" alt="" style="width:160px;height:130px"></div>
+        <div class="lane-text">
+          <h3 class="t-h3">Plavecká přípravka</h3>
+          <p class="t-telo muted">Pro děti od 5 let, které se učí plavat. Tři úrovně od neplavců po pokročilé.</p>
+          <div class="tags"><span class="tag">5 až 10 let</span><span class="tag">1× nebo 2× týdně</span><span class="tag">45 minut</span></div>
+        </div>
+        <div class="lane-gap"></div>
+        <div class="lane-price"><div class="row"><span class="t-h3">od 4 500 Kč</span><span class="t-maly muted">/ rok</span></div></div>
+        <span class="btn btn-l btn-cta">Vybrat kurz</span>
+      </a>
+      <div class="lane-rope reveal"></div>
+      <a class="lane pr-lane reveal" style="--d:.1s" href="prihlaska-klubove.html">
+        <div class="lane-animal"><img src="assets/zvire-kachna-2.svg" alt="" style="width:160px;height:130px"></div>
+        <div class="lane-text">
+          <h3 class="t-h3">Klubové plavání</h3>
+          <p class="t-telo muted">Pro děti 9 až 15 let, které nechodí do sportovních tříd a z přípravky už vyrostly.</p>
+          <div class="tags"><span class="tag">9 až 15 let</span><span class="tag">3× týdně</span><span class="tag">50 m bazén</span></div>
+        </div>
+        <div class="lane-gap"></div>
+        <div class="lane-price"><div class="row"><span class="t-h3">7 200 Kč</span><span class="t-maly muted">/ rok</span></div></div>
+        <span class="btn btn-l btn-cta">Vybrat kurz</span>
+      </a>
+      <div class="lane-rope reveal"></div>
+    </div>
+  </section>
+
+  <section class="pr-note reveal">
+    <p class="t-telo-s">Sportovní třídy a vrcholové plavání</p>
+    <p class="t-maly muted">Mají vlastní nábor, přihláška přes vedoucího trenéra. <a href="o-klubu.html#treneri" style="text-decoration:underline">Napište trenérovi</a></p>
+  </section>
+
+  <div data-footer></div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

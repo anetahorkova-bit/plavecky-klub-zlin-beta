@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plavecká přípravka · Přihláška · Plavecký klub Zlín</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/program.css">
+  <link rel="stylesheet" href="css/oklubu.css">
+  <style>
+    .pr-intro { padding: 48px var(--pad) 80px; position: relative; min-height: 330px; }
+    .pr-intro .ok-hero-text { width: 640px; }
+    .pr-intro .perex { width: 420px; }
+    .pr-head { padding: 0 var(--pad) 64px; }
+    .pr-lane { gap: 24px; }
+    .pr-lane .lane-text { width: 560px; }
+    .pr-lane .lane-text .t-h3 { transition: color .3s; }
+    .pr-lane .lane-price { width: 220px; }
+    .pr-note { padding: 40px var(--pad) 96px; display: flex; flex-direction: column; gap: 8px; }
+    .pr-meta { font-size: 13px; font-weight: 500; display: flex; gap: 12px; align-items: baseline; }
+    .pr-meta .k { color: var(--seda-600); text-transform: uppercase; letter-spacing: .04em; }
+    .pr-hero-ilu { position: absolute; right: calc(var(--pad) + 40px); top: 40px; max-width: none; animation: float 7s ease-in-out infinite; }
+    .slot { display: flex; align-items: center; padding: 28px var(--pad); gap: 24px; transition: background-color .3s; }
+    .slot:hover { background: linear-gradient(90deg, rgba(227,242,253,.6), rgba(227,242,253,0)); }
+    .slot .day { width: 224px; } .slot .time { width: 324px; }
+    .slot .grp { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .slot.full .day, .slot.full .time, .slot.full .grp, .slot.full .grp .muted { color: #9ea8bd; }
+    .st { height: 28px; padding: 0 12px; border-radius: var(--r-full); display: inline-flex; align-items: center; font-size: 13px; font-weight: 500; }
+    .st.ok { background: #e5f7e5; color: #1a8040; } .st.no { background: #f0f0f5; color: #9ea8bd; }
+    .infos { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; padding: 80px var(--pad) 120px; }
+    .infos > div { background: var(--modra-100); border-radius: var(--r-md); padding: 32px; display: flex; flex-direction: column; gap: 8px; }
+    .pr-top { padding: 40px var(--pad) 48px; display: flex; flex-direction: column; gap: 12px; }
+    .pr-top .crumbs { margin-bottom: 8px; }
+  </style>
+</head>
+<body data-page="prihlaska">
+<div data-nav></div>
+<div class="page" style="overflow-x:clip">
+  <section class="pr-top">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="prihlaska.html">Přihláška</a> <span class="sep">›</span> <span class="cur">Plavecká přípravka</span></nav>
+    <span class="t-eyebrow">Krok 2</span>
+    <h1 class="t-h2">Vyberte úroveň</h1>
+    <p class="t-telo muted">Plavecká přípravka pro děti od 5 let. Úroveň potvrdí trenér po prvních lekcích.</p>
+  </section>
+  <section class="lanes">
+      <div class="lane-rope reveal"></div>
+      <a class="lane pr-lane reveal" style="--d:0.0s" href="prihlaska-neplavec.html">
+        <div class="lane-animal"><img src="assets/zvire-zaba.svg" alt="" style="width:115px;height:120px"></div>
+        <div class="lane-text">
+          <h3 class="t-h3">Neplavec</h3>
+          <p class="t-telo muted">Pro děti, které ještě neplavou. Seznámení s vodou, splývání a dýchání do vody.</p>
+          <div class="tags"><span class="tag">Dětský bazének</span><span class="tag">1× týdně</span><span class="tag">od 1. 9. 2026</span></div>
+          <div class="pr-meta"><span class="k">Termíny</span><span>Út 15:30, 16:30 a 17:15 · Čt 17:15 · Pá 17:15</span></div>
+        </div>
+        <div class="lane-gap"></div>
+        <div class="lane-price"><div class="row"><span class="t-h3">4 500 Kč</span><span class="t-maly muted">/ rok</span></div><span class="t-maly muted">nebo 2× 2 300 Kč za pololetí</span></div>
+        <span class="btn btn-l btn-cta">Zobrazit termíny</span>
+      </a>
+      <div class="lane-rope reveal"></div>
+      <a class="lane pr-lane reveal" style="--d:0.1s" href="prihlaska-mirne-pokrocily.html">
+        <div class="lane-animal"><img src="assets/zvire-zelva.svg" alt="" style="width:150px;height:120px"></div>
+        <div class="lane-text">
+          <h3 class="t-h3">Mírně pokročilý</h3>
+          <p class="t-telo muted">Dítě uplave pár metrů s pomůckou. Učí se kraul a znak bez pomůcek.</p>
+          <div class="tags"><span class="tag">25 m, šířky</span><span class="tag">2× týdně</span><span class="tag">od 9. 9. 2026</span></div>
+          <div class="pr-meta"><span class="k">Termíny</span><span>St 18:00 až 19:00 · Pá 16:00 až 17:00</span></div>
+        </div>
+        <div class="lane-gap"></div>
+        <div class="lane-price"><div class="row"><span class="t-h3">5 600 Kč</span><span class="t-maly muted">/ rok</span></div><span class="t-maly muted">nebo 2× 2 900 Kč za pololetí</span></div>
+        <span class="btn btn-l btn-cta">Zobrazit termíny</span>
+      </a>
+      <div class="lane-rope reveal"></div>
+      <a class="lane pr-lane reveal" style="--d:0.2s" href="prihlaska-pokrocily.html">
+        <div class="lane-animal"><img src="assets/zvire-ryba.svg" alt="" style="width:150px;height:84px"></div>
+        <div class="lane-text">
+          <h3 class="t-h3">Pokročilý</h3>
+          <p class="t-telo muted">Dítě uplave 25 m. Zdokonaluje techniku kraula, znaku a startů.</p>
+          <div class="tags"><span class="tag">25 m, délky</span><span class="tag">2× týdně</span><span class="tag">od 9. 9. 2026</span></div>
+          <div class="pr-meta"><span class="k">Termíny</span><span>Po a St 17:00 až 18:00 · Út a Čt 17:00 až 18:00</span></div>
+        </div>
+        <div class="lane-gap"></div>
+        <div class="lane-price"><div class="row"><span class="t-h3">5 600 Kč</span><span class="t-maly muted">/ rok</span></div><span class="t-maly muted">nebo 2× 2 900 Kč za pololetí</span></div>
+        <span class="btn btn-l btn-cta">Zobrazit termíny</span>
+      </a>
+      <div class="lane-rope reveal"></div>
+  </section>
+  <div style="height:120px"></div>
+  <div data-footer></div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

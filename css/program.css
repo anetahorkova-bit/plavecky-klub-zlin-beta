@@ -123,3 +123,8 @@
 .info-row .c-card.info-y { background: var(--zluta-500); }
 @media (max-width: 1100px) { .step { grid-template-columns: 120px 1fr; } .step-n { font-size: 96px; } .step-d { grid-column: 1 / -1; display: none; } .step.on .step-d { display: flex; } .info-row { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .info-row { grid-template-columns: 1fr; } .info-row .c-card { min-height: 0; } }
+
+/* Kalendář: stejné mezery mezi všemi akcemi */
+[class^="cal-sec-"] { gap: 16px !important; }
+.month { display: contents; }
+.event[hidden], .month[hidden] { display: none !important; }

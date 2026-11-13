@@ -110,3 +110,9 @@
   .hl-lane { height: 104px; padding-left: calc(var(--pad) + 48px); }
   .home-lanes .chip { margin-left: 0; font-size: 22px; height: 56px; padding: 0 24px; }
 }
+
+/* Hero: vlna výš, běžící text vždy čitelný na žluté */
+.home-hero { height: calc(var(--ph) + 40px); }
+.home-hero-photo, .home-hero-photo img { height: calc(var(--ph) - 64px); }
+.home-hero-strip { top: calc(var(--ph) * .6); }
+.marquee { top: calc(var(--ph) - 52px); }

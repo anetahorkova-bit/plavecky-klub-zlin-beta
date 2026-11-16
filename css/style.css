@@ -309,3 +309,14 @@ button:focus:not(:focus-visible) { outline: none; }
   .drop-item .drop-txt > *, .drop-item .drop-txt .muted { transition: color .25s var(--ease); }
   .drop-item:hover .drop-txt > * { color: var(--modra-300); }
 }
+
+/* Na úvodu: při otevřeném dropdownu se navigace přepne do bílé, aby s pásem tvořila jeden celek */
+@media (min-width: 1025px) {
+  .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) { background: var(--bila); }
+  .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .logo-dark { opacity: 1; }
+  .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .logo-light { opacity: 0; }
+  .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .nav-link { color: var(--navy-900); text-shadow: none; }
+  .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .nav-link .chev { filter: none; }
+  .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .nav-drop > .nav-link { background: var(--modra-100); }
+  .nav.is-home { transition: background-color .25s var(--ease), padding .3s var(--ease), box-shadow .3s var(--ease); }
+}

@@ -236,7 +236,7 @@ button:focus:not(:focus-visible) { outline: none; }
 
 /* ---------- Carousel ---------- */
 .carousel { position: relative; }
-.carousel-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; scroll-behavior: smooth; cursor: grab; padding-bottom: 4px; }
+.carousel-track { display: flex; gap: 24px; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; touch-action: pan-x pan-y; scroll-snap-type: x mandatory; scrollbar-width: none; scroll-behavior: smooth; cursor: grab; padding-bottom: 4px; }
 .carousel-track::-webkit-scrollbar { display: none; }
 .carousel-track.is-drag { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; }
 .carousel-track > * { scroll-snap-align: start; flex: none; }

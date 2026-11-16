@@ -19,9 +19,9 @@
 @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 
 .marquee { position: absolute; left: 0; right: 0; top: var(--ph); height: 92px; display: flex; align-items: center; overflow: hidden; z-index: 2; }
-.marquee-track { display: flex; align-items: center; gap: 28px; width: max-content; animation: marquee 28s linear infinite; padding-left: 28px; will-change: transform; backface-visibility: hidden; }
+.marquee-track { display: flex; align-items: center; gap: 28px; width: max-content; animation: marquee 28s linear infinite; padding-left: 28px; }
 .marquee-track span { font-size: 20px; letter-spacing: .04em; font-weight: 600; line-height: 1.2; white-space: nowrap; }
-.marquee-track img { width: 36px; height: 12px; flex: none; display: block; }
+.marquee-track img { width: 40px; height: 14px; flex: none; display: block; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 

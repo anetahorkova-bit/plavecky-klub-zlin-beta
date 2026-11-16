@@ -124,7 +124,7 @@
 
 /* Hero: malá statická vlnka jako v patičce (bez masky, nehýbe se se zoomem fotky) */
 .home-hero-photo img { -webkit-mask: none; mask: none; }
-.home-hero-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: calc(5.0625vw + 1px); min-height: 20px; background: url(../assets/vlna-zluta.svg) center bottom / 100% 100% no-repeat; pointer-events: none; z-index: 1; }
+.home-hero-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: calc(5.0625vw + 3px); min-height: 20px; background: url(../assets/vlna-zluta.svg) center bottom / 100% 100% no-repeat; pointer-events: none; z-index: 1; }
 .home-hero-strip { top: calc(var(--ph) - 66px); }
 
 /* Mobil: užší žlutý pás pod hero */

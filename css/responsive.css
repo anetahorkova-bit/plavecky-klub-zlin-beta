@@ -75,7 +75,7 @@ img, video, svg { max-width: 100%; }
   .home-join-art { zoom: .58; }
   .home-hero-content { top: 96px; }
   .home-hero-content .t-h1, .home-hero-content h1 { font-size: 52px !important; }
-  .home-130 { padding-top: 64px; gap: 24px; }
+  .home-130 { padding-top: 8px; gap: 56px; }
   .home-130-drop { zoom: .75; }
   .home-lanes .chip { align-self: center !important; }
   .hl-lane { height: 132px; }

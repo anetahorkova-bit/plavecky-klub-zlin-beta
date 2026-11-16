@@ -293,3 +293,19 @@ button:focus:not(:focus-visible) { outline: none; }
   .faq-split .faq-list::before { content: ""; position: absolute; left: -64px; top: 0; bottom: 0; width: 1px; background: var(--seda-200); }
   .faq-wave.faq-split .faq-list::before { background: rgba(255,255,255,.18); }
 }
+
+/* Dropdown kurzů: pás přes celou šířku, kurzy vedle sebe, bez rámečku (desktop) */
+@media (min-width: 1025px) {
+  .nav-drop { position: static; }
+  .nav-drop-panel {
+    top: 100%; left: 0; right: 0; width: auto; transform: translateY(-8px);
+    grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 24px var(--pad) 32px;
+    border: 0; border-radius: 0; box-shadow: 0 16px 24px -16px rgba(0, 46, 148, .12);
+  }
+  .nav-drop:hover .nav-drop-panel, .nav-drop:focus-within .nav-drop-panel { transform: none; }
+  .nav-drop-panel::before { inset: -40px 0 auto; height: 40px; }
+  .drop-item { padding: 8px 0; }
+  .drop-item:hover { background: none; }
+  .drop-item .drop-txt > *, .drop-item .drop-txt .muted { transition: color .25s var(--ease); }
+  .drop-item:hover .drop-txt > * { color: var(--modra-300); }
+}

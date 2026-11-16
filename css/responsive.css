@@ -59,19 +59,27 @@ img, video, svg { max-width: 100%; }
   .home-join-inner { width: 100%; height: auto; display: flex; flex-direction: column-reverse; align-items: center; gap: 32px; padding: 120px var(--pad) 96px; }
   .home-join-panel { top: 0; height: 100%; object-fit: cover; object-position: left center; }
   .home-join-text { position: relative; left: auto; top: auto; width: 100%; max-width: 560px; }
-  .home-join-art { position: relative; inset: auto; width: 300px; height: 210px; flex: none; }
-  .home-join-art .kruh { left: 124px; top: 27px; width: 180px; height: 179px; }
-  .home-join-art .vydra { left: 22px; top: 0; width: 300px; height: 203px; }
-  .home-join-art .maska { left: 0; top: 60px; width: 97px; height: 99px; }
+  /* vydra: původní rozměry i vzájemné pozice z desktopu, celé jen zmenšené */
+  .home-join-art { position: relative; inset: auto; width: 558px; height: 362px; flex: none; zoom: .8; }
+  .home-join-art .kruh { left: 124px; top: 27px; }
+  .home-join-art .vydra { left: 22px; top: 0; }
+  .home-join-art .maska { left: 0; top: 60px; }
 }
 @media (max-width: 760px) {
-  .home-hero { --ph: 600px; }
+  .home-hero { --ph: 760px; }
+  .home-join-art { zoom: .58; }
   .home-hero-content { top: 96px; }
   .home-hero-content .t-h1, .home-hero-content h1 { font-size: 52px !important; }
   .home-130 { padding-top: 64px; gap: 24px; }
   .home-130-drop { zoom: .75; }
   .home-lanes .chip { align-self: center !important; }
-  .hl-lane { height: 96px; }
+  .hl-lane { height: 132px; }
+  .home-lanes .chip { font-size: 19px; height: 52px; padding: 0 20px; }
+  .home-lanes .chip img { width: 28px; }
+  .hl-lane:nth-of-type(2) .chip { margin-left: 4px; }
+  .hl-lane:nth-of-type(4) .chip { margin-left: 44px; }
+  .hl-lane:nth-of-type(6) .chip { margin-left: 18px; }
+  .hl-lane:nth-of-type(8) .chip { margin-left: 32px; }
 }
 
 /* ===== Podstránky kurzů ===== */

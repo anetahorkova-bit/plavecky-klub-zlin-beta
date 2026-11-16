@@ -118,3 +118,7 @@
 .marquee { top: calc(var(--ph) - 52px); }
 /* podvodní fotka: vlnu u spodního okraje bere z masky původního hero obrázku */
 .home-hero-photo img { -webkit-mask: url(../assets/hero-voda.png) center bottom / cover no-repeat; mask: url(../assets/hero-voda.png) center bottom / cover no-repeat; object-position: center 40%; }
+
+/* Text v kapce vystředěný na střed kapky (střed obrázku = 198px) */
+.home-130-drop .uz, .home-130-drop .let, .home-130-drop .num { left: 198px; transform: translateX(-50%); text-align: center; }
+.home-130-drop .num { width: auto; white-space: nowrap; }

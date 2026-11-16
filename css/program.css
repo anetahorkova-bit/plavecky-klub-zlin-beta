@@ -142,7 +142,7 @@
 .nrow-t .t-h3 { color: var(--navy-900); transition: color .3s var(--ease); }
 .nrow-ph { height: 200px; border-radius: var(--r-md); overflow: hidden; opacity: 0; transform: translateX(-16px) scale(.97); transition: opacity .35s var(--ease), transform .5s var(--ease-out); }
 .nrow-ph img { width: 100%; height: 100%; object-fit: cover; }
-@media (hover: hover) { .nrow:hover .nrow-ph, .nrow:focus-visible .nrow-ph { opacity: 1; transform: none; } }
+.nrow:hover .nrow-ph, .nrow:focus-visible .nrow-ph { opacity: 1; transform: none; }
 @media (hover: hover) { .nrow:hover .nrow-d { color: var(--modra-500); } }
 @media (max-width: 900px) { .nrow { grid-template-columns: 1fr; gap: 12px; } .nrow-d { font-size: 32px; } .nrow-ph { display: none; } }
 .art-hero { padding: 0 var(--pad) 56px; }

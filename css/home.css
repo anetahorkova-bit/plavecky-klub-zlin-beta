@@ -136,15 +136,15 @@
 }
 
 /* Hero: jemné ztmavení pod navigací pro čitelnost */
-.home-hero-photo::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 220px; background: linear-gradient(rgba(0,31,97,.55), rgba(0,31,97,0)); z-index: 1; pointer-events: none; }
+.home-hero-photo::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 260px; background: linear-gradient(rgba(0,31,97,.75), rgba(0,31,97,.35) 45%, rgba(0,31,97,0)); z-index: 1; pointer-events: none; }
 
 /* Hero: nižší vlna (2 oblouky jako modrá vlna) + šipky carouselu */
 .home-hero-photo::after { height: calc(2.75vw + 3px); }
-.home-hero-arrows { position: absolute; right: var(--pad); top: calc(var(--ph) - 64px - 2.75vw - 72px); display: flex; gap: 12px; z-index: 3; }
+.home-hero-arrows { display: flex; gap: 12px; margin-top: 40px; }
 .home-hero-arrows .icon-btn { border-color: var(--bila); color: var(--bila); }
 .home-hero-arrows .icon-btn:hover { background: rgba(255,255,255,.18); }
 @media (max-width: 760px) {
   .home-hero-photo::after { height: 26px; background-size: 945px 26px; }
-  .home-hero-arrows { top: calc(var(--ph) - 40px - 26px - 64px); }
+  .home-hero-arrows { margin-top: 24px; }
   .home-hero-arrows .icon-btn { width: 40px; height: 40px; }
 }

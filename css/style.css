@@ -131,7 +131,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .nav-link:hover, .nav-link.is-active { color: var(--modra-300); }
 .nav.is-home .nav-link { font-weight: 400; }
-.nav.is-home:not(.is-scrolled) .nav-link { color: var(--bila); text-shadow: 0 0 10px rgba(0, 47, 148, .35); }
+.nav.is-home:not(.is-scrolled) .nav-link { color: var(--bila); text-shadow: 0 1px 12px rgba(0, 31, 97, .6); font-weight: 500; }
 .nav.is-home:not(.is-scrolled) .nav-link:hover, .nav.is-home:not(.is-scrolled) .nav-link.is-active { color: var(--modra-100); }
 .nav.is-home:not(.is-scrolled) .nav-link .chev { filter: brightness(0) invert(1); }
 .nav-link { transition: background-color .2s var(--ease), color .35s var(--ease); }

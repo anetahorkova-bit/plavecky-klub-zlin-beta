@@ -65,8 +65,10 @@
             ${programs.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}<a href="#" data-todo>Letní tábory</a></div>
           <div class="footer-col"><span class="t-eyebrow">Klub</span>
             <a href="o-klubu.html#historie">Historie</a><a href="o-klubu.html#treneri">Trenéři</a><a href="o-klubu.html#uspechy">Úspěchy</a><a href="#" data-todo>Galerie</a><a href="o-klubu.html#partneri">Partneři</a></div>
-          <div class="footer-col"><span class="t-eyebrow">Pro rodiče</span>
-            <a href="pripravka.html#program">Rozvrh</a><a href="prihlaska.html">Ceník</a><a href="prihlaska.html">Přihláška</a><a href="${document.getElementById('faq') ? '#faq' : 'index.html#faq'}">Časté dotazy</a><a href="#" data-todo>Kontakt</a></div>
+          <div class="footer-col"><span class="t-eyebrow">Přihlášky</span>
+            <a href="prihlaska.html">Přihláška</a><a href="https://www.plaveckyklubzlin.cz/cz/ochrana-osobnich-udaju" target="_blank" rel="noopener">Ochrana osobních údajů</a><a href="https://www.plaveckyklubzlin.cz/cz/ke-stazeni/soubory/1" target="_blank" rel="noopener">Stanovy a směrnice</a></div>
+          <div class="footer-col"><span class="t-eyebrow">Důležité odkazy</span>
+            <a href="https://zlinswim.rajce.idnes.cz/" target="_blank" rel="noopener">Fotogalerie Rajče.net</a><a href="http://www.statistikaplavani.cz/" target="_blank" rel="noopener">Statistiky plavců ČR</a><a href="https://www.czechswimming.cz/" target="_blank" rel="noopener">ČSPS</a></div>
         </div>
       </div>
       <div class="footer-bottom"><div class="footer-legal"><span>© 2026 Plavecký klub Zlín, z. s.</span><a href="#" data-todo>Ochrana osobních údajů</a><a href="#" data-todo>Cookies</a><a href="#" data-todo>Nastavení soukromí</a></div><span>Webdesign: <a href="#" data-todo>Studio 9</a></span></div>

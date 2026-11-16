@@ -212,3 +212,8 @@ img, video, svg { max-width: 100%; }
   .tl-rail { width: 84px; }
   .tl-content { gap: 32px; }
 }
+
+/* Mobil: CTA v hlavičce sekce pod nadpisem */
+@media (max-width: 760px) {
+  .section-head { flex-direction: column; align-items: flex-start; gap: 20px; }
+}

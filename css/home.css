@@ -134,3 +134,6 @@
   .home-hero-strip { top: calc(var(--ph) - 42px); }
   .marquee { top: calc(var(--ph) - 40px); height: 52px; }
 }
+
+/* Hero: jemné ztmavení pod navigací pro čitelnost */
+.home-hero-photo::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 220px; background: linear-gradient(rgba(0,31,97,.55), rgba(0,31,97,0)); z-index: 1; pointer-events: none; }

@@ -28,7 +28,7 @@ img, video, svg { max-width: 100%; }
   .nav-menu .nav-link .chev { display: none; }
   .nav-menu .btn-cta { margin-top: 16px; justify-content: center; flex: none; min-height: 56px; padding: 16px 32px; }
   .nav-menu > * { flex-shrink: 0; }
-  .nav-drop-panel { position: static !important; opacity: 1 !important; visibility: visible !important; transform: none !important; box-shadow: none !important; border: 0 !important; border-radius: 0 !important; width: auto !important; padding: 0 0 8px !important; display: grid !important; grid-template-columns: 1fr; gap: 4px; background: none !important; }
+  .nav-drop-panel { position: static !important; opacity: 1 !important; visibility: inherit !important; transform: none !important; box-shadow: none !important; border: 0 !important; border-radius: 0 !important; width: auto !important; padding: 0 0 8px !important; display: grid !important; grid-template-columns: 1fr; gap: 4px; background: none !important; }
   .nav-drop-panel::before { display: none; }
   .drop-item { animation: none !important; }
   body.nav-lock { overflow: hidden; }

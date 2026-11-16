@@ -54,7 +54,6 @@
     footHost.outerHTML = `
     <img class="footer-wave" src="assets/vlna-nova.svg" alt="">
     <footer class="footer" id="kontakt">
-      <p class="footer-tag">Na suchu nás nehledejte</p>
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html"><img src="assets/logo-white-footer.svg" alt="Plavecký klub Zlín"></a>
@@ -72,6 +71,7 @@
             <a href="https://zlinswim.rajce.idnes.cz/" target="_blank" rel="noopener">Fotogalerie Rajče.net</a><a href="http://www.statistikaplavani.cz/" target="_blank" rel="noopener">Statistiky plavců ČR</a><a href="https://www.czechswimming.cz/" target="_blank" rel="noopener">ČSPS</a></div>
         </div>
       </div>
+      <img class="footer-lettering" src="assets/plav-v-tom-s-nami.svg" alt="Plav v tom s námi!">
       <div class="footer-bottom"><div class="footer-legal"><span>© 2026 Plavecký klub Zlín, z. s.</span><a href="#" data-todo>Ochrana osobních údajů</a><a href="#" data-todo>Cookies</a><a href="#" data-todo>Nastavení soukromí</a></div><span>Webdesign: <a href="#" data-todo>Studio 9</a></span></div>
     </footer>`;
   }

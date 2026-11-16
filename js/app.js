@@ -36,7 +36,13 @@
         <a class="nav-link" href="#kontakt">Kontakt</a>
         <a class="btn btn-l btn-cta" href="prihlaska.html">Přihláška</a>
       </nav>
+      <button class="nav-burger" type="button" aria-label="Otevřít menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </header>`;
+    const hdr = document.getElementById('nav'), burger = hdr.querySelector('.nav-burger');
+    const setMenu = (open) => { hdr.classList.toggle('nav-open', open); document.body.classList.toggle('nav-lock', open); burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Zavřít menu' : 'Otevřít menu'); };
+    burger.addEventListener('click', () => setMenu(!hdr.classList.contains('nav-open')));
+    hdr.querySelectorAll('.nav-menu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   }
 
   /* ---------- Patička ---------- */

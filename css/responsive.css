@@ -1,0 +1,72 @@
+/* ===== Responzivita (tablet ≤1024, mobil ≤760) ===== */
+.nav-burger { display: none; }
+img, video, svg { max-width: 100%; }
+
+@media (max-width: 1200px) {
+  :root { --pad: 48px; }
+}
+
+@media (max-width: 1024px) {
+  :root { --pad: 32px; }
+  html, body { overflow-x: clip; }
+  :not(img)[style*="width:"] { max-width: 100% !important; }
+
+  /* Mobilní menu */
+  .nav-burger { display: flex; flex-direction: column; justify-content: center; gap: 6px; width: 48px; height: 48px; padding: 12px; border: 0; border-radius: var(--r-full); background: var(--bila); cursor: pointer; position: relative; z-index: 3; }
+  .nav-burger span { display: block; height: 2px; border-radius: 2px; background: var(--navy-900); transition: transform .3s var(--ease), opacity .2s; }
+  .nav.nav-open .nav-burger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav.nav-open .nav-burger span:nth-child(2) { opacity: 0; }
+  .nav.nav-open .nav-burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .nav-logo img { height: 44px; }
+  .nav-menu { position: fixed; inset: 0; z-index: 2; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 4px; padding: 96px var(--pad) 32px; border-radius: 0; background: var(--bila) !important; overflow-y: auto; opacity: 0; visibility: hidden; transition: opacity .25s var(--ease), visibility .25s; }
+  .nav.nav-open .nav-menu { opacity: 1; visibility: visible; }
+  .nav.nav-open .nav-logo { z-index: 3; }
+  .nav.nav-open .logo-dark { opacity: 1 !important; }
+  .nav.nav-open .logo-light { opacity: 0 !important; }
+  .nav-menu .nav-link { color: var(--navy-900) !important; text-shadow: none !important; font-size: 22px; padding: 14px 8px; background: none !important; }
+  .nav-menu .nav-link:hover { color: var(--modra-300) !important; }
+  .nav-menu .nav-link .chev { display: none; }
+  .nav-menu .btn-cta { margin-top: 16px; justify-content: center; }
+  .nav-drop-panel { position: static !important; opacity: 1 !important; visibility: visible !important; transform: none !important; box-shadow: none !important; width: auto !important; padding: 0 0 8px !important; display: grid !important; grid-template-columns: 1fr; gap: 4px; background: none !important; }
+  .nav-drop-panel::before { display: none; }
+  .drop-item { animation: none !important; }
+  body.nav-lock { overflow: hidden; }
+
+  /* Obecné mřížky */
+  .footer-top { flex-direction: column; gap: 48px; }
+  .footer-cols { flex-wrap: wrap; gap: 32px 48px; }
+}
+
+@media (max-width: 760px) {
+  :root { --pad: 16px; }
+  .t-h1, h1 { font-size: 44px !important; line-height: 1.1 !important; }
+  .t-h2, h2 { font-size: 32px !important; line-height: 1.15 !important; }
+  .t-h3 { font-size: 22px !important; }
+  .t-perex { font-size: 18px !important; }
+  .footer-cols { display: grid; grid-template-columns: 1fr 1fr; }
+  .btn-l { padding-left: 24px; padding-right: 24px; }
+}
+
+/* ===== Úvod ===== */
+@media (max-width: 1024px) {
+  .home-hero { --ph: 680px; }
+  .home-hero-content { width: auto; right: var(--pad); }
+  .home-130 { height: auto; flex-direction: column; gap: 48px; padding: 96px var(--pad); align-items: flex-start; }
+  .home-130-drop { align-self: center; }
+  .home-130-text { width: 100%; min-width: 0; }
+  .home-130-text * { max-width: 100%; }
+  .home-join { height: auto; display: block; }
+  .home-join-inner { width: 100%; height: auto; display: flex; flex-direction: column-reverse; align-items: center; gap: 32px; padding: 120px var(--pad) 96px; }
+  .home-join-panel { top: 0; height: 100%; object-fit: cover; object-position: left center; }
+  .home-join-text { position: relative; left: auto; top: auto; width: 100%; max-width: 560px; }
+  .home-join-art { position: relative; inset: auto; width: 300px; height: 210px; flex: none; }
+  .home-join-art .kruh { left: 124px; top: 27px; width: 180px; height: 179px; }
+  .home-join-art .vydra { left: 22px; top: 0; width: 300px; height: 203px; }
+  .home-join-art .maska { left: 0; top: 60px; width: 97px; height: 99px; }
+}
+@media (max-width: 760px) {
+  .home-hero { --ph: 600px; }
+  .home-hero-content { top: 96px; }
+  .home-hero-content .t-h1, .home-hero-content h1 { font-size: 52px !important; }
+  .home-130-drop { transform: scale(.8); transform-origin: top center; margin-bottom: -85px; }
+}

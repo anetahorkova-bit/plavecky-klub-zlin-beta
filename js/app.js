@@ -33,7 +33,7 @@
         <a class="nav-link" href="#" data-todo>Tábory</a>
         <a class="nav-link${active('oklubu')}" href="o-klubu.html">O Klubu</a>
         <a class="nav-link" href="aktuality.html">Aktuality</a>
-        <a class="nav-link" href="#kontakt">Kontakt</a>
+        <a class="nav-link" href="#" data-todo>Kontakt</a>
         <a class="btn btn-l btn-cta" href="prihlaska.html">Přihláška</a>
       </nav>
       <button class="nav-burger" type="button" aria-label="Otevřít menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -66,7 +66,7 @@
           <div class="footer-col"><span class="t-eyebrow">Klub</span>
             <a href="o-klubu.html#historie">Historie</a><a href="o-klubu.html#treneri">Trenéři</a><a href="o-klubu.html#uspechy">Úspěchy</a><a href="#" data-todo>Galerie</a><a href="o-klubu.html#partneri">Partneři</a></div>
           <div class="footer-col"><span class="t-eyebrow">Pro rodiče</span>
-            <a href="pripravka.html#program">Rozvrh</a><a href="prihlaska.html">Ceník</a><a href="prihlaska.html">Přihláška</a><a href="${document.getElementById('faq') ? '#faq' : 'index.html#faq'}">Časté dotazy</a><a href="#kontakt">Kontakt</a></div>
+            <a href="pripravka.html#program">Rozvrh</a><a href="prihlaska.html">Ceník</a><a href="prihlaska.html">Přihláška</a><a href="${document.getElementById('faq') ? '#faq' : 'index.html#faq'}">Časté dotazy</a><a href="#" data-todo>Kontakt</a></div>
         </div>
       </div>
       <div class="footer-bottom"><div class="footer-legal"><span>© 2026 Plavecký klub Zlín, z. s.</span><a href="#" data-todo>Ochrana osobních údajů</a><a href="#" data-todo>Cookies</a><a href="#" data-todo>Nastavení soukromí</a></div><span>Webdesign: <a href="#" data-todo>Studio 9</a></span></div>

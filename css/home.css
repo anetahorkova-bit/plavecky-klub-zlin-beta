@@ -36,7 +36,6 @@
 .chip {
   position: absolute; height: 93px; padding: 0 58px; gap: 12.6px; display: inline-flex; align-items: center;
   border-radius: var(--r-full); font-size: 48px; font-weight: 500; line-height: 1.1; white-space: nowrap;
-  filter: drop-shadow(0 4px 4px rgba(0, 47, 148, .25));
   transition: translate .35s var(--ease-out), transform .4s var(--ease-out), opacity .8s var(--ease-out);
 }
 .chip img { width: 50.5px; height: 50.5px; transition: transform .4s var(--ease-out); }

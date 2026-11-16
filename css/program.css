@@ -111,12 +111,12 @@
 .pr-steps .t-h2 { margin-bottom: 64px; }
 .steps { display: flex; flex-direction: column; gap: 24px; margin-bottom: 64px; }
 .step { display: grid; grid-template-columns: 200px 420px 1fr; gap: 40px; align-items: center; cursor: pointer; outline: none; }
-.step-n { font-size: 140px; font-weight: 300; line-height: 1; color: var(--oranzova-200); transition: color .35s var(--ease); }
-.step-t { color: var(--oranzova-200); transition: color .35s var(--ease); }
+.step-n { font-size: 140px; font-weight: 300; line-height: 1; color: var(--modra-100); transition: color .35s var(--ease); }
+.step-t { color: var(--modra-100); transition: color .35s var(--ease); }
 .step-d { display: flex; align-items: center; gap: 16px; opacity: 0; transform: translateX(-12px); transition: opacity .35s var(--ease), transform .45s var(--ease-out); }
 .step-d img { width: 120px; height: 6px; object-fit: cover; object-position: left; flex: none; }
 .step-d p { max-width: 400px; color: var(--navy-900); }
-.step.on .step-n, .step.on .step-t { color: var(--oranzova-500); }
+.step.on .step-n, .step.on .step-t { color: var(--modra-300); }
 .step.on .step-d { opacity: 1; transform: none; }
 .info-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .info-row .c-card { width: auto; height: auto; min-height: 340px; }

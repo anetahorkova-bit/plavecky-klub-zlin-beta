@@ -21,7 +21,7 @@
 .marquee { position: absolute; left: 0; right: 0; top: var(--ph); height: 92px; display: flex; align-items: center; overflow: hidden; z-index: 2; }
 .marquee-track { display: flex; align-items: center; gap: 28px; width: max-content; animation: marquee 28s linear infinite; padding-left: 28px; will-change: transform; backface-visibility: hidden; }
 .marquee-track span { font-size: 20px; letter-spacing: .04em; font-weight: 600; line-height: 1.2; white-space: nowrap; }
-.marquee-track img { width: 36px; height: 10px; flex: none; display: block; }
+.marquee-track img { width: 36px; height: 12px; flex: none; display: block; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
@@ -126,3 +126,11 @@
 .home-hero-photo img { -webkit-mask: none; mask: none; }
 .home-hero-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: calc(5.0625vw + 1px); min-height: 20px; background: url(../assets/vlna-zluta.svg) center bottom / 100% 100% no-repeat; pointer-events: none; z-index: 1; }
 .home-hero-strip { top: calc(var(--ph) - 66px); }
+
+/* Mobil: užší žlutý pás pod hero */
+@media (max-width: 760px) {
+  .home-hero { height: calc(var(--ph) + 12px); }
+  .home-hero-photo, .home-hero-photo img { height: calc(var(--ph) - 40px); }
+  .home-hero-strip { top: calc(var(--ph) - 42px); }
+  .marquee { top: calc(var(--ph) - 40px); height: 52px; }
+}

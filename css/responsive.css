@@ -223,6 +223,5 @@ img, video, svg { max-width: 100%; }
   .coach-tile, .coach, .coach .ph { width: min(342px, calc(100vw - 2 * var(--pad) - 64px)); }
   .coach-tile { min-height: 0; padding: 24px; }
   .coach .ph { height: auto; aspect-ratio: 342 / 420; }
-  .coach .ph img { inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover; }
   .coach-track { gap: 16px; }
 }

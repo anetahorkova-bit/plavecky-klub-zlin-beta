@@ -58,7 +58,7 @@ img, video, svg { max-width: 100%; }
   .home-130-text * { max-width: 100%; }
   .home-join { height: auto; display: block; }
   .home-join-inner { width: 100%; height: auto; display: flex; flex-direction: column-reverse; align-items: center; gap: 32px; padding: 120px var(--pad) 96px; }
-  .home-join-panel { top: 0; height: 100%; object-fit: cover; object-position: left center; }
+  .home-join-panel { left: 0; translate: none; width: 100%; top: 0; height: 100%; object-fit: cover; object-position: left center; }
   .home-join-text { position: relative; left: auto; top: auto; width: 100%; max-width: 560px; }
   /* vydra: původní rozměry i vzájemné pozice z desktopu, celé jen zmenšené */
   .home-join-art { position: relative; inset: auto; width: 558px; height: 362px; flex: none; zoom: .8; }

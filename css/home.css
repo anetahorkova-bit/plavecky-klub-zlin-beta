@@ -67,12 +67,12 @@
 /* Přidejte se */
 .home-join { position: relative; height: max(627px, 39.1875vw); overflow: hidden; display: flex; align-items: center; justify-content: center; }
 .home-join-inner { position: relative; width: 1600px; height: 627px; flex: none; }
-.home-join-panel { position: absolute; left: 0; top: max(18px, 1.125vw); width: 100%; height: auto; max-width: none; }
+.home-join-panel { position: absolute; left: 50%; translate: -50% 0; top: max(18px, 1.125vw); width: max(1600px, 100%); height: auto; max-width: none; }
 .home-join-art { position: absolute; inset: 0; pointer-events: none; }
 .home-join-art .kruh { position: absolute; left: 970px; top: 160px; width: 322px; height: 320px; }
 .home-join-art .vydra { position: absolute; left: 868px; top: 133px; width: 536px; height: 362px; animation: bob 4.5s ease-in-out infinite; }
 .home-join-art .maska { position: absolute; left: 846px; top: 193px; width: 173px; height: 177px; }
-.home-join-text { position: absolute; left: 271px; top: 221px; width: 529px; display: flex; flex-direction: column; gap: 12px; }
+.home-join-text { position: absolute; left: max(271px, calc(var(--pad) + 800px - 50vw)); max-width: calc(100vw - 2 * var(--pad) - 480px); top: 221px; width: 529px; display: flex; flex-direction: column; gap: 12px; }
 .home-join-text > div { margin-top: 12px; }
 .home-kurzy-head { justify-content: center; text-align: center; }
 .home-kurzy-head .t-h1 { color: var(--navy-900); }

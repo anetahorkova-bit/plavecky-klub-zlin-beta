@@ -244,3 +244,9 @@ img, video, svg { max-width: 100%; }
   .faq-q { font-size: 18px; padding: 20px 0; }
   .faq-a p { padding-right: 32px; }
 }
+
+/* Leták na šířku (A4 landscape) */
+.leaflet-wide .leaflet-img { width: 600px; height: 424px; }
+@media (max-width: 1200px) { .leaflet-wide .leaflet-img { width: 46%; height: auto; aspect-ratio: 600 / 424; } }
+@media (max-width: 1024px) { .leaflet-wide .leaflet-img { width: 100%; max-width: 600px; } }
+@media (max-width: 760px) { .leaflet-wide .leaflet-img { max-width: none; aspect-ratio: 600 / 424; } }

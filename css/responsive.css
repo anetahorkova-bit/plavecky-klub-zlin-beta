@@ -228,7 +228,7 @@ img, video, svg { max-width: 100%; }
 
 /* Mobil: vlny ve stálém poměru (oříznuté, ne smáčknuté) */
 @media (max-width: 760px) {
-  .home-hero-photo::after { height: 44px; background-size: 870px 44px; }
+  .home-hero-photo::after { height: 26px; background-size: 945px 26px; }
   .footer-wave { height: 44px; object-fit: cover; object-position: center top; }
   .faq-wave { padding-top: calc(44px + 64px);
     background: url(../assets/vlna-nova.svg) center top / 870px 44px no-repeat,

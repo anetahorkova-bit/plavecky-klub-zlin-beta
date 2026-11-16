@@ -225,3 +225,13 @@ img, video, svg { max-width: 100%; }
   .coach .ph { height: auto; aspect-ratio: 342 / 420; }
   .coach-track { gap: 16px; }
 }
+
+/* Mobil: vlny ve stálém poměru (oříznuté, ne smáčknuté) */
+@media (max-width: 760px) {
+  .home-hero-photo::after { height: 44px; background-size: 870px 44px; }
+  .footer-wave { height: 44px; object-fit: cover; object-position: center top; }
+  .faq-wave { padding-top: calc(44px + 64px);
+    background: url(../assets/vlna-nova.svg) center top / 870px 44px no-repeat,
+                url(../assets/faq-vlna.svg) center bottom / 100% auto no-repeat,
+                linear-gradient(#002F94, #002F94) left 40px / 100% calc(100% - 20vw - 40px) no-repeat; }
+}

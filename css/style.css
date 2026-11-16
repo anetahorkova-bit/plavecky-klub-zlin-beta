@@ -267,6 +267,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .faq-split .faq-list { width: auto; border-top: 1px solid var(--seda-200); }
 .faq-split .faq-n { font-size: 13px; font-weight: 500; color: var(--seda-600); width: 24px; flex: none; }
 .faq-split .faq-q { justify-content: flex-start; }
+.faq-split .faq-a p { padding-left: 48px; }
 .faq-split .faq-q .pm { margin-left: auto; }
 .faq-split .faq-item.is-open .faq-q { color: var(--modra-300); }
 @media (min-width: 901px) { .faq-split .faq-a { display: none; } }

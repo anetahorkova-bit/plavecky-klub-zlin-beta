@@ -326,7 +326,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .faq-wave > .bg { display: none; }
 .faq-wave { min-height: 0 !important; padding-top: calc(5.0625vw + 120px); padding-bottom: 160px;
   padding-bottom: 200px;
-  background: url(../assets/vlna-paticka.svg) center top / 100% auto no-repeat,
+  background: url(../assets/vlna-nova.svg) center top / 100% auto no-repeat,
               url(../assets/faq-vlna.svg) center bottom / 100% auto no-repeat,
               linear-gradient(#002F94, #002F94) left calc(5.0625vw - 4px) / 100% calc(100% - 25vw + 6px) no-repeat; }
 @media (max-width: 760px) { .faq-wave { padding-top: calc(5.0625vw + 64px); padding-bottom: calc(20vw + 64px); } }

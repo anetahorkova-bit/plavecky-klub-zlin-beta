@@ -52,7 +52,7 @@
   const footHost = document.querySelector('[data-footer]');
   if (footHost) {
     footHost.outerHTML = `
-    <img class="footer-wave" src="assets/vlna-paticka.svg" alt="">
+    <img class="footer-wave" src="assets/vlna-nova.svg" alt="">
     <footer class="footer" id="kontakt">
       <div class="footer-top">
         <div class="footer-brand">

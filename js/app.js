@@ -43,6 +43,9 @@
     burger.addEventListener('click', () => setMenu(!hdr.classList.contains('nav-open')));
     hdr.querySelectorAll('.nav-menu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+    // Výška navigace pro sticky prvky pod ní (bez mezery)
+    const setNavH = () => document.documentElement.style.setProperty('--nav-h', hdr.getBoundingClientRect().bottom + 'px');
+    new ResizeObserver(setNavH).observe(hdr, { box: 'border-box' }); hdr.addEventListener('transitionend', setNavH); addEventListener('scroll', setNavH, { passive: true }); setNavH();
   }
 
   /* ---------- Patička ---------- */

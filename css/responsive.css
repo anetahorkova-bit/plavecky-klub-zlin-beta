@@ -129,7 +129,7 @@ img, video, svg { max-width: 100%; }
 @media (max-width: 1024px) {
   .ok-hero { min-height: 0; padding-top: 120px; }
   .ok-body { flex-direction: column; gap: 32px; }
-  .ok-side { width: auto; margin: 0 calc(var(--pad) * -1); padding: 0 var(--pad); top: 72px; z-index: 3; background: var(--bila); display: flex; overflow-x: auto; scrollbar-width: none; align-self: stretch; }
+  .ok-side { width: auto; margin: 0 calc(var(--pad) * -1); padding: 0 var(--pad); top: calc(var(--nav-h, 72px) - 1px); z-index: 3; background: var(--bila); display: flex; overflow-x: auto; scrollbar-width: none; align-self: stretch; }
   .ok-side::-webkit-scrollbar { display: none; }
   .ok-side a, .ok-side a:first-child { flex: none; padding: 16px 14px; white-space: nowrap; background: none; border-bottom: 2px solid transparent; }
   .ok-side a::before { display: none; }

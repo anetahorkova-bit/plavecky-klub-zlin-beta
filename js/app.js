@@ -9,7 +9,7 @@
   const programs = [
     ['pripravka.html', 'Přípravka', 'var(--zluta-500)', 'zvire-zaba.svg', '5 až 10 let'],
     ['klubove-plavani.html', 'Klubové plavání', 'var(--modra-300)', 'zvire-kachna.svg', '9 až 15 let'],
-    ['sportovni-tridy.html', 'Sportovní třídy', 'var(--navy-700)', 'zvire-bobr.svg', '4. až 9. třída'],
+    ['sportovni-tridy.html', 'Sportovní třídy', 'var(--tyrkys-200)', 'zvire-bobr.svg', '4. až 9. třída'],
     ['vrcholove-plavani.html', 'Vrcholové plavání', 'var(--oranzova-500)', 'zvire-vydra.svg', 'SŠ a VŠ'],
   ];
 

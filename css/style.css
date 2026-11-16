@@ -321,3 +321,12 @@ button:focus:not(:focus-visible) { outline: none; }
   .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .nav-drop > .nav-link { color: var(--modra-300); }
   .nav.is-home { transition: background-color .25s var(--ease), padding .3s var(--ease), box-shadow .3s var(--ease); }
 }
+
+/* FAQ: malá vlnka nahoře jako v patičce */
+.faq-wave > .bg { display: none; }
+.faq-wave { min-height: 0 !important; padding-top: calc(5.0625vw + 120px); padding-bottom: 160px;
+  padding-bottom: calc(5.0625vw + 160px);
+  background: url(../assets/vlna-paticka.svg) center top / 100% auto no-repeat,
+              url(../assets/vlna-dolu.svg?v=2) center bottom / 100% auto no-repeat,
+              linear-gradient(#002F94, #002F94) left calc(5.0625vw - 1px) / 100% calc(100% - 10.125vw + 2px) no-repeat; }
+@media (max-width: 760px) { .faq-wave { padding-top: calc(5.0625vw + 64px); padding-bottom: calc(5.0625vw + 96px); } }

@@ -33,7 +33,7 @@
         <a class="nav-link" href="#" data-todo>Tábory</a>
         <a class="nav-link${active('oklubu')}" href="o-klubu.html">O Klubu</a>
         <a class="nav-link" href="aktuality.html">Aktuality</a>
-        <a class="nav-link" href="#" data-todo>Kontakt</a>
+        <a class="nav-link${active('kontakt')}" href="kontakt.html">Kontakt</a>
         <a class="btn btn-l btn-cta" href="prihlaska.html">Přihláška</a>
       </nav>
       <button class="nav-burger" type="button" aria-label="Otevřít menu" aria-expanded="false"><span></span><span></span><span></span></button>

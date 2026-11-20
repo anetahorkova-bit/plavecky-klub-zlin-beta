@@ -7,9 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1795180691">
-  <link rel="stylesheet" href="css/program.css?v=1795180691">
-  <link rel="stylesheet" href="css/oklubu.css?v=1795180691">
+  <link rel="stylesheet" href="css/style.css?v=">
+  <link rel="stylesheet" href="css/program.css?v=">
+  <link rel="stylesheet" href="css/oklubu.css?v=">
   <style>
     .pr-intro { padding: 48px var(--pad) 64px; }
     .pr-intro .perex { max-width: 420px; }
@@ -65,7 +65,7 @@
       .slot { flex-wrap: wrap; padding: 28px var(--pad); gap: 8px 16px; } .slot .day, .slot .time { width: auto; } .slot .grp { flex-basis: 100%; }
     }
   </style>
-  <link rel="stylesheet" href="css/responsive.css?v=1795180691">
+  <link rel="stylesheet" href="css/responsive.css?v=">
 </head>
 <body data-page="prihlaska">
 <div data-nav></div>
@@ -94,7 +94,7 @@
   <div style="height:120px"></div>
   <div data-footer></div>
 </div>
-<script src="js/app.js?v=1795180691"></script>
+<script src="js/app.js?v="></script>
 <script>
 (() => {
   const D = {
@@ -113,7 +113,7 @@
   const val = (k) => k === 'course' ? D[S.course].name
     : k === 'level' ? D.pripravka.levels[S.level].name + ' · ' + D.pripravka.levels[S.level].price
     : k === 'term' ? S.term : '';
-  const head = (i, n, t) => `<div class="pr-head"><span class="t-eyebrow">Krok ${i} ze ${n}</span><h2 class="t-h2">${t}</h2></div>`;
+  const head = (i, n, t) => `<div class="pr-head"><span class="t-eyebrow">Krok ${i}</span><h2 class="t-h2">${t}</h2></div>`;
   const lane = (o) => `<div class="lane-rope"></div><button type="button" class="lane pr-lane" ${o.attr}>
       <div class="lane-animal"><img src="assets/${o.img}" alt="" style="width:${o.w}px;height:${o.h}px"></div>
       <div class="lane-text"><h3 class="t-h3">${o.t}</h3><p class="t-telo muted">${o.p}</p><div class="tags">${o.tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>${o.meta ? `<div class="pr-meta"><span class="k">Termíny</span><span>${o.meta}</span></div>` : ''}</div>

@@ -29,6 +29,7 @@
 
     .stp-rows { padding: 0 var(--pad); display: flex; flex-direction: column; gap: 12px; }
     .stp-rows:empty { display: none; }
+    .pr-steps[data-howto] { padding: 0 var(--pad) 120px; }
     .stp-done { margin-bottom: 64px; } .stp-todo { margin: 64px 0 0; }
     .stp-row { display: flex; align-items: center; gap: 20px; padding: 20px 28px; border-radius: var(--r-md); background: var(--modra-100); color: var(--navy-900); }
     .stp-row .n { width: 40px; height: 40px; flex: none; border-radius: 50%; background: var(--navy-900); color: var(--bila); display: flex; align-items: center; justify-content: center; font-weight: 600; }
@@ -76,11 +77,7 @@
     <p class="t-telo perex muted">Vyberte kurz podle věku dítěte. Na stránce kurzu najdete úrovně, termíny a ceny a odtud dítě přihlásíte.</p>
   </section>
 
-  <div class="stp-rows stp-done" data-done></div>
-  <div data-stage></div>
-  <div class="stp-rows stp-todo" data-todo-rows></div>
-
-<section class="pr-steps" data-howto="pripravka" hidden>
+<section class="pr-steps" data-howto="pripravka">
     <h2 class="t-h2">Jak se přihlásit</h2>
     <div class="steps" data-steps><div class="step on" tabindex="0"><span class="step-n">01</span><span class="step-t t-h3">Vyplňte přihlášku</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Elektronicky přes klubový e-shop. Při první přihlášce se nejdřív zaregistrujete, pak dítě přihlásíte do vybrané úrovně.</p></div></div><div class="step" tabindex="0"><span class="step-n">02</span><span class="step-t t-h3">Zaplaťte příspěvek</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Na účet 4449157540/5500 (Raiffeisenbank). Variabilní symbol je rodné číslo dítěte, specifický symbol 124.</p></div></div><div class="step" tabindex="0"><span class="step-n">03</span><span class="step-t t-h3">Přijďte na první lekci</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Vezměte plavky, ručník a čepici. Neplavci začínají v týdnu od 1. září, ostatní v týdnu od 9. září 2026.</p></div></div></div>
     <div class="info-row"><div class="c-card info"><span class="t-eyebrow num">Dobré vědět</span><h3 class="t-karta">Sleva pro 2. sourozence<br>3. sourozenec −50 %</h3><p class="t-maly"></p></div><div class="c-card info"><span class="t-eyebrow num">01</span><h3 class="t-karta">Začátek kurzu</h3><p class="t-maly">1. část začíná první týden v září, 2. část první týden v únoru.</p></div><div class="c-card info"><span class="t-eyebrow num">02</span><h3 class="t-karta">Zameškané hodiny</h3><p class="t-maly">Můžete je nahradit v jiné skupině po domluvě s trenérem.</p></div><div class="c-card info info-y"><span class="t-eyebrow num">03</span><h3 class="t-karta">Máte dotaz?</h3><p class="t-maly">Dita Knedlová<br>731 621 637<br>pripravka@zlinswim.cz</p></div></div>
@@ -90,6 +87,11 @@
     <div class="steps" data-steps><div class="step on" tabindex="0"><span class="step-n">01</span><span class="step-t t-h3">Vyplňte přihlášku</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Elektronicky přes klubový e-shop. Při první přihlášce se nejdřív zaregistrujete, pak dítě přihlásíte do klubového plavání.</p></div></div><div class="step" tabindex="0"><span class="step-n">02</span><span class="step-t t-h3">Zaplaťte příspěvek</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Na účet 4449157540/5500 (Raiffeisenbank). Variabilní symbol je rodné číslo dítěte. 7 200 Kč za rok nebo 3 700 Kč za pololetí.</p></div></div><div class="step" tabindex="0"><span class="step-n">03</span><span class="step-t t-h3">Doneste potvrzení od lékaře</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Že dítě může pravidelně sportovat. Platí i potvrzení pro tábor, každý lékař může mít vlastní formulář.</p></div></div></div>
     <div class="info-row"><div class="c-card info"><span class="t-eyebrow num">Dobré vědět</span><h3 class="t-karta">Sleva pro 2. sourozence −20 %</h3><p class="t-maly"></p></div><div class="c-card info"><span class="t-eyebrow num">01</span><h3 class="t-karta">Tréninky</h3><p class="t-maly">Po 18:00 až 19:00, St 17:00 až 18:00, Pá 17:00 až 18:00. Bazén 50 m, šířky.</p></div><div class="c-card info"><span class="t-eyebrow num">02</span><h3 class="t-karta">Pro koho</h3><p class="t-maly">Pro děti 9 až 15 let, které nechodí do sportovních tříd.</p></div><div class="c-card info info-y"><span class="t-eyebrow num">03</span><h3 class="t-karta">Máte dotaz?</h3><p class="t-maly">Jiří Šup<br>info@zlinswim.cz</p></div></div>
   </section>
+  <div class="stp-rows stp-done" data-done></div>
+  <div data-stage></div>
+  <div class="stp-rows stp-todo" data-todo-rows></div>
+
+
   <div style="height:120px"></div>
   <div data-footer></div>
 </div>
@@ -148,7 +150,7 @@
     $('[data-done]').innerHTML = list.slice(0, doneUpTo).map(([k, l]) => `<div class="stp-row"><span class="n"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="tx"><span class="lb">${l}</span><span class="t-karta">${val(k)}</span></span>${cur === 'sent' ? '' : `<button type="button" class="ch" data-back="${k}">Změnit</button>`}</div>`).join('');
     $('[data-todo-rows]').innerHTML = cur === 'sent' ? '' : list.slice(ci + 1).map(([k, l], j) => `<div class="stp-row todo"><span class="n">${ci + 2 + j}</span><span class="tx"><span class="lb">${l}</span><span class="t-karta">${typeof later[k] === 'function' ? later[k](S) : later[k]}</span></span><span aria-hidden="true" style="opacity:.4">⌄</span></div>`).join('');
     const st = $('[data-stage]'); st.innerHTML = views[cur](); st.firstElementChild.classList.add('stp-open'); requestAnimationFrame(() => requestAnimationFrame(() => st.querySelectorAll('.lane-rope').forEach((r) => r.classList.add('is-in'))));
-    document.querySelectorAll('[data-howto]').forEach((h) => { h.hidden = h.dataset.howto !== S.course; });
+    document.querySelectorAll('[data-howto]').forEach((h) => { h.hidden = h.dataset.howto !== (S.course || 'pripravka'); });
     if (scroll) (document.querySelector('[data-done] .stp-row:last-child') || st).scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   document.addEventListener('click', (e) => {

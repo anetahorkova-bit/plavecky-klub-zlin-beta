@@ -41,7 +41,7 @@
 .chip img { width: 50.5px; height: 50.5px; transition: transform .4s var(--ease-out); }
 .chip:hover img { transform: translateX(6px); }
 .chip-1 { left: 396px; top: 14px; background: var(--zluta-500); color: var(--navy-900); }
-.chip-2 { left: 750px; top: 144px; background: var(--modra-300); color: #fff; }
+.chip-2 { left: 750px; top: 144px; background: var(--modra-300); color: var(--navy-900); }
 .chip-3 { left: 203px; top: 294px; background: var(--tyrkys-200); color: var(--navy-900); }
 .chip-4 { left: 750px; top: 435px; background: var(--oranzova-500); color: #fff; }
 .chip.is-in { animation: float 6s ease-in-out infinite; }

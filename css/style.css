@@ -359,3 +359,11 @@ button:focus:not(:focus-visible) { outline: none; }
 .e404 .btn { margin-top: 16px; }
 @media (max-width: 1100px) { .e404 { grid-template-columns: 1fr; } .e404-num { order: -1; } .e404-num span { font-size: 160px; } .e404-num img { width: 160px; } }
 @media (max-width: 760px) { .e404 { padding: 64px var(--pad) 96px; gap: 40px; } .e404-num span { font-size: 110px; } .e404-num img { width: 110px; } }
+
+/* Kontakt: mapa OpenStreetMap */
+#kt-map { height: 388px; background: #dbe8fb; z-index: 0; }
+#kt-map .leaflet-tile-pane { filter: grayscale(1) sepia(1) hue-rotate(180deg) saturate(1.6) brightness(1.08) contrast(.9); }
+.kt-pin { background: none; border: 0; }
+.kt-tip { background: #fff; color: var(--navy-900); border: 0; border-radius: 999px; padding: 6px 12px; font: 600 12px Rubik, sans-serif; box-shadow: 0 2px 8px rgba(0,47,148,.15); }
+.kt-tip::before { display: none; }
+@media (max-width: 760px) { #kt-map { height: 300px; } }

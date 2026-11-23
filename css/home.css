@@ -54,7 +54,7 @@
 .home-130-drop { position: relative; width: 373px; height: 426px; flex: none; }
 .home-130-drop img { position: absolute; left: 32.5px; top: 0; width: 331px; height: 426px; }
 .home-130-drop.is-in img { animation: drop-wobble 5s ease-in-out infinite; transform-origin: 50% 100%; }
-@keyframes drop-wobble { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.02, .985); } }
+@keyframes drop-wobble { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1, 1); } }
 .home-130-drop .uz, .home-130-drop .let { position: absolute; left: 196px; transform: translateX(-50%); font-size: 28px; font-weight: 600; line-height: 1.2; text-align: center; }
 .home-130-drop .uz { top: 133px; }
 .home-130-drop .let { top: 298px; width: 221px; }

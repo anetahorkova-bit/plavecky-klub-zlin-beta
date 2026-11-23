@@ -24,7 +24,7 @@
 .stat { border-radius: var(--r-lg); padding: 32px; display: flex; flex-direction: column; gap: 12px; color: var(--navy-700); transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out); }
 .stat:hover { }
 .stat .ilu { height: 96px; width: auto; align-self: flex-start; transition: transform .6s var(--ease-out); }
-.stat:hover .ilu { transform: rotate(-6deg) scale(1.06); }
+.stat:hover .ilu { transform: scale(1.06); }
 
 /* Časová osa */
 .tl { display: flex; gap: 40px; align-items: center; }

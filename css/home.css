@@ -104,7 +104,7 @@
 .hl-axis::before { left: 0; } .hl-axis::after { right: 0; }
 .home-lanes .chip { position: relative; left: auto; top: auto; translate: none; margin-left: var(--x, 20%); }
 .home-lanes .chip.is-in { animation: none; }
-.home-lanes .chip:hover { translate: 8px 0; }
+.home-lanes .chip { transition: transform .4s var(--ease-out), opacity .8s var(--ease-out); }
 @media (max-width: 760px) {
   .hl-lane { height: 104px; padding-left: calc(var(--pad) + 48px); }
   .home-lanes .chip { margin-left: 0; font-size: 22px; height: 56px; padding: 0 24px; }

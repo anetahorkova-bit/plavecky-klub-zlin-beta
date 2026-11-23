@@ -205,13 +205,22 @@
 
   /* ---------- Čipy kurzů: pohyb za myší ---------- */
   document.querySelectorAll('.chip').forEach((c) => {
+    if (matchMedia('(hover: none), (prefers-reduced-motion: reduce)').matches) return;
+    let base = null, tx = 0, ty = 0, x = 0, y = 0, raf = 0;
+    const tick = () => {
+      x += (tx - x) * 0.14; y += (ty - y) * 0.14;
+      c.style.translate = `${x.toFixed(2)}px ${y.toFixed(2)}px`;
+      if (Math.abs(tx - x) > 0.05 || Math.abs(ty - y) > 0.05) raf = requestAnimationFrame(tick); else raf = 0;
+    };
+    const go = () => { if (!raf) raf = requestAnimationFrame(tick); };
+    c.addEventListener('mouseenter', () => { const r = c.getBoundingClientRect(); base = { cx: r.left + r.width / 2 - x, cy: r.top + r.height / 2 - y, w: r.width, h: r.height }; });
     c.addEventListener('mousemove', (e) => {
-      const r = c.getBoundingClientRect();
-      const dx = (e.clientX - (r.left + r.width / 2)) / r.width;
-      const dy = (e.clientY - (r.top + r.height / 2)) / r.height;
-      c.style.translate = `${(dx * 28).toFixed(1)}px ${(dy * 16).toFixed(1)}px`;
+      if (!base) return;
+      tx = ((e.clientX - base.cx) / base.w) * 20;
+      ty = ((e.clientY - base.cy) / base.h) * 10;
+      go();
     });
-    c.addEventListener('mouseleave', () => { c.style.translate = '0 0'; });
+    c.addEventListener('mouseleave', () => { base = null; tx = 0; ty = 0; go(); });
   });
 
   /* ---------- Jemný parallax ---------- */

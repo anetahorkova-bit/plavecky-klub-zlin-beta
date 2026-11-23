@@ -163,11 +163,8 @@
 .home-intro-lead .hi-a .w.on { color: var(--navy-900); }
 .home-intro-lead .hi-b .w.on { color: var(--navy-900); }
 .home-intro-art { width: 200px; height: auto; }
-.home-kurzy-head { justify-content: flex-start; text-align: left; }
-.home-kurzy-head .t-eyebrow, #aktuality .section-head .t-eyebrow { color: var(--navy-900); }
 @media (max-width: 760px) {
   .home-intro { grid-template-columns: 1fr; padding: 64px var(--pad); }
   .home-intro-lead { font-size: 24px; }
   .home-intro-art { width: 140px; }
 }
-.home-kurzy-head h2.t-eyebrow, #aktuality h2.t-eyebrow { font-size: 14px; line-height: 1.2; letter-spacing: .08em; }

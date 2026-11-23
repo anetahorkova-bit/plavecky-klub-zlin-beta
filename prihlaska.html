@@ -7,164 +7,73 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=">
-  <link rel="stylesheet" href="css/program.css?v=">
-  <link rel="stylesheet" href="css/oklubu.css?v=">
+  <link rel="stylesheet" href="css/style.css?v=1795417080">
+  <link rel="stylesheet" href="css/program.css?v=1795417080">
+  <link rel="stylesheet" href="css/oklubu.css?v=1795417080">
   <style>
-    .pr-intro { padding: 48px var(--pad) 64px; }
-    .pr-intro .perex { max-width: 420px; }
-    .pr-head { padding: 0 var(--pad) 48px; display: flex; flex-direction: column; gap: 8px; }
-    .pr-lane { gap: 24px; width: 100%; text-align: left; }
+    .pr-intro { padding: 48px var(--pad) 80px; position: relative; min-height: 330px; }
+    .pr-intro .ok-hero-text { width: 640px; }
+    .pr-intro .perex { width: 420px; }
+    .pr-head { padding: 0 var(--pad) 64px; }
+    .pr-lane { gap: 24px; }
     .pr-lane .lane-text { width: 560px; }
+    .pr-lane .lane-text .t-h3 { transition: color .3s; }
     .pr-lane .lane-price { width: 220px; }
-    .pr-meta { font-size: 13px; font-weight: 500; display: flex; gap: 12px; align-items: baseline; }
-    .pr-meta .k { color: var(--seda-600); text-transform: uppercase; letter-spacing: .04em; }
-    .pr-note { padding: 32px var(--pad) 8px; display: flex; flex-direction: column; gap: 8px; }
-    .slot { display: flex; align-items: center; padding: 40px var(--pad); gap: 24px; }
-    .slot .day { width: 224px; } .slot .time { width: 324px; }
-    .slot .grp { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-    .slot.full .day, .slot.full .time, .slot.full .grp, .slot.full .grp .muted { color: #9ea8bd; }
-    .st { height: 28px; padding: 0 12px; border-radius: var(--r-full); display: inline-flex; align-items: center; font-size: 13px; font-weight: 500; }
-    .st.ok { background: var(--tyrkys-200); color: var(--navy-900); } .st.no { background: #f0f0f5; color: #9ea8bd; }
-
-    .stp-rows { padding: 0 var(--pad); display: flex; flex-direction: column; gap: 12px; }
-    .stp-rows:empty { display: none; }
-    .stp-done { margin-bottom: 64px; } .stp-todo { margin: 64px 0 0; }
-    .stp-row { display: flex; align-items: center; gap: 20px; padding: 20px 28px; border-radius: var(--r-md); background: var(--modra-100); color: var(--navy-900); }
-    .stp-row .n { width: 40px; height: 40px; flex: none; border-radius: 50%; background: var(--navy-900); color: var(--bila); display: flex; align-items: center; justify-content: center; font-weight: 600; }
-    .stp-row .tx { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-    .stp-row .lb { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; opacity: .6; }
-    .stp-row .ch { font-size: 15px; font-weight: 500; color: var(--modra-500, #005ce6); }
-    @media (hover: hover) { .stp-row .ch:hover { color: var(--navy-900); } }
-    .stp-row.todo { background: #f2f4f8; }
-    .stp-row.todo .n { background: var(--bila); color: rgba(0,31,97,.45); }
-    .stp-row.todo .t-karta { color: rgba(0,31,97,.4); }
-    .stp-row, [data-stage] { scroll-margin-top: 120px; }
-    .stp-open { animation: stpIn .5s var(--ease-out) both; }
-    @keyframes stpIn { from { opacity: 0; transform: translateY(16px); } }
-
-    .fm { margin: 0 var(--pad); max-width: 760px; border: 1px solid var(--seda-200); border-radius: var(--r-lg); padding: 40px; display: flex; flex-direction: column; gap: 32px; }
-    .fm fieldset { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .fm legend { grid-column: 1 / -1; font-size: 20px; font-weight: 600; color: var(--navy-900); margin-bottom: 16px; }
-    .fm label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500; color: var(--navy-900); }
-    .fm label.full { grid-column: 1 / -1; }
-    .fm input[type=text], .fm input[type=email], .fm input[type=tel] { height: 48px; border: 1px solid var(--seda-200); border-radius: 10px; padding: 0 14px; font: inherit; font-size: 15px; font-weight: 400; color: var(--navy-900); }
-    .fm input:focus { outline: 2px solid var(--modra-300); border-color: transparent; }
-    .fm .up { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; padding: 24px; border: 1.5px dashed rgba(0,47,148,.35); border-radius: 12px; background: var(--modra-100); cursor: pointer; }
-    .fm .up input { display: none; }
-    .fm .up .ic { width: 40px; height: 40px; border-radius: 50%; background: var(--bila); display: flex; align-items: center; justify-content: center; flex: none; font-size: 18px; }
-    .fm .up b { display: block; font-size: 16px; font-weight: 600; }
-    .fm .up span.muted { font-weight: 400; }
-    .fm .chk { display: flex; flex-direction: row; align-items: center; gap: 10px; font-size: 14px; font-weight: 400; }
-    .fm .chk input { width: 18px; height: 18px; accent-color: var(--navy-900); }
-    .stp-sent { margin: 0 var(--pad); max-width: 760px; background: var(--modra-100); border-radius: var(--r-lg); padding: 40px; display: flex; flex-direction: column; gap: 12px; }
-    @media (max-width: 760px) {
-      .fm { padding: 24px; } .fm fieldset { grid-template-columns: 1fr; }
-      .stp-row { padding: 16px 18px; gap: 14px; }
-      .slot { flex-wrap: wrap; padding: 28px var(--pad); gap: 8px 16px; } .slot .day, .slot .time { width: auto; } .slot .grp { flex-basis: 100%; }
-    }
+    .pr-note { padding: 40px var(--pad) 96px; display: flex; flex-direction: column; gap: 8px; }
   </style>
-  <link rel="stylesheet" href="css/responsive.css?v=">
+  <link rel="stylesheet" href="css/responsive.css?v=1795417080">
 </head>
 <body data-page="prihlaska">
 <div data-nav></div>
 <div class="page" style="overflow-x:clip">
 
-  <section class="pr-intro">
-    <nav class="crumbs" aria-label="Drobečková navigace"><span class="cur">Přihláška</span></nav>
-    <h1 class="t-h1" style="margin:16px 0 20px">Přihláška</h1>
-    <p class="t-telo perex muted">Vyberte kurz podle věku dítěte. Na stránce kurzu najdete úrovně, termíny a ceny a odtud dítě přihlásíte.</p>
+  <section class="pr-intro ok-hero">
+    <img class="p-hero-wave" src="assets/hero-vlna.svg" alt="">
+    <div class="ok-hero-text">
+      <nav class="crumbs" aria-label="Drobečková navigace"><span class="cur">Přihláška</span></nav>
+      <h1 class="t-h1"><span class="w"><span>Přihláška</span></span></h1>
+      <p class="t-telo perex">Vyberte kurz podle věku dítěte. Na stránce kurzu najdete úrovně, termíny a ceny a odtud dítě přihlásíte.</p>
+    </div>
   </section>
 
-  <div class="stp-rows stp-done" data-done></div>
-  <div data-stage></div>
-  <div class="stp-rows stp-todo" data-todo-rows></div>
+  <section>
+    <div class="pr-head reveal" style="display:flex;flex-direction:column;gap:8px"><span class="t-eyebrow">Krok 1</span><h2 class="t-h2">Vyberte kurz</h2></div>
+    <div class="lanes">
+      <div class="lane-rope reveal"></div>
+      <a class="lane pr-lane reveal" href="prihlaska-pripravka.html">
+        <div class="lane-animal"><img src="assets/zvire-zaba.svg" alt="" style="width:160px;height:130px"></div>
+        <div class="lane-text">
+          <h3 class="t-h3">Plavecká přípravka</h3>
+          <p class="t-telo muted">Pro děti od 5 let, které se učí plavat. Tři úrovně od neplavců po pokročilé.</p>
+          <div class="tags"><span class="tag">5 až 10 let</span><span class="tag">1× nebo 2× týdně</span><span class="tag">45 minut</span></div>
+        </div>
+        <div class="lane-gap"></div>
+        <div class="lane-price"><div class="row"><span class="t-h3">od 4 500 Kč</span><span class="t-maly muted">/ rok</span></div></div>
+        <span class="btn btn-l btn-cta">Vybrat kurz</span>
+      </a>
+      <div class="lane-rope reveal"></div>
+      <a class="lane pr-lane reveal" style="--d:.1s" href="prihlaska-klubove.html">
+        <div class="lane-animal"><img src="assets/zvire-kachna-2.svg" alt="" style="width:160px;height:130px"></div>
+        <div class="lane-text">
+          <h3 class="t-h3">Klubové plavání</h3>
+          <p class="t-telo muted">Pro děti 9 až 15 let, které nechodí do sportovních tříd a z přípravky už vyrostly.</p>
+          <div class="tags"><span class="tag">9 až 15 let</span><span class="tag">3× týdně</span><span class="tag">50 m bazén</span></div>
+        </div>
+        <div class="lane-gap"></div>
+        <div class="lane-price"><div class="row"><span class="t-h3">7 200 Kč</span><span class="t-maly muted">/ rok</span></div></div>
+        <span class="btn btn-l btn-cta">Vybrat kurz</span>
+      </a>
+      <div class="lane-rope reveal"></div>
+    </div>
+  </section>
 
-<section class="pr-steps" data-howto="pripravka" hidden>
-    <h2 class="t-h2">Jak se přihlásit</h2>
-    <div class="steps" data-steps><div class="step on" tabindex="0"><span class="step-n">01</span><span class="step-t t-h3">Vyplňte přihlášku</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Elektronicky přes klubový e-shop. Při první přihlášce se nejdřív zaregistrujete, pak dítě přihlásíte do vybrané úrovně.</p></div></div><div class="step" tabindex="0"><span class="step-n">02</span><span class="step-t t-h3">Zaplaťte příspěvek</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Na účet 4449157540/5500 (Raiffeisenbank). Variabilní symbol je rodné číslo dítěte, specifický symbol 124.</p></div></div><div class="step" tabindex="0"><span class="step-n">03</span><span class="step-t t-h3">Přijďte na první lekci</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Vezměte plavky, ručník a čepici. Neplavci začínají v týdnu od 1. září, ostatní v týdnu od 9. září 2026.</p></div></div></div>
-    <div class="info-row"><div class="c-card info"><span class="t-eyebrow num">Dobré vědět</span><h3 class="t-karta">Sleva pro 2. sourozence<br>3. sourozenec −50 %</h3><p class="t-maly"></p></div><div class="c-card info"><span class="t-eyebrow num">01</span><h3 class="t-karta">Začátek kurzu</h3><p class="t-maly">1. část začíná první týden v září, 2. část první týden v únoru.</p></div><div class="c-card info"><span class="t-eyebrow num">02</span><h3 class="t-karta">Zameškané hodiny</h3><p class="t-maly">Můžete je nahradit v jiné skupině po domluvě s trenérem.</p></div><div class="c-card info info-y"><span class="t-eyebrow num">03</span><h3 class="t-karta">Máte dotaz?</h3><p class="t-maly">Dita Knedlová<br>731 621 637<br>pripravka@zlinswim.cz</p></div></div>
+  <section class="pr-note reveal">
+    <p class="t-telo-s">Sportovní třídy a vrcholové plavání</p>
+    <p class="t-maly muted">Mají vlastní nábor, přihláška přes vedoucího trenéra. <a href="o-klubu.html#treneri" style="text-decoration:underline">Napište trenérovi</a></p>
   </section>
-<section class="pr-steps" data-howto="klubove" hidden>
-    <h2 class="t-h2">Jak se přihlásit</h2>
-    <div class="steps" data-steps><div class="step on" tabindex="0"><span class="step-n">01</span><span class="step-t t-h3">Vyplňte přihlášku</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Elektronicky přes klubový e-shop. Při první přihlášce se nejdřív zaregistrujete, pak dítě přihlásíte do klubového plavání.</p></div></div><div class="step" tabindex="0"><span class="step-n">02</span><span class="step-t t-h3">Zaplaťte příspěvek</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Na účet 4449157540/5500 (Raiffeisenbank). Variabilní symbol je rodné číslo dítěte. 7 200 Kč za rok nebo 3 700 Kč za pololetí.</p></div></div><div class="step" tabindex="0"><span class="step-n">03</span><span class="step-t t-h3">Doneste potvrzení od lékaře</span><div class="step-d"><img src="assets/vlnka-vzor.svg" alt=""><p class="t-telo">Že dítě může pravidelně sportovat. Platí i potvrzení pro tábor, každý lékař může mít vlastní formulář.</p></div></div></div>
-    <div class="info-row"><div class="c-card info"><span class="t-eyebrow num">Dobré vědět</span><h3 class="t-karta">Sleva pro 2. sourozence −20 %</h3><p class="t-maly"></p></div><div class="c-card info"><span class="t-eyebrow num">01</span><h3 class="t-karta">Tréninky</h3><p class="t-maly">Po 18:00 až 19:00, St 17:00 až 18:00, Pá 17:00 až 18:00. Bazén 50 m, šířky.</p></div><div class="c-card info"><span class="t-eyebrow num">02</span><h3 class="t-karta">Pro koho</h3><p class="t-maly">Pro děti 9 až 15 let, které nechodí do sportovních tříd.</p></div><div class="c-card info info-y"><span class="t-eyebrow num">03</span><h3 class="t-karta">Máte dotaz?</h3><p class="t-maly">Jiří Šup<br>info@zlinswim.cz</p></div></div>
-  </section>
-  <div style="height:120px"></div>
+
   <div data-footer></div>
 </div>
-<script src="js/app.js?v="></script>
-<script>
-(() => {
-  const D = {
-    pripravka: { name: 'Plavecká přípravka', levels: {
-      neplavec: { name: 'Neplavec', price: '4 500 Kč / rok', slots: [['Úterý','15:30 až 16:15','Skupina I.E','dětský bazének',0],['Úterý','16:30 až 17:15','Skupina I.A','dětský bazének',0],['Úterý','17:15 až 18:00','Skupina I.B','dětský bazének',1],['Čtvrtek','17:15 až 18:00','Skupina I.C','dětský bazének',1],['Pátek','17:15 až 18:00','Skupina I.D','dětský bazének',1]] },
-      mirne: { name: 'Mírně pokročilý', price: '5 600 Kč / rok', slots: [['Středa','18:00 až 19:00','25 m bazén, šířky','',1],['Pátek','16:00 až 17:00','25 m bazén, šířky','',1]] },
-      pokrocily: { name: 'Pokročilý', price: '5 600 Kč / rok', slots: [['Po a St','17:00 až 18:00','25 m bazén, délky','',1],['Út a Čt','17:00 až 18:00','25 m bazén, délky','',1]] } } },
-    klubove: { name: 'Klubové plavání' }
-  };
-  const S = {};
-  const $ = (s) => document.querySelector(s);
-  const steps = () => S.course === 'klubove'
-    ? [['course','Kurz'],['term','Termín'],['form','Údaje o dítěti']]
-    : [['course','Kurz'],['level','Úroveň'],['term','Termín'],['form','Údaje o dítěti']];
-  const later = { level: 'Vyberete po zvolení kurzu', term: S => S.course === 'klubove' ? 'Potvrdíte po zvolení kurzu' : 'Vyberete po zvolení úrovně', form: 'Vyplníte po výběru termínu' };
-  const val = (k) => k === 'course' ? D[S.course].name
-    : k === 'level' ? D.pripravka.levels[S.level].name + ' · ' + D.pripravka.levels[S.level].price
-    : k === 'term' ? S.term : '';
-  const head = (i, n, t) => `<div class="pr-head"><span class="t-eyebrow">Krok ${i}</span><h2 class="t-h2">${t}</h2></div>`;
-  const lane = (o) => `<div class="lane-rope"></div><button type="button" class="lane pr-lane" ${o.attr}>
-      <div class="lane-animal"><img src="assets/${o.img}" alt="" style="width:${o.w}px;height:${o.h}px"></div>
-      <div class="lane-text"><h3 class="t-h3">${o.t}</h3><p class="t-telo muted">${o.p}</p><div class="tags">${o.tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>${o.meta ? `<div class="pr-meta"><span class="k">Termíny</span><span>${o.meta}</span></div>` : ''}</div>
-      <div class="lane-gap"></div>
-      <div class="lane-price"><div class="row"><span class="t-h3">${o.price}</span><span class="t-maly muted">/ rok</span></div>${o.sub ? `<span class="t-maly muted">${o.sub}</span>` : ''}</div>
-      <span class="btn btn-l btn-cta">${o.cta}</span></button>`;
-  const views = {
-    course: () => `<section>${head(1, 4, 'Vyberte kurz')}<div class="lanes">
-      ${lane({ attr: 'data-course="pripravka"', img: 'zvire-zaba.svg', w: 160, h: 130, t: 'Plavecká přípravka', p: 'Pro děti od 5 let, které se učí plavat. Tři úrovně od neplavců po pokročilé.', tags: ['5 až 10 let','1× nebo 2× týdně','45 minut'], price: 'od 4 500 Kč', cta: 'Vybrat kurz' })}
-      ${lane({ attr: 'data-course="klubove"', img: 'zvire-kachna-2.svg', w: 160, h: 130, t: 'Klubové plavání', p: 'Pro děti 9 až 15 let, které nechodí do sportovních tříd a z přípravky už vyrostly.', tags: ['9 až 15 let','3× týdně','50 m bazén'], price: '7 200 Kč', cta: 'Vybrat kurz' })}
-      <div class="lane-rope"></div></div>
-      <div class="pr-note"><p class="t-telo-s">Sportovní třídy a vrcholové plavání</p><p class="t-maly muted">Mají vlastní nábor, přihláška přes vedoucího trenéra. <a href="o-klubu.html#treneri" style="text-decoration:underline">Napište trenérovi</a></p></div></section>`,
-    level: () => `<section>${head(2, 4, 'Vyberte úroveň')}<div class="lanes">
-      ${lane({ attr: 'data-level="neplavec"', img: 'zvire-zaba.svg', w: 115, h: 120, t: 'Neplavec', p: 'Pro děti, které ještě neplavou. Seznámení s vodou, splývání a dýchání do vody.', tags: ['Dětský bazének','1× týdně','od 1. 9. 2026'], meta: 'Út 15:30, 16:30 a 17:15 · Čt 17:15 · Pá 17:15', price: '4 500 Kč', sub: 'nebo 2× 2 300 Kč za pololetí', cta: 'Zobrazit termíny' })}
-      ${lane({ attr: 'data-level="mirne"', img: 'zvire-zelva.svg', w: 150, h: 120, t: 'Mírně pokročilý', p: 'Dítě uplave pár metrů s pomůckou. Učí se kraul a znak bez pomůcek.', tags: ['25 m, šířky','2× týdně','od 9. 9. 2026'], meta: 'St 18:00 až 19:00 · Pá 16:00 až 17:00', price: '5 600 Kč', sub: 'nebo 2× 2 900 Kč za pololetí', cta: 'Zobrazit termíny' })}
-      ${lane({ attr: 'data-level="pokrocily"', img: 'zvire-ryba.svg', w: 150, h: 84, t: 'Pokročilý', p: 'Dítě uplave 25 m. Zdokonaluje techniku kraula, znaku a startů.', tags: ['25 m, délky','2× týdně','od 9. 9. 2026'], meta: 'Po a St 17:00 až 18:00 · Út a Čt 17:00 až 18:00', price: '5 600 Kč', sub: 'nebo 2× 2 900 Kč za pololetí', cta: 'Zobrazit termíny' })}
-      <div class="lane-rope"></div></div></section>`,
-    term: () => S.course === 'klubove'
-      ? `<section>${head(2, 3, 'Termín a přihlášení')}<div class="lanes">${lane({ attr: 'data-term="Po, St a Pá · 3× týdně"', img: 'zvire-kachna-2.svg', w: 160, h: 130, t: 'Klubové plavání', p: 'Aerobní trénink, sprinty, vytrvalost, technika, suchá příprava a víkendové akce.', tags: ['50 m, šířky','3× týdně, 60 min','září 2026'], meta: 'Po 18:00 až 19:00 · St 17:00 až 18:00 · Pá 17:00 až 18:00', price: '7 200 Kč', sub: 'nebo 2× 3 700 Kč za pololetí', cta: 'Přihlásit' })}<div class="lane-rope"></div></div></section>`
-      : `<section>${head(3, 4, 'Vyberte termín')}<div class="lanes">${D.pripravka.levels[S.level].slots.map(([d, t, g, m, ok]) => `<div class="lane-rope"></div><div class="slot${ok ? '' : ' full'}"><span class="t-h3 day">${d}</span><span class="t-h3 time">${t}</span><div class="grp"><span class="t-telo-s">${g}</span>${m ? `<span class="t-maly muted">${m}</span>` : ''}</div>${ok ? `<span class="st ok">Volná místa</span><button type="button" class="btn btn-m btn-cta" data-term="${d} ${t}${g.startsWith('Skupina') ? ' · ' + g.replace('Skupina ', 'skupina ') : ''}">Vybrat termín</button>` : `<span class="st no">Kapacita naplněna</span><button type="button" class="btn btn-m btn-outline" data-term="${d} ${t} · náhradník">Jako náhradník</button>`}</div>`).join('')}<div class="lane-rope"></div></div></section>`,
-    form: () => { const n = steps().length; return `<section>${head(n, n, 'Údaje o dítěti')}<form class="fm" data-form>
-      <fieldset><legend>Dítě</legend><label>Jméno<input type="text" placeholder="Jméno"></label><label>Příjmení<input type="text" placeholder="Příjmení"></label><label>Datum narození<input type="text" placeholder="dd. mm. rrrr"></label><label>Rodné číslo<input type="text" placeholder="bez lomítka"></label><label class="full">Poznámka pro trenéra (nepovinné)<input type="text" placeholder="Zdravotní omezení, obavy z vody..."></label></fieldset>
-      <fieldset><legend>Zákonný zástupce</legend><label>Jméno a příjmení<input type="text" placeholder="Jméno a příjmení"></label><label>Telefon<input type="tel" placeholder="+420"></label><label class="full">E-mail<input type="email" placeholder="Sem pošleme potvrzení a platební údaje"></label></fieldset>
-      <fieldset><legend>Dokumenty</legend><label class="full" style="font-weight:400">Lékařské potvrzení, průkaz pojištěnce nebo jiný dokument (nepovinné)</label><label class="up"><input type="file" multiple accept=".pdf,.jpg,.jpeg,.png" data-file><span class="ic">↑</span><span><b data-file-name>Přetáhněte soubor sem nebo vyberte z počítače</b><span class="t-maly muted">PDF, JPG nebo PNG, nejvýše 10 MB</span></span></label></fieldset>
-      <div style="display:flex;flex-direction:column;gap:10px"><label class="chk"><input type="checkbox">Souhlasím se zpracováním osobních údajů</label><label class="chk"><input type="checkbox">Beru na vědomí, že přihláška je závazná</label></div>
-      <div><button type="submit" class="btn btn-l btn-cta">Odeslat přihlášku</button></div></form></section>`; },
-    sent: () => `<section><div class="stp-sent"><span class="t-eyebrow">Hotovo</span><h2 class="t-h2">Přihláška je odeslaná</h2><p class="t-telo">Potvrzení a platební údaje vám přijdou e-mailem. (Ukázka v prototypu, nic se neodesílá.)</p></div></section>`
-  };
-  const current = () => S.sent ? 'sent' : !S.course ? 'course' : (S.course === 'pripravka' && !S.level) ? 'level' : !S.term ? 'term' : 'form';
-  function render(scroll) {
-    const list = steps(), cur = current(), ci = list.findIndex(([k]) => k === cur);
-    const doneUpTo = cur === 'sent' ? list.length - 1 : ci;
-    $('[data-done]').innerHTML = list.slice(0, doneUpTo).map(([k, l]) => `<div class="stp-row"><span class="n"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="tx"><span class="lb">${l}</span><span class="t-karta">${val(k)}</span></span>${cur === 'sent' ? '' : `<button type="button" class="ch" data-back="${k}">Změnit</button>`}</div>`).join('');
-    $('[data-todo-rows]').innerHTML = cur === 'sent' ? '' : list.slice(ci + 1).map(([k, l], j) => `<div class="stp-row todo"><span class="n">${ci + 2 + j}</span><span class="tx"><span class="lb">${l}</span><span class="t-karta">${typeof later[k] === 'function' ? later[k](S) : later[k]}</span></span><span aria-hidden="true" style="opacity:.4">⌄</span></div>`).join('');
-    const st = $('[data-stage]'); st.innerHTML = views[cur](); st.firstElementChild.classList.add('stp-open'); requestAnimationFrame(() => requestAnimationFrame(() => st.querySelectorAll('.lane-rope').forEach((r) => r.classList.add('is-in'))));
-    document.querySelectorAll('[data-howto]').forEach((h) => { h.hidden = h.dataset.howto !== (S.course || 'pripravka'); });
-    if (scroll) (document.querySelector('[data-done] .stp-row:last-child') || st).scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-  document.addEventListener('click', (e) => {
-    const t = e.target.closest('[data-course],[data-level],[data-term],[data-back]'); if (!t) return;
-    if (t.dataset.course) { S.course = t.dataset.course; S.level = S.term = null; }
-    else if (t.dataset.level) { S.level = t.dataset.level; S.term = null; }
-    else if (t.dataset.term) S.term = t.dataset.term;
-    else { const k = t.dataset.back; if (k === 'course') S.course = S.level = S.term = null; if (k === 'level') S.level = S.term = null; if (k === 'term') S.term = null; }
-    render(true);
-  });
-  document.addEventListener('change', (e) => { if (e.target.matches('[data-file]')) { const f = [...e.target.files].map((x) => x.name).join(', '); document.querySelector('[data-file-name]').textContent = f || 'Přetáhněte soubor sem nebo vyberte z počítače'; } });
-  document.addEventListener('submit', (e) => { if (e.target.matches('[data-form]')) { e.preventDefault(); S.sent = true; render(true); } });
-  const q = new URLSearchParams(location.search); if (D[q.get('kurz')]) S.course = q.get('kurz'); if (S.course === 'pripravka' && D.pripravka.levels[q.get('uroven')]) S.level = q.get('uroven');
-  render(false);
-  document.querySelectorAll('[data-steps]').forEach(l=>l.querySelectorAll('.step').forEach(p=>{const on=()=>l.querySelectorAll('.step').forEach(x=>x.classList.toggle('on',x===p));p.addEventListener('mouseenter',on);p.addEventListener('focus',on);p.addEventListener('click',on);}));
-})();
-</script>
+<script src="js/app.js?v=1795417080"></script>
 </body>
 </html>

@@ -221,3 +221,20 @@
     run(); window.addEventListener('scroll', () => requestAnimationFrame(run), { passive: true });
   }
 })();
+
+/* Text, který se při scrollu postupně probarví ze světlé do modré */
+(function(){
+  document.querySelectorAll('[data-scroll-color]').forEach(function(el){
+    el.querySelectorAll('span').forEach(function(sp){
+      sp.innerHTML = sp.textContent.split(/(\s+)/).map(function(w){ return /\S/.test(w) ? '<span class="w">'+w+'</span>' : w; }).join('');
+    });
+    var words = el.querySelectorAll('.w');
+    function upd(){
+      var r = el.getBoundingClientRect(), vh = window.innerHeight;
+      var p = Math.min(1, Math.max(0, (vh*0.85 - r.top) / (vh*0.45)));
+      var n = Math.round(p * words.length);
+      words.forEach(function(w,i){ w.classList.toggle('on', i < n); });
+    }
+    window.addEventListener('scroll', upd, {passive:true}); window.addEventListener('resize', upd); upd();
+  });
+})();

@@ -148,3 +148,9 @@
   .home-hero-arrows { margin-top: 24px; }
   .home-hero-arrows .icon-btn { width: 40px; height: 40px; }
 }
+/* Kapka podle Figmy: tučné písmo, 89, text na dva řádky */
+.home-130-drop.is-in img { animation: none; }
+.home-130-drop .uz, .home-130-drop .let { font-weight: 700; color: var(--navy-900); }
+.home-130-drop .uz { top: 120px; }
+.home-130-drop .num { top: 146px; font-weight: 700; font-size: 132px; line-height: 150px; color: var(--navy-900); }
+.home-130-drop .let { top: 300px; width: 300px; white-space: nowrap; }

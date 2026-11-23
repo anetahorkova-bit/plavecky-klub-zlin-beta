@@ -76,9 +76,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   white-space: nowrap; position: relative; isolation: isolate;
   transition: background-color .25s var(--ease), color .25s var(--ease), box-shadow .25s var(--ease), transform .25s var(--ease), border-color .25s var(--ease);
 }
-.btn-l { height: 56px; padding: 0 24px; }
-.btn-m { height: 48px; padding: 0 20px; }
-.btn-s { height: 40px; padding: 0 16px; font-size: 15px; }
+.btn-l { height: 48px; padding: 0 24px; }
+.btn-m { height: 40px; padding: 0 20px; }
+.btn-s { height: 34px; padding: 0 16px; font-size: 15px; }
 .btn-cta { background: var(--zluta-500); color: var(--navy-900); }
 .btn-cta:hover { background: var(--zluta-600); }
 .btn-outline { border: 1.5px solid var(--navy-900); color: var(--navy-900); }

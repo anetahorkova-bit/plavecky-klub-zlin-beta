@@ -120,3 +120,7 @@
   .kt-mail { text-align: left; }
 }
 @media (max-width: 760px) { .kt-row { grid-template-columns: 1fr; } .kt-tiles { padding-bottom: 64px; } .kt-sec { padding-bottom: 64px; } }
+/* Linky jen mezi položkami */
+.ok-side a:first-child { background: none; }
+.ok-side a { background: var(--dash) left top / 100% 1px no-repeat; }
+.ok-side a:first-child { background: none; }

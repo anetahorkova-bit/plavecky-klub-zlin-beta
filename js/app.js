@@ -30,7 +30,7 @@
             ${programs.map(([h, t, c, ilu, age]) => `<a class="drop-item" href="${h}"><span class="drop-ilu"><img src="assets/${ilu}" alt=""></span><span class="drop-txt"><span class="t-telo-s">${t}</span><span class="t-maly muted">${age}</span></span></a>`).join('')}
           </div>
         </div>
-        <a class="nav-link" href="#" data-todo>Tábory</a>
+        <a class="nav-link" href="#" data-todo>Tábory a kempy</a>
         <a class="nav-link${active('oklubu')}" href="o-klubu.html">O Klubu</a>
         <a class="nav-link" href="aktuality.html">Aktuality</a>
         <a class="nav-link${active('kontakt')}" href="kontakt.html">Kontakt</a>

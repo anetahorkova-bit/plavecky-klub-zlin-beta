@@ -23,11 +23,11 @@ img, video, svg { max-width: 100%; }
   .nav.nav-open .nav-menu { opacity: 1; visibility: visible; }
   .nav.nav-open .nav-logo { z-index: 3; }
   .nav.nav-open { background: var(--bila) !important; box-shadow: none !important; }
-  .nav-menu > .nav-drop, .nav-menu > .nav-link { border-bottom: 1px solid var(--seda-200); border-radius: 0 !important; }
+  .nav-menu > .nav-drop, .nav-menu > .nav-link { border-bottom: 0; background: var(--dash) left bottom / 100% 1px no-repeat; border-radius: 0 !important; }
   .nav-menu > .nav-drop > .nav-link { display: flex; }
   .nav.nav-open .logo-dark { opacity: 1 !important; }
   .nav.nav-open .logo-light { opacity: 0 !important; }
-  .nav-menu .nav-link { color: var(--navy-900) !important; text-shadow: none !important; font-size: 22px; padding: 14px 8px; background: none !important; }
+  .nav-menu .nav-link { color: var(--navy-900) !important; text-shadow: none !important; font-size: 22px; padding: 14px 8px; background-color: transparent !important; }
   .nav-menu .nav-link:hover { color: var(--modra-300) !important; }
   .nav-menu .nav-link .chev { display: none; }
   .nav-menu .btn-cta { margin-top: 16px; justify-content: center; flex: none; min-height: 56px; padding: 16px 32px; }

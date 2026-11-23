@@ -7,10 +7,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1795442271">
-  <link rel="stylesheet" href="css/program.css?v=1795442271">
-  <link rel="stylesheet" href="css/oklubu.css?v=1795442271">
-  <link rel="stylesheet" href="css/responsive.css?v=1795442271">
+  <link rel="stylesheet" href="css/style.css?v=1795442370">
+  <link rel="stylesheet" href="css/program.css?v=1795442370">
+  <link rel="stylesheet" href="css/oklubu.css?v=1795442370">
+  <link rel="stylesheet" href="css/responsive.css?v=1795442370">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body data-page="kontakt">
 <div data-nav></div>
@@ -25,7 +26,7 @@
       <div><span class="t-eyebrow muted">Adresa klubu</span><span class="t-karta">Plavecký klub Zlín, z. s.</span><span class="t-telo-s">Hradská 854<br>760 01 Zlín</span></div>
       <div><span class="t-eyebrow muted">Obecné dotazy</span><span class="t-karta">Výkonný výbor klubu</span><span class="t-telo-s"><a href="mailto:info@zlinswim.cz">info@zlinswim.cz</a></span></div>
     </div>
-    <a class="kt-mapimg reveal" href="https://www.openstreetmap.org/search?query=Hradsk%C3%A1%20854%2C%20Zl%C3%ADn" target="_blank" rel="noopener"><img src="assets/mapa-kontakt.png" alt="Mapa: Městské lázně, Hradská 854, Zlín"></a>
+    <div class="kt-mapimg reveal" id="kt-map" role="region" aria-label="Mapa: Městské lázně, Hradská 854, Zlín"></div>
   </section>
   <section class="kt-sec">
     <div class="kt-head reveal"><span class="t-eyebrow muted">Kurzy a skupiny</span><h2 class="t-h2">Trenéři kurzů</h2></div>
@@ -37,6 +38,16 @@
   </section>
   <div data-footer></div>
 </div>
-<script src="js/app.js?v=1795442271"></script>
+<script src="js/app.js?v=1795442370"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  var pos=[49.22195,17.66674];
+  var m=L.map('kt-map',{scrollWheelZoom:false,zoomControl:true}).setView(pos,15);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);
+  var pin=L.divIcon({className:'kt-pin',html:'<svg width="40" height="52" viewBox="0 0 40 52"><path d="M20 51C20 51 38 32 38 19A18 18 0 0 0 2 19C2 32 20 51 20 51Z" fill="#002f94"/><circle cx="20" cy="19" r="7" fill="#fcdc08"/></svg>',iconSize:[40,52],iconAnchor:[20,51]});
+  L.marker(pos,{icon:pin,title:'Městské lázně · Hradská 854'}).addTo(m).bindTooltip('Městské lázně · Hradská 854',{permanent:true,direction:'right',offset:[16,-30],className:'kt-tip'});
+})();
+</script>
 </body>
 </html>

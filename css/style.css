@@ -334,3 +334,28 @@ button:focus:not(:focus-visible) { outline: none; }
 .kt-map { max-width: 1440px; margin: 0 auto 80px; padding: 0 var(--pad, 80px); }
 .kt-map iframe { display: block; width: 100%; height: 440px; border: 0; border-radius: 24px; filter: grayscale(1) sepia(.35) hue-rotate(180deg) saturate(2.2) brightness(1.02); }
 @media (max-width: 767px) { .kt-map iframe { height: 320px; border-radius: 16px; } .kt-map { margin-bottom: 48px; } }
+
+/* Kontakt: adresa vlevo, mapa vpravo */
+.kt-split { display: grid; grid-template-columns: 340px 1fr; gap: 48px; align-items: start; padding: 0 var(--pad); margin: 64px 0 96px; }
+.kt-info > div { display: flex; flex-direction: column; gap: 6px; padding: 24px 0; }
+.kt-info > div + div { background: var(--dash) top / 100% 1.5px no-repeat; }
+.kt-info > div:first-child { padding-top: 0; }
+.kt-mapimg { display: block; border-radius: 16px; overflow: hidden; }
+.kt-mapimg img { display: block; width: 100%; height: auto; }
+@media (max-width: 900px) { .kt-split { grid-template-columns: 1fr; } }
+
+/* GDPR */
+.gd-text { max-width: 760px; padding: 0 var(--pad); margin: 64px 0 120px; display: flex; flex-direction: column; gap: 16px; }
+.gd-text h2 { margin-top: 32px; }
+.gd-text h2:first-child { margin-top: 0; }
+.gd-list { margin: 0; padding-left: 1.2em; font-size: 18px; line-height: 1.6; display: flex; flex-direction: column; gap: 4px; }
+.gd-text a { color: var(--modra-500); }
+
+/* 404 */
+.e404 { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 96px var(--pad) 140px; }
+.e404-num { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
+.e404-num span { font-size: 280px; font-weight: 800; line-height: .8; color: var(--navy-900); }
+.e404-num img { width: 280px; height: auto; }
+.e404 .t-perex { max-width: 560px; }
+.e404 .btn { margin-top: 16px; }
+@media (max-width: 760px) { .e404-num span { font-size: 140px; } .e404-num img { width: 140px; } }

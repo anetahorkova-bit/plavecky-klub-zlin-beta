@@ -30,7 +30,7 @@
             ${programs.map(([h, t, c, ilu, age]) => `<a class="drop-item" href="${h}"><span class="drop-ilu"><img src="assets/${ilu}" alt=""></span><span class="drop-txt"><span class="t-telo-s">${t}</span><span class="t-maly muted">${age}</span></span></a>`).join('')}
           </div>
         </div>
-        <a class="nav-link" href="#" data-todo>Tábory a kempy</a>
+        <a class="nav-link" href="tabory.html">Tábory a kempy</a>
         <a class="nav-link${active('oklubu')}" href="o-klubu.html">O Klubu</a>
         <a class="nav-link" href="aktuality.html">Aktuality</a>
         <a class="nav-link${active('kontakt')}" href="kontakt.html">Kontakt</a>
@@ -62,7 +62,7 @@
         </div>
         <div class="footer-cols">
           <div class="footer-col"><span class="t-eyebrow">Kurzy</span>
-            ${programs.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}<a href="#" data-todo>Tábory a kempy</a></div>
+            ${programs.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}<a href="tabory.html">Tábory a kempy</a></div>
           <div class="footer-col"><span class="t-eyebrow">Klub</span>
             <a href="o-klubu.html#historie">Historie</a><a href="o-klubu.html#treneri">Trenéři</a><a href="o-klubu.html#uspechy">Úspěchy</a><a href="o-klubu.html#partneri">Partneři</a><a href="o-klubu.html#zavody">Naše závody</a><a href="o-klubu.html#dokumenty">Dokumenty ke stažení</a></div>
           <div class="footer-col"><span class="t-eyebrow">Pro rodiče</span><a href="prihlaska.html">Přihláška</a>
@@ -70,7 +70,7 @@
         </div>
       </div>
       <img class="footer-lettering" src="assets/plav-v-tom-s-nami.svg" alt="Plav v tom s námi!">
-      <div class="footer-bottom"><div class="footer-legal"><span>© 2026 Plavecký klub Zlín, z. s.</span><a href="#" data-todo>Ochrana osobních údajů</a><a href="#" data-todo>Nastavení soukromí</a></div><span>Webdesign: <a href="#" data-todo>Studio 9</a></span></div>
+      <div class="footer-bottom"><div class="footer-legal"><span>© 2026 Plavecký klub Zlín, z. s.</span><a href="gdpr.html">Ochrana osobních údajů</a><a href="#" data-todo>Nastavení soukromí</a></div><span>Webdesign: <a href="#" data-todo>Studio 9</a></span></div>
     </footer>`;
   }
 

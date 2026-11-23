@@ -362,7 +362,8 @@ button:focus:not(:focus-visible) { outline: none; }
 
 /* Kontakt: mapa OpenStreetMap */
 #kt-map { height: 388px; background: #dbe8fb; z-index: 0; }
-#kt-map .leaflet-tile-pane { filter: grayscale(1) sepia(1) hue-rotate(180deg) saturate(1.6) brightness(1.08) contrast(.9); }
+#kt-map .leaflet-tile { filter: grayscale(1) contrast(1.1) brightness(1.06); }
+#kt-map .leaflet-tile-pane::after { content: ""; position: absolute; inset: -5000px; z-index: 1; background: #6dc2ff; mix-blend-mode: multiply; opacity: .42; pointer-events: none; }
 .kt-pin { background: none; border: 0; width: 40px !important; height: 52px !important; }
 .kt-pin svg { display: block; width: 40px; height: 52px; max-width: none; }
 .kt-tip { background: #fff; color: var(--navy-900); border: 0; border-radius: 999px; padding: 6px 12px; font: 600 12px Rubik, sans-serif; box-shadow: 0 2px 8px rgba(0,47,148,.15); }

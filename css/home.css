@@ -161,7 +161,7 @@
 .home-intro-lead { font-size: 36px; line-height: 1.25; font-weight: 500; color: var(--navy-900); margin: 0; }
 .home-intro-lead .w { color: #c9d3ea; transition: color .25s; }
 .home-intro-lead .hi-a .w.on { color: var(--navy-900); }
-.home-intro-lead .hi-b .w.on { color: #4b5f93; }
+.home-intro-lead .hi-b .w.on { color: var(--navy-900); }
 .home-intro-art { width: 200px; height: auto; }
 .home-kurzy-head { justify-content: flex-start; text-align: left; }
 .home-kurzy-head .t-eyebrow, #aktuality .section-head .t-eyebrow { color: var(--navy-900); }

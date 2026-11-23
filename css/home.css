@@ -168,3 +168,5 @@
   .home-intro-lead { font-size: 24px; }
   .home-intro-art { width: 140px; }
 }
+.home-kurzy-head { justify-content: flex-start; text-align: left; }
+.home-kurzy-head .t-h2 { color: var(--navy-900); }

@@ -150,10 +150,10 @@
 }
 /* Kapka podle Figmy: tučné písmo, 89, text na dva řádky */
 .home-130-drop.is-in img { animation: none; }
-.home-130-drop .uz, .home-130-drop .let { font-weight: 700; color: var(--navy-900); }
-.home-130-drop .uz { top: 120px; }
-.home-130-drop .num { top: 146px; font-weight: 700; font-size: 132px; line-height: 150px; color: var(--navy-900); }
-.home-130-drop .let { top: 300px; width: 300px; white-space: nowrap; }
+.home-130-drop .uz, .home-130-drop .let { font-size: 28px; line-height: 1.2; color: var(--navy-900); }
+.home-130-drop .uz { top: 109px; font-weight: 700; }
+.home-130-drop .num { top: 134px; font-weight: 700; font-size: 124px; line-height: 142px; letter-spacing: -7px; color: var(--navy-900); }
+.home-130-drop .let { top: 266px; width: 330px; font-weight: 600; white-space: nowrap; }
 
 /* Úvodní text + eyebrow nadpisy (podle Figmy) */
 .home-intro { display: grid; grid-template-columns: minmax(0,808px) auto; justify-content: space-between; align-items: center; gap: 48px; padding: 96px var(--pad); }

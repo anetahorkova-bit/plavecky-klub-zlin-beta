@@ -76,7 +76,7 @@ img, video, svg { max-width: 100%; }
   .home-hero-content { top: 96px; }
   .home-hero-content .t-h1, .home-hero-content h1 { font-size: 52px !important; }
   .home-130 { padding-top: 8px; gap: 56px; }
-  .home-130-drop { zoom: .75; }
+  .home-130-drop { zoom: .6; align-self: center; }
   .home-lanes .chip { align-self: center !important; }
   .hl-lane { height: 132px; }
   .home-lanes .chip { font-size: 19px; height: 52px; padding: 0 20px; }

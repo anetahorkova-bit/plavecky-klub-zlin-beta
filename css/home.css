@@ -98,8 +98,8 @@
 .home-kurzy-head { margin-bottom: 40px; }
 .home-lanes { padding-bottom: 96px; }
 .hl-lane { position: relative; height: clamp(120px, calc((100svh - 330px) / 4), 160px); display: flex; align-items: center; padding: 0 var(--pad) 0 calc(var(--pad) + 72px); }
-.hl-n { position: absolute; left: var(--pad); top: 50%; translate: 0 -50%; color: var(--seda-600); }
-.hl-axis { position: absolute; left: calc(var(--pad) + 40px); right: var(--pad); top: 50%; height: 4px; translate: 0 -50%; background: var(--modra-150); border-radius: 2px; }
+.hl-n { display: none; position: absolute; left: var(--pad); top: 50%; translate: 0 -50%; color: var(--seda-600); }
+.hl-axis { position: absolute; left: var(--pad); right: var(--pad); top: 50%; height: 4px; translate: 0 -50%; background: var(--modra-150); border-radius: 2px; }
 .hl-axis::before, .hl-axis::after { content: ""; position: absolute; top: 50%; width: 4px; height: 28px; translate: 0 -50%; background: var(--modra-150); border-radius: 2px; }
 .hl-axis::before { left: 0; } .hl-axis::after { right: 0; }
 .home-lanes .chip { position: relative; left: auto; top: auto; translate: none; margin-left: var(--x, 20%); }
@@ -170,3 +170,6 @@
 }
 .home-kurzy-head { justify-content: flex-start; text-align: left; }
 .home-kurzy-head .t-h2 { color: var(--navy-900); }
+
+/* Číslo kurzu uvnitř čipu */
+.chip-n { font-size: .42em; font-weight: 600; letter-spacing: .04em; opacity: .55; margin-right: .2em; align-self: center; }

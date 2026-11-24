@@ -361,9 +361,14 @@ button:focus:not(:focus-visible) { outline: none; }
 @media (max-width: 760px) { .e404 { padding: 64px var(--pad) 96px; gap: 40px; } .e404-num span { font-size: 110px; } .e404-num img { width: 110px; } }
 
 /* Kontakt: mapa OpenStreetMap */
-#kt-map { height: 388px; background: #dbe8fb; z-index: 0; }
-#kt-map .leaflet-tile { filter: grayscale(1) contrast(1.1) brightness(1.06); }
-#kt-map .leaflet-tile-pane::after { content: ""; position: absolute; inset: -5000px; z-index: 1; background: #6dc2ff; mix-blend-mode: multiply; opacity: .42; pointer-events: none; }
+#kt-map { height: 388px; background: var(--modra-100, #e3f2fd); z-index: 0; font-family: Rubik, sans-serif; }
+#kt-map .leaflet-tile { filter: grayscale(1) contrast(.85) brightness(1.12); }
+#kt-map .leaflet-tile-pane::after { content: ""; position: absolute; inset: -5000px; z-index: 1; background: #c8e7fd; mix-blend-mode: multiply; pointer-events: none; }
+#kt-map .leaflet-bar { border: 0; box-shadow: 0 2px 8px rgba(0,47,148,.15); border-radius: 999px; overflow: hidden; }
+#kt-map .leaflet-bar a { color: var(--navy-900); background: #fff; border-color: #d5deef; }
+#kt-map .leaflet-bar a:hover { background: #e3f2fd; }
+#kt-map .leaflet-control-attribution { background: rgba(255,255,255,.8); color: #4b5f93; }
+#kt-map .leaflet-control-attribution a { color: var(--navy-900); }
 .kt-pin { background: none; border: 0; width: 40px !important; height: 52px !important; }
 .kt-pin svg { display: block; width: 40px; height: 52px; max-width: none; }
 .kt-tip { background: #fff; color: var(--navy-900); border: 0; border-radius: 999px; padding: 6px 12px; font: 600 12px Rubik, sans-serif; box-shadow: 0 2px 8px rgba(0,47,148,.15); }

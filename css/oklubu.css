@@ -64,6 +64,7 @@
 .coach-group:hover { }
 .coach-group .t-h3 { transition: transform .4s var(--ease-out); }
 .coach-group:hover .t-h3 { transform: translateX(4px); }
+.coach-ilu { display: block; width: 140px; height: auto; margin: 0 auto; }
 .coach-sm { width: 196px; display: flex; flex-direction: column; gap: 12px; }
 .coach-sm .ph { width: 196px; height: 245px; border-radius: var(--r-md); overflow: hidden; position: relative; }
 .coach-sm .ph img { position: absolute; max-width: none; transition: transform .8s var(--ease-out); transform-origin: 50% 30%; }

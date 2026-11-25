@@ -24,7 +24,7 @@
 @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 
 /* Plavecké dráhy */
-.lanes-head { padding: 80px var(--pad) 64px; display: flex; flex-direction: column; gap: 16px; }
+.lanes-head { padding: var(--sec) var(--pad) 32px; display: flex; flex-direction: column; gap: 16px; }
 .lanes { position: relative; }
 .lane-rope { height: 1px; background: none; position: relative; overflow: hidden; }
 .lane-rope::after { content: ""; position: absolute; inset: 0; background: var(--dash); clip-path: inset(0 100% 0 0); transition: clip-path 1.4s var(--ease-out); }
@@ -45,7 +45,7 @@
 .lane-price .row { display: flex; gap: 8px; align-items: baseline; }
 
 /* Carousel obsah */
-.c-section { padding: 80px var(--pad); overflow: hidden; }
+.c-section { padding: var(--sec) var(--pad); overflow: hidden; }
 .c-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px; }
 .c-track { margin-right: calc(-1 * var(--pad)); padding-right: var(--pad); }
 .c-card { width: 342px; height: 340px; border-radius: var(--r-md); padding: 32px 24px; display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden; background: var(--modra-100); transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out); }
@@ -63,14 +63,14 @@
 .dots span { flex: 1; }
 
 /* Info leták */
-.leaflet-sec { padding: 80px var(--pad); }
+.leaflet-sec { padding: var(--sec) var(--pad); }
 .leaflet { display: flex; align-items: center; gap: 80px; padding: 56px; border-radius: var(--r-lg); }
 .leaflet-img { width: 300px; height: 424px; flex: none; background: var(--bila); border-radius: var(--r-sm); box-shadow: 0 16px 40px rgba(0, 46, 148, .14); display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; font-size: 14px; font-weight: 600; transition: transform .6s var(--ease-out); }
 .leaflet:hover .leaflet-img { transform: translateY(-6px); }
 .leaflet-text { display: flex; flex-direction: column; gap: 20px; max-width: 720px; color: var(--navy-900); }
 
 /* Trenéři */
-.coach-sec { padding: 80px var(--pad); overflow: hidden; }
+.coach-sec { padding: var(--sec) var(--pad); overflow: hidden; }
 .coach-track { margin-right: calc(-1 * var(--pad)); padding-right: var(--pad); align-items: stretch; }
 .coach-tile { width: 342px; border-radius: var(--r-lg); padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 456px; }
 .coach-tile .contact { display: flex; flex-direction: column; gap: 4px; }
@@ -81,7 +81,7 @@
 .coach:hover .ph img { transform: scale(1.05); }
 
 /* Kalendář */
-.cal-sec { padding: 80px var(--pad); display: flex; flex-direction: column; gap: 32px; }
+.cal-sec { padding: var(--sec) var(--pad); display: flex; flex-direction: column; gap: 32px; }
 .filters { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .filter { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 20px; border: 2px solid var(--seda-200); border-radius: var(--r-full); font-size: 14px; font-weight: 600; transition: all .25s var(--ease); }
 .filter .dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -107,7 +107,7 @@
 .faq-wave { min-height: 39.5vw; }
 
 /* Jak se přihlásit: čísla + dlaždice */
-.pr-steps { padding: 120px var(--pad) 40px; }
+.pr-steps { padding: var(--sec) var(--pad); }
 .pr-steps .t-h2 { margin-bottom: 64px; }
 .steps { display: flex; flex-direction: column; gap: 24px; margin-bottom: 64px; }
 .step { display: grid; grid-template-columns: 200px 420px 1fr; gap: 40px; align-items: center; cursor: pointer; outline: none; }

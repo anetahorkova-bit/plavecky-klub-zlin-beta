@@ -56,7 +56,7 @@ img, video, svg { max-width: 100%; }
 @media (max-width: 1024px) {
   .home-hero { --ph: 680px; }
   .home-hero-content { width: auto; right: var(--pad); }
-  .home-130 { height: auto; flex-direction: column; gap: 48px; padding: 96px var(--pad); align-items: flex-start; }
+  .home-130 { height: auto; flex-direction: column; gap: 48px; padding: var(--sec) var(--pad); align-items: flex-start; }
   .home-130-drop { align-self: center; }
   .home-130-text { width: 100%; min-width: 0; }
   .home-130-text * { max-width: 100%; }
@@ -66,16 +66,13 @@ img, video, svg { max-width: 100%; }
   .home-join-text { position: relative; left: auto; top: auto; width: 100%; max-width: 560px; }
   /* vydra: původní rozměry i vzájemné pozice z desktopu, celé jen zmenšené */
   .home-join-art { position: relative; inset: auto; width: 558px; height: 362px; flex: none; zoom: .8; }
-  .home-join-art .kruh { left: 124px; top: 27px; }
-  .home-join-art .vydra { left: 22px; top: 0; }
-  .home-join-art .maska { left: 0; top: 60px; }
 }
 @media (max-width: 760px) {
   .home-hero { --ph: 760px; }
   .home-join-art { zoom: .58; }
   .home-hero-content { top: 96px; }
   .home-hero-content .t-h1, .home-hero-content h1 { font-size: 52px !important; }
-  .home-130 { padding-top: 8px; gap: 56px; }
+  .home-130 { padding-top: var(--sec); gap: 56px; }
   .home-130-drop { zoom: .6; align-self: center; }
   .home-lanes .chip { align-self: center !important; }
   .hl-lane { height: 132px; }
@@ -230,10 +227,6 @@ img, video, svg { max-width: 100%; }
 @media (max-width: 760px) {
   .home-hero-photo::after { height: 26px; background-size: 945px 26px; }
   .footer-wave { height: 44px; object-fit: cover; object-position: center top; }
-  .faq-wave { padding-top: calc(44px + 64px);
-    background: url(../assets/vlna-nova.svg) center top / 870px 44px no-repeat,
-                url(../assets/faq-vlna.svg) center bottom / 100% auto no-repeat,
-                linear-gradient(#002F94, #002F94) left 40px / 100% calc(100% - 20vw - 40px) no-repeat; }
 }
 
 /* FAQ: běžný akordeon, na menších šířkách pod sebou */
@@ -253,3 +246,15 @@ img, video, svg { max-width: 100%; }
 /* Vlna v záhlaví podstránek: na úzkých displejích jen rovnoměrně zmenšená */
 @media (max-width: 1023px) { .p-hero-wave { width: 300vw; right: -40px; top: -300px; } .ok-hero .p-hero-wave { top: -300px; } }
 @media (max-width: 767px) { .p-hero-wave { width: 300vw; right: -40px; top: -40px; } .ok-hero .p-hero-wave { top: -40px; } }
+
+/* Mobil a tablet: vlny jako patička (horní a dolní pruh, mezi nimi plná barva) */
+@media (max-width: 1023px) {
+  .home-join-panel, .faq-wave .bg { display: none; }
+  .home-join, .faq-wave { --vh: calc(max(870px, 100vw) * 81 / 1600); background:
+      url(../assets/vlna-horni-B.svg) center top / max(870px, 100%) var(--vh) no-repeat,
+      url(../assets/vlna-dolni-B.svg) center bottom / max(870px, 100%) var(--vh) no-repeat,
+      linear-gradient(var(--c), var(--c)) left calc(var(--vh) - 2px) / 100% calc(100% - 2 * var(--vh) + 4px) no-repeat; }
+  .home-join { --c: #FCDC08; background-image: url(../assets/vlna-horni-zluta.svg), url(../assets/vlna-dolni-zluta.svg), linear-gradient(#FCDC08, #FCDC08); }
+  .faq-wave { --c: #002F94; background-image: url(../assets/vlna-horni-modra.svg), url(../assets/vlna-dolni-modra.svg), linear-gradient(#002F94, #002F94); padding-top: calc(var(--vh) + 48px); padding-bottom: calc(var(--vh) + 48px); min-height: 0; }
+  .home-join-inner { padding-top: calc(var(--vh) + 48px); padding-bottom: calc(var(--vh) + 48px); }
+}

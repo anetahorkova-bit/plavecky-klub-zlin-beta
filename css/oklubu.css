@@ -5,7 +5,7 @@
 .ok-hero-text .perex { color: var(--seda-600); animation: fade-up .8s .3s var(--ease-out) both; max-width: 753px; }
 .ok-hero-text .btn { align-self: flex-start; animation: fade-up .8s .45s var(--ease-out) both; }
 
-.ok-body { display: flex; gap: clamp(40px, 5vw, 96px); padding: 0 var(--pad) 80px; align-items: flex-start; }
+.ok-body { display: flex; gap: clamp(40px, 5vw, 96px); padding: var(--sec) var(--pad); align-items: flex-start; }
 .ok-side { width: 240px; flex: none; position: sticky; top: 120px; }
 .ok-side a { display: flex; align-items: center; gap: 12px; padding: 24px 16px; border: 0; background: var(--dash) left bottom / 100% 1px no-repeat; font-weight: 600; color: var(--seda-600); position: relative; transition: color .3s var(--ease), padding .35s var(--ease-out); }
 .ok-side a:first-child { background: var(--dash) left top / 100% 1px no-repeat, var(--dash) left bottom / 100% 1px no-repeat; }
@@ -13,7 +13,7 @@
 .ok-side a:hover { color: var(--navy-900); }
 .ok-side a.is-active { color: var(--navy-900); padding-left: 24px; }
 .ok-side a.is-active::before { height: 28px; }
-.ok-sections { flex: 1; min-width: 0; max-width: 1104px; display: flex; flex-direction: column; gap: 160px; }
+.ok-sections { flex: 1; min-width: 0; max-width: 1104px; display: flex; flex-direction: column; gap: 64px; }
 .ok-sections > section { scroll-margin-top: 120px; }
 .ok-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; }
 .ok-head .perex { color: var(--seda-600); margin-top: 8px; white-space: pre-line; }
@@ -101,11 +101,11 @@
 .doc:hover .dl { background: var(--modra-150); }
 
 /* Kontakt */
-.kt-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 var(--pad) 96px; }
+.kt-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 var(--pad) var(--sec); }
 .kt-tile { background: var(--modra-100); border-radius: var(--r-md); padding: 32px; display: flex; flex-direction: column; gap: 8px; color: var(--navy-900); }
 .kt-tile .t-eyebrow { margin-bottom: 4px; }
 .kt-tile a:hover { text-decoration: underline; }
-.kt-sec { padding: 0 0 96px; }
+.kt-sec { padding: 0 0 var(--sec); }
 .kt-head { display: flex; flex-direction: column; gap: 12px; padding: 0 var(--pad) 32px; }
 .kt-list { background: var(--dash) left top / 100% 1px no-repeat; }
 .kt-row { display: grid; grid-template-columns: 200px 1fr 220px 280px; align-items: center; gap: 24px; padding: 28px var(--pad); background: var(--dash) left bottom / 100% 1px no-repeat; color: var(--navy-900); }

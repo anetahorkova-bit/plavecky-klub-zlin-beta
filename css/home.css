@@ -50,7 +50,7 @@
 .chip-4.is-in { animation-delay: -4.5s; }
 
 /* 130 let */
-.home-130 { height: 547px; display: flex; align-items: center; gap: 160px; padding-left: calc(var(--pad) + 117px); }
+.home-130 { padding-top: var(--sec); padding-bottom: var(--sec); display: flex; align-items: center; gap: 160px; padding-left: calc(var(--pad) + 117px); }
 .home-130-drop { position: relative; width: 373px; height: 426px; flex: none; }
 .home-130-drop img { position: absolute; left: 32.5px; top: 0; width: 331px; height: 426px; }
 .home-130-drop.is-in img { animation: drop-wobble 5s ease-in-out infinite; transform-origin: 50% 100%; }
@@ -67,10 +67,10 @@
 .home-join { position: relative; height: max(627px, 39.1875vw); overflow: hidden; display: flex; align-items: center; justify-content: center; }
 .home-join-inner { position: relative; width: 1600px; height: 627px; flex: none; }
 .home-join-panel { position: absolute; left: 50%; translate: -50% 0; top: max(18px, 1.125vw); width: max(1600px, 100%); height: auto; max-width: none; }
-.home-join-art { position: absolute; inset: 0; pointer-events: none; }
-.home-join-art .kruh { position: absolute; left: 970px; top: 160px; width: 322px; height: 320px; }
-.home-join-art .vydra { position: absolute; left: 868px; top: 133px; width: 536px; height: 362px; animation: bob 4.5s ease-in-out infinite; }
-.home-join-art .maska { position: absolute; left: 846px; top: 193px; width: 173px; height: 177px; }
+.home-join-art { position: absolute; left: 846px; top: 133px; width: 558px; height: 362px; pointer-events: none; }
+.home-join-art .kruh { position: absolute; left: 124px; top: 27px; width: 322px; height: 320px; }
+.home-join-art .vydra { position: absolute; left: 22px; top: 0; width: 536px; height: 362px; animation: bob 4.5s ease-in-out infinite; }
+.home-join-art .maska { position: absolute; left: 0; top: 60px; width: 173px; height: 177px; }
 .home-join-text { position: absolute; left: max(271px, calc(var(--pad) + 800px - 50vw)); max-width: calc(100vw - 2 * var(--pad) - 480px); top: 221px; width: 529px; display: flex; flex-direction: column; gap: 12px; }
 .home-join-text > div { margin-top: 12px; }
 .home-kurzy-head { justify-content: center; text-align: center; }
@@ -96,7 +96,7 @@
 /* Kurzy v plaveckých drahách (varianta B z Figmy) */
 .home-kurzy { padding-top: 96px; }
 .home-kurzy-head { margin-bottom: 40px; }
-.home-lanes { padding-bottom: 96px; }
+.home-lanes { padding-bottom: var(--sec); }
 .hl-lane { position: relative; height: clamp(120px, calc((100svh - 330px) / 4), 160px); display: flex; align-items: center; padding: 0 var(--pad) 0 calc(var(--pad) + 72px); }
 .hl-n { display: none; position: absolute; left: var(--pad); top: 50%; translate: 0 -50%; color: var(--seda-600); }
 .hl-axis { position: absolute; left: var(--pad); right: var(--pad); top: 50%; height: 4px; translate: 0 -50%; background: var(--modra-150); border-radius: 2px; }
@@ -156,7 +156,7 @@
 .home-130-drop .let { top: 266px; width: 330px; font-weight: 600; white-space: nowrap; }
 
 /* Úvodní text + eyebrow nadpisy (podle Figmy) */
-.home-intro { display: grid; grid-template-columns: minmax(0,808px) auto; justify-content: space-between; align-items: center; gap: 48px; padding: 96px var(--pad); }
+.home-intro { display: grid; grid-template-columns: minmax(0,808px) auto; justify-content: space-between; align-items: center; gap: 48px; padding: var(--sec) var(--pad); }
 .home-intro .t-eyebrow { color: var(--navy-900); margin-bottom: 16px; }
 .home-intro-lead { font-size: 36px; line-height: 1.25; font-weight: 500; color: var(--navy-900); margin: 0; }
 .home-intro-lead .w { color: #c9d3ea; transition: color .25s; }
@@ -164,7 +164,7 @@
 .home-intro-lead .hi-b .w.on { color: var(--navy-900); }
 .home-intro-art { width: 200px; height: auto; }
 @media (max-width: 760px) {
-  .home-intro { grid-template-columns: 1fr; padding: 64px var(--pad); }
+  .home-intro { grid-template-columns: 1fr; padding: var(--sec) var(--pad); }
   .home-intro-lead { font-size: 24px; }
   .home-intro-art { width: 140px; }
 }

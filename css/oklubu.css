@@ -135,3 +135,12 @@
 @media (max-width: 600px) { .rec-tiles { grid-template-columns: 1fr; gap: 16px; } .rec-tile { min-height: 200px; padding: 24px; } }
 /* Mapa v barvách webu (Leaflet podklad) */
 #kt-map .leaflet-tile-pane { filter: grayscale(1) sepia(.4) hue-rotate(175deg) saturate(2.4) brightness(1.08) contrast(.86); }
+/* Soubor ke stažení podle Figmy (Soubor · Ročenka 2021) */
+.doc { gap: 12px; padding: 16px 20px; border-radius: 16px; background: transparent; border: 1.5px solid #d5deef; transition: border-color .25s, background-color .25s; }
+.doc:hover { background: transparent; border-color: var(--modra-300); }
+.doc .meta { gap: 12px; }
+.doc .t-telo-s { font-size: 16px; font-weight: 600; color: var(--navy-900); }
+.doc .meta .t-maly, .doc .meta .t-stitek { font-size: 14px; font-weight: 600; color: #4b5f93; text-transform: none; letter-spacing: 0; }
+.doc .dl { width: 44px; height: 44px; flex: none; border: 0; background: #d5deef; color: var(--navy-900); }
+.doc .dl::before { width: 14px; height: 14px; transform: none; -webkit-mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; }
+.doc:hover .dl { background: var(--modra-200); }

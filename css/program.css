@@ -3,9 +3,7 @@
 .p-hero-wave { position: absolute; right: -48px; top: -104px; translate: 0 -23.547%; width: max(1533px, 95.8vw); height: auto; max-width: none; z-index: -1; pointer-events: none; animation: wave-drift 12s ease-in-out infinite; }
 .p-hero-text { width: 700px; display: flex; flex-direction: column; gap: 20px; position: relative; }
 .crumbs { display: flex; gap: 12px; font-size: 14px; line-height: 1.4; margin-bottom: 20px; }
-.crumbs a { color: var(--modra-500); font-weight: 600; }
-.crumbs a { transition: color .3s var(--ease); }
-.crumbs a:hover { color: var(--oranzova-500); }
+.crumbs a { color: var(--oranzova-500); font-weight: 600; }
 .crumbs .sep { color: var(--seda-600); }
 .crumbs .cur { font-weight: 600; }
 .p-hero h1 { margin-bottom: 0; }

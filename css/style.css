@@ -129,9 +129,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: 14px; font-weight: 600; line-height: 1.4; position: relative;
   transition: background-color .2s var(--ease);
 }
-/* Hover v navigaci: vlnka se vykreslí pod odkazem, barva se nemění */
-.nav-link::after { content: ""; position: absolute; left: 20px; right: 20px; bottom: 4px; height: 6px; background: currentColor; -webkit-mask: url(../assets/vlnka-dlazdice.svg?v=3) left center / 12px 5px repeat-x; mask: url(../assets/vlnka-dlazdice.svg?v=3) left center / 12px 5px repeat-x; clip-path: inset(0 100% 0 0); transition: clip-path .45s var(--ease-out); pointer-events: none; }
-.nav-link:hover::after, .nav-link.is-active::after, .nav-link:focus-visible::after { clip-path: inset(0 0 0 0); }
+/* Hover s vlnkou (navigace, patička, drobečky): vlnka se vykreslí pod odkazem, barva se nemění */
+.nav-link::after, .footer-col a::after, .footer-bottom a::after, .crumbs a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -9px; height: 8px; background: currentColor; -webkit-mask: url(../assets/vlnka-hover.svg?v=1) left center / 16px 7px repeat-x; mask: url(../assets/vlnka-hover.svg?v=1) left center / 16px 7px repeat-x; clip-path: inset(0 100% 0 0); transition: clip-path .45s var(--ease-out); pointer-events: none; }
+.nav-link::after { left: 20px; right: 20px; bottom: 3px; }
+.footer-col a, .footer-bottom a, .crumbs a { position: relative; }
+.nav-link:hover::after, .nav-link.is-active::after, .nav-link:focus-visible::after, .footer-col a:hover::after, .footer-bottom a:hover::after, .crumbs a:hover::after, .footer-col a:focus-visible::after, .crumbs a:focus-visible::after { clip-path: inset(0 0 0 0); }
 .nav.is-home .nav-link { font-weight: 400; }
 .nav.is-home:not(.is-scrolled) .nav-link { color: var(--bila); text-shadow: 0 1px 12px rgba(0, 31, 97, .6); font-weight: 500; }
 
@@ -174,11 +176,11 @@ body:not([data-page="home"]) { padding-top: 104px; }
 .footer-col { display: flex; flex-direction: column; gap: 12px; font-weight: 400; font-size: 16px; }
 .footer-col .t-eyebrow { font-weight: 500; opacity: 1; margin-bottom: 8px; }
 .footer-col a { width: fit-content; opacity: .75; transition: color .25s var(--ease), opacity .25s var(--ease); }
-.footer-col a:hover { color: var(--modra-300); opacity: 1; }
+.footer-col a:hover { opacity: 1; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 80px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.15); font-size: 13px; color: rgba(255,255,255,.65); }
 .footer-legal { display: flex; gap: 32px; flex-wrap: wrap; }
 .footer-bottom a { transition: color .25s var(--ease); }
-.footer-bottom a:hover { color: var(--modra-300); }
+
 .footer-bottom > span a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Animace: odhalení při scrollu ---------- */

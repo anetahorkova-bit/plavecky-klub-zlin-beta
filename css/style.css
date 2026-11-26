@@ -82,6 +82,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .btn-cta { background: var(--zluta-500); color: var(--navy-900); }
 .btn-cta:hover { background: var(--zluta-600); }
 .btn-outline { border: 1.5px solid var(--navy-900); color: var(--navy-900); }
+.btn-navy { background: var(--navy-900); color: var(--bila); }
+.btn-navy:hover { background: var(--navy-950, #00236e); }
 .btn-outline:hover { background: var(--modra-100); }
 .btn:active { transform: translateY(0) scale(.98); }
 .btn .ico { width: 16px; height: 16px; transition: transform .3s var(--ease); }

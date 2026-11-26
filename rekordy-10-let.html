@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Klubové rekordy 10leté žactvo · Plavecký klub Zlín</title>
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#002f94">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Klubové rekordy 10leté žactvo · Plavecký klub Zlín">
+  <meta property="og:description" content="Kurzy plavání pro děti, sportovní třídy a vrcholové plavání. Ve Zlíně od roku 1939.">
+  <meta property="og:image" content="https://anetahorkova-bit.github.io/plavecky-klub-zlin-beta/og-image.png?v=1795695071">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1795695071">
+  <link rel="stylesheet" href="css/program.css?v=1795695071">
+  <link rel="stylesheet" href="css/oklubu.css?v=1795695071">
+  <style>
+    .rec-top { padding: 40px var(--pad) 48px; display: flex; flex-direction: column; gap: 16px; }
+    .rec-top .perex { max-width: 720px; color: var(--seda-600); }
+    .rec-tabs { position: sticky; top: 88px; z-index: 5; background: var(--bila); padding: 16px var(--pad); display: flex; gap: 8px; flex-wrap: wrap; }
+    .rec-tabs .filter.is-active { height: 40px; padding: 0 20px; font-size: 14px; }
+    .rec-body { padding: 24px var(--pad) 120px; display: flex; flex-direction: column; gap: 64px; }
+    .rec-sec { display: flex; flex-direction: column; gap: 8px; scroll-margin-top: 170px; }
+    .rec-sub { margin: 32px 0 8px; font-size: 22px; font-weight: 600; line-height: 1.2; }
+    .rec-wrap { overflow-x: auto; }
+    .rec { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; min-width: 900px; }
+    .rec th { text-align: left; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; color: var(--oranzova-500); padding: 8px 12px; border-bottom: 1px solid var(--seda-200); }
+    .rec th.pool { text-transform: none; letter-spacing: 0; font-size: 18px; font-weight: 400; color: var(--navy-900); border-bottom: 0; padding-top: 16px; }
+    .rec thead tr:first-child th { border-bottom: 0; }
+    .rec th.r, .rec td.t { text-align: right; }
+    .rec td { padding: 12px; border-bottom: 1px solid var(--seda-200); color: var(--navy-900); }
+    .rec td.d, .rec td.sw { font-weight: 600; }
+    .rec td.yr { font-weight: 400; }
+    .rec td.t { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .rec td.t.hl { position: relative; }
+    .rec td.t.hl::before { content: ""; position: absolute; inset: 6px 4px 6px auto; width: calc(100% - 4px); max-width: 76px; border-radius: 8px; background: var(--zluta-500); z-index: -1; }
+    .rec tbody { position: relative; z-index: 0; }
+    .rec tr.grp td { background: var(--modra-100); font-weight: 400; font-size: 18px; padding: 10px 12px; }
+    .rec-sec .docs, .rec-sec > .doc-group { margin-top: 16px; border-top: 1px solid var(--seda-200); border-bottom: 1px solid var(--seda-200); }
+  </style>
+  <link rel="stylesheet" href="css/responsive.css?v=1795695071">
+</head>
+<body data-page="oklubu">
+<div data-nav></div>
+<div class="page" style="overflow-x:clip">
+  <section class="rec-top">
+    <nav class="crumbs" aria-label="Drobečková navigace"><a href="index.html">Úvod</a><span class="sep">›</span><a href="o-klubu.html">O klubu</a><span class="sep">›</span><a href="o-klubu.html#rekordy">Klubové rekordy</a><span class="sep">›</span><span class="cur">10leté žactvo</span></nav>
+    <h1 class="t-h1"><span class="w"><span>10leté žactvo</span></span></h1>
+    <p class="t-telo perex">Klubové rekordy chlapců a dívek v kategorii 10 let. Žlutě jsou rekordy z poslední sezóny.</p>
+  </section>
+  <nav class="rec-tabs" aria-label="Kategorie"><a class="filter is-active" href="rekordy-10-let.html">10 let</a><a class="filter" href="#" data-todo>11–12 let</a><a class="filter" href="#" data-todo>13–14 let</a><a class="filter" href="#" data-todo>Dorost</a><a class="filter" href="#" data-todo>Dospělí</a><a class="filter" href="#" data-todo>Tabulky výkonů</a></nav>
+  <div class="rec-body">
+    <section class="rec-sec" id="z10">
+      
+      <p class="t-telo">Rekordy k 1. 12. 2024</p>
+      
+      <div class="rec-wrap"><table class="rec"><thead><tr><th></th><th colspan="3" class="pool">Chlapci</th><th colspan="3" class="pool">Dívky</th></tr><tr><th>Disciplína</th><th>Plavec</th><th>Rok</th><th class="r">Čas</th><th>Plavec</th><th>Rok</th><th class="r">Čas</th></tr></thead><tbody><tr class="grp"><td colspan="7">Volný způsob</td></tr><tr><td class="d">50 m</td><td class="sw">Beníček Karel</td><td class="yr">2002</td><td class="t">0:32,15</td><td class="sw">Vydrová Marie</td><td class="yr">2016</td><td class="t">0:31,80</td></tr><tr><td class="d">100 m</td><td class="sw">Huňa Aleš</td><td class="yr">2019</td><td class="t">1:10,26</td><td class="sw">Kubalčíková Celestina</td><td class="yr">2024</td><td class="t">1:13,01</td></tr><tr><td class="d">200 m</td><td class="sw">Huňa Aleš</td><td class="yr">2019</td><td class="t">2:41,89</td><td class="sw">Kubalčíková Celestina</td><td class="yr">2024</td><td class="t">2:42,81</td></tr><tr><td class="d">400 m</td><td class="sw">Huňa Aleš</td><td class="yr">2019</td><td class="t">5:30,95</td><td class="sw">Kubalčíková Celestina</td><td class="yr">2024</td><td class="t">5:40,98</td></tr><tr><td class="d">800 m</td><td class="sw">Huňa Aleš</td><td class="yr">2019</td><td class="t">11:31,38</td><td class="sw">Malúšová Hana</td><td class="yr">1990</td><td class="t">12:45,0</td></tr><tr><td class="d">1500 m</td><td class="sw">Mikšík David</td><td class="yr">1991</td><td class="t">24:17,2</td><td class="sw">Malúšová Hana</td><td class="yr">1990</td><td class="t">23:58,4</td></tr><tr class="grp"><td colspan="7">Motýlek</td></tr><tr><td class="d">50 m</td><td class="sw">Huňa Aleš</td><td class="yr">2019</td><td class="t">0:35,08</td><td class="sw">Duroňová Dominika</td><td class="yr">2003</td><td class="t">0:36,5</td></tr><tr><td class="d">100 m</td><td class="sw">Huňa Aleš</td><td class="yr">2019</td><td class="t">1:19,52</td><td class="sw">Duroňová Dominika</td><td class="yr">2003</td><td class="t">1:31,1</td></tr><tr><td class="d">200 m</td><td class="sw">Michek Ladislav</td><td class="yr">1972</td><td class="t">3:19,5</td><td class="sw">Němcová, Odstrčilová</td><td class="yr">1990</td><td class="t">3:43,6</td></tr><tr class="grp"><td colspan="7">Znak</td></tr><tr><td class="d">50 m</td><td class="sw">Beníček Karel</td><td class="yr">2002</td><td class="t">0:37,7</td><td class="sw">Vydrová Marie</td><td class="yr">2016</td><td class="t">0:36,2</td></tr><tr><td class="d">100 m</td><td class="sw">Knedla Miroslav</td><td class="yr">2015</td><td class="t">1:20,7</td><td class="sw">Vydrová Marie</td><td class="yr">2016</td><td class="t">1:23,4</td></tr><tr><td class="d">200 m</td><td class="sw">Gregorovič Marcel</td><td class="yr">1972</td><td class="t">3:11,3</td><td class="sw">Kubalčíková Celestina</td><td class="yr">2024</td><td class="t">3:09,39</td></tr><tr class="grp"><td colspan="7">Prsa</td></tr><tr><td class="d">50 m</td><td class="sw">Turza Kryštof</td><td class="yr">2012</td><td class="t">0:41,7</td><td class="sw">Minaříková Tereza</td><td class="yr">2019</td><td class="t">0:39,62</td></tr><tr><td class="d">100 m</td><td class="sw">Ledabyl Tomáš</td><td class="yr">2019</td><td class="t">1:32,69</td><td class="sw">Minaříková Tereza</td><td class="yr">2019</td><td class="t">1:29,66</td></tr><tr><td class="d">200 m</td><td class="sw">Veselý Petr</td><td class="yr">1983</td><td class="t">3:15,10</td><td class="sw">Minaříková Tereza</td><td class="yr">2019</td><td class="t">3:14,83</td></tr><tr class="grp"><td colspan="7">Polohový závod</td></tr><tr><td class="d">100 m</td><td class="sw">Havel Radek</td><td class="yr">1971</td><td class="t">1:21,6</td><td class="sw">Minaříková Tereza</td><td class="yr">2019</td><td class="t">1:23,78</td></tr><tr><td class="d">200 m</td><td class="sw">Huňa Aleš</td><td class="yr">2019</td><td class="t">2:56,39</td><td class="sw">Vyoralová Lucie</td><td class="yr">1993</td><td class="t">3:04,2</td></tr></tbody></table></div>
+    </section>
+  </div>
+  <div data-footer></div>
+</div>
+<script src="js/app.js?v=1795695071"></script>
+</body>
+</html>

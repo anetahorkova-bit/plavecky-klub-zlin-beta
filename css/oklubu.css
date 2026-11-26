@@ -125,3 +125,11 @@
 .ok-side a:first-child { background: none; }
 .ok-side a { background: var(--dash) left top / 100% 1px no-repeat; }
 .ok-side a:first-child { background: none; }
+
+/* Klubové rekordy: dlaždice kategorií */
+.rec-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.rec-tile { border-radius: var(--r-lg); padding: 32px; min-height: 260px; display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; background: var(--modra-100); color: var(--navy-900); position: relative; }
+.rec-tile .ilu { height: 110px; width: auto; align-self: flex-start; margin-bottom: auto; transition: transform .6s var(--ease-out); }
+@media (hover: hover) { .rec-tile:hover .ilu { transform: translateX(8px); } }
+@media (max-width: 1023px) { .rec-tiles { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .rec-tiles { grid-template-columns: 1fr; gap: 16px; } .rec-tile { min-height: 200px; padding: 24px; } }

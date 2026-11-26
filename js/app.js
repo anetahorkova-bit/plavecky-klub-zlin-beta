@@ -64,7 +64,7 @@
           <div class="footer-col"><span class="t-eyebrow">Kurzy</span>
             ${programs.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}<a href="tabory.html">Tábory a kempy</a></div>
           <div class="footer-col"><span class="t-eyebrow">Klub</span>
-            <a href="o-klubu.html#historie">Historie</a><a href="o-klubu.html#treneri">Trenéři</a><a href="o-klubu.html#uspechy">Úspěchy</a><a href="o-klubu.html#partneri">Partneři</a><a href="o-klubu.html#zavody">Naše závody</a><a href="o-klubu.html#dokumenty">Dokumenty ke stažení</a></div>
+            <a href="o-klubu.html#historie">Historie</a><a href="o-klubu.html#treneri">Trenéři</a><a href="o-klubu.html#uspechy">Úspěchy</a><a href="o-klubu.html#rekordy">Klubové rekordy</a><a href="o-klubu.html#partneri">Partneři</a><a href="o-klubu.html#zavody">Naše závody</a><a href="o-klubu.html#dokumenty">Dokumenty ke stažení</a></div>
           <div class="footer-col"><span class="t-eyebrow">Pro rodiče</span><a href="prihlaska.html">Přihláška</a>
             <a href="https://zlinswim.rajce.idnes.cz/" target="_blank" rel="noopener">Fotogalerie Rajče.net</a><a href="https://www.czechswimming.cz/" target="_blank" rel="noopener">ČSPS</a></div>
         </div>

@@ -181,3 +181,19 @@
 .ev-tabs-sec { display: flex; flex-direction: column; gap: clamp(48px, 5vw, 80px); }
 .ev-panel[data-panel="info"] p { max-width: 760px; }
 .lanes + .c-section { padding-top: clamp(80px, 8vw, 128px); }
+/* Aktuality: typy (detail / odkaz ven / jen informace) */
+.nrow-info { cursor: default; }
+@media (hover: hover) { .nrow-info:hover .nrow-d, .nrow-info:hover .nrow-t > * { color: inherit; } .nrow-info:hover .nrow-d { color: var(--navy-900); } .nrow-info:hover .nrow-t .t-h3 { color: var(--navy-900); } .nrow-info .nrow-t .muted { color: var(--seda-600); } }
+.nrow-ext { display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 15px; font-weight: 600; color: var(--navy-900); }
+.ext-ico { width: 16px; height: 16px; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 14L14 6M7 6h7v7' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 14L14 6M7 6h7v7' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+/* Detail aktuality: text a fotka max na půl stránky */
+.art-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); align-items: start; padding: var(--sec) var(--pad); }
+.art-split-text { display: flex; flex-direction: column; gap: 16px; max-width: 640px; color: var(--navy-900); }
+.art-split-text .t-karta { margin-top: 16px; }
+.art-split-text a:not(.btn) { text-decoration: underline; }
+.art-split-text a:not(.btn):hover { color: var(--oranzova-500); }
+.art-split-ph { margin: 0; position: sticky; top: calc(var(--nav-h, 96px) + 24px); border-radius: var(--r-lg); overflow: hidden; background: var(--modra-100); }
+.art-split-ph img { display: block; width: 100%; height: auto; max-height: 640px; object-fit: contain; }
+.art-list { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+.art-cta { margin-top: 16px; }
+@media (max-width: 900px) { .art-split { grid-template-columns: 1fr; } .art-split-ph { position: static; order: -1; } }

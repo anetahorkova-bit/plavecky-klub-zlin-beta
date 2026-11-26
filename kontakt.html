@@ -11,17 +11,17 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kontakt · Plavecký klub Zlín">
   <meta property="og:description" content="Kurzy plavání pro děti, sportovní třídy a vrcholové plavání. Ve Zlíně od roku 1939.">
-  <meta property="og:image" content="https://anetahorkova-bit.github.io/plavecky-klub-zlin-beta/og-image.png?v=1795701052">
+  <meta property="og:image" content="https://anetahorkova-bit.github.io/plavecky-klub-zlin-beta/og-image.png?v=1795701334">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1795701052">
-  <link rel="stylesheet" href="css/program.css?v=1795701052">
-  <link rel="stylesheet" href="css/oklubu.css?v=1795701052">
-  <link rel="stylesheet" href="css/responsive.css?v=1795701052">
+  <link rel="stylesheet" href="css/style.css?v=1795701334">
+  <link rel="stylesheet" href="css/program.css?v=1795701334">
+  <link rel="stylesheet" href="css/oklubu.css?v=1795701334">
+  <link rel="stylesheet" href="css/responsive.css?v=1795701334">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body data-page="kontakt">
@@ -49,7 +49,7 @@
   </section>
   <div data-footer></div>
 </div>
-<script src="js/app.js?v=1795701052"></script>
+<script src="js/app.js?v=1795701334"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 /* Mapa: Google Maps s vlastním stylem, pokud je vyplněný klíč; jinak Leaflet se světlým podkladem. */
@@ -59,7 +59,7 @@ var KT_PIN = '<svg width="40" height="51" viewBox="-12 -12 355 450" xmlns="http:
 var KT_STYLE = [{"elementType": "geometry", "stylers": [{"color": "#eef5fa"}]}, {"elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"elementType": "labels.text.fill", "stylers": [{"color": "#4a6394"}]}, {"elementType": "labels.text.stroke", "stylers": [{"color": "#ffffff"}, {"weight": 3}]}, {"featureType": "administrative", "elementType": "geometry", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative.land_parcel", "stylers": [{"visibility": "off"}]}, {"featureType": "landscape.natural", "elementType": "geometry", "stylers": [{"color": "#eef5fa"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{"color": "#e6f0f7"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.stroke", "stylers": [{"color": "#4f8fd1"}, {"weight": 2}]}, {"featureType": "landscape.man_made", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "poi", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.park", "stylers": [{"visibility": "on"}]}, {"featureType": "poi.park", "elementType": "geometry", "stylers": [{"color": "#bfe9d8"}]}, {"featureType": "poi.park", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.sports_complex", "stylers": [{"visibility": "on"}]}, {"featureType": "poi.sports_complex", "elementType": "geometry", "stylers": [{"color": "#c8e7fd"}]}, {"featureType": "poi.sports_complex", "elementType": "labels.text.fill", "stylers": [{"color": "#002f94"}]}, {"featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "road", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.local", "elementType": "labels", "stylers": [{"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#7fd6e8"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "off"}]}]; /* = assets/mapa-styl.json */
 function ktGoogle(){
   var m=new google.maps.Map(document.getElementById('kt-map'),{center:KT_POS,zoom:16,styles:KT_STYLE,disableDefaultUI:true,zoomControl:true,gestureHandling:'cooperative'});
-  new google.maps.Marker({position:KT_POS,map:m,title:'Městské lázně · Hradská 854',icon:{url:'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(KT_PIN),scaledSize:new google.maps.Size(40,51),anchor:new google.maps.Point(20,51)}});
+  new google.maps.Marker({position:KT_POS,map:m,title:'Městské lázně · Hradská 854',icon:{url:'assets/kolo.svg',scaledSize:new google.maps.Size(64,56),anchor:new google.maps.Point(32,28)}});
 }
 (function(){
   if (GMAPS_KEY) {
@@ -70,8 +70,8 @@ function ktGoogle(){
   var pos=[KT_POS.lat,KT_POS.lng];
   var m=L.map('kt-map',{scrollWheelZoom:false,zoomControl:true}).setView(pos,16);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);
-  var pin=L.divIcon({className:'kt-pin',html:KT_PIN,iconSize:[40,51],iconAnchor:[20,51]});
-  L.marker(pos,{icon:pin,title:'Městské lázně · Hradská 854'}).addTo(m).bindTooltip('Městské lázně · Hradská 854',{permanent:true,direction:'right',offset:[16,-30],className:'kt-tip'});
+  var pin=L.divIcon({className:'kt-pin',html:'<img src="assets/kolo.svg" alt="" width="64" height="56">',iconSize:[64,56],iconAnchor:[32,28]});
+  L.marker(pos,{icon:pin,title:'Městské lázně · Hradská 854'}).addTo(m).bindTooltip('Městské lázně · Hradská 854',{permanent:true,direction:'right',offset:[34,0],className:'kt-tip'});
 })();
 </script>
 </body>

@@ -376,7 +376,8 @@ button:focus:not(:focus-visible) { outline: none; }
 #kt-map .leaflet-bar a:hover { background: #e3f2fd; }
 #kt-map .leaflet-control-attribution { background: rgba(255,255,255,.8); color: #4b5f93; }
 #kt-map .leaflet-control-attribution a { color: var(--navy-900); }
-.kt-pin { background: none; border: 0; width: 40px !important; height: 51px !important; }
+.kt-pin { background: none; border: 0; width: 64px !important; height: 56px !important; }
+.kt-pin img { display: block; width: 64px; height: 56px; max-width: none; }
 .kt-pin svg { display: block; width: 40px; height: 51px; max-width: none; overflow: visible; }
 .kt-tip { background: #fff; color: var(--navy-900); border: 0; border-radius: 999px; padding: 6px 12px; font: 600 12px Rubik, sans-serif; box-shadow: 0 2px 8px rgba(0,47,148,.15); }
 .kt-tip::before { display: none; }

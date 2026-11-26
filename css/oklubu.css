@@ -112,7 +112,7 @@
 .kt-name { color: var(--navy-900); }
 .kt-tel, .kt-mail { font-size: 15px; font-weight: 600; }
 .kt-mail { text-align: right; }
-.kt-tel a:hover, .kt-mail:hover { color: var(--modra-300); }
+.kt-tel a:hover, .kt-mail:hover { color: var(--oranzova-500); }
 @media (max-width: 1024px) {
   .kt-tiles { grid-template-columns: 1fr; }
   .kt-row { grid-template-columns: 1fr auto; gap: 4px 16px; }

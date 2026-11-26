@@ -132,8 +132,9 @@
 .rec-tile:hover { border-color: var(--navy-900); background: var(--modra-100); }
 .rec-tile .ilu { height: 110px; width: auto; align-self: flex-start; margin-bottom: auto; transition: transform .6s var(--ease-out); }
 @media (hover: hover) { .rec-tile:hover .ilu { transform: translateX(8px); } }
-@media (max-width: 1023px) { .rec-tiles { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .rec-tiles { grid-template-columns: 1fr; gap: 16px; } .rec-tile { min-height: 200px; padding: 24px; } }
+@media (max-width: 1023px) { .rec-tiles { gap: 16px; } .rec-tile { min-height: 220px; padding: 24px; } .rec-tile .ilu { height: 88px; } }
+@media (max-width: 767px) { .rec-tiles { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .rec-tiles { gap: 12px; } .rec-tile { min-height: 172px; padding: 16px; gap: 2px; } .rec-tile .ilu { height: 64px; } .rec-tile .t-h3 { font-size: 17px; line-height: 1.25; } .rec-tile .t-telo { font-size: 13px; } }
 /* Mapa v barvách webu (Leaflet podklad) */
 #kt-map .leaflet-tile-pane { filter: grayscale(1) sepia(.4) hue-rotate(175deg) saturate(2.4) brightness(1.08) contrast(.86); }
 /* Soubor ke stažení podle Figmy (Soubor · Ročenka 2021) */

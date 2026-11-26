@@ -48,11 +48,11 @@
 .person { display: flex; align-items: center; gap: 32px; cursor: default; }
 .person .nm { display: flex; align-items: center; gap: 24px; width: min(560px, 48%); flex: none; }
 .person .nm span { font-size: 48px; font-weight: 500; line-height: 1.1; color: var(--oranzova-200); white-space: nowrap; transition: color .35s var(--ease); max-width: 488px; }
-.person .wave { flex: 1; min-width: 48px; height: 6px; overflow: hidden; opacity: 0; transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease-out), opacity .3s; }
+.person .wave { flex: 1; min-width: 48px; height: 6px; overflow: hidden; opacity: 0; transition: opacity .3s var(--ease); }
 .person .wave img { width: 1106px; height: 6px; max-width: none; }
 .person .desc { width: min(480px, 40%); opacity: 0; transform: translateX(-12px); transition: opacity .35s var(--ease), transform .45s var(--ease-out); pointer-events: none; }
 .person.on .nm span { color: var(--oranzova-500); }
-.person.on .wave { opacity: 1; transform: scaleX(1); }
+.person.on .wave { opacity: 1; }
 .person.on .desc { opacity: 1; transform: none; }
 .person .desc .t-telo-s { font-size: 14px; }
 .person .desc p { font-size: 14px; }
@@ -144,4 +144,4 @@
 .doc .dl { width: 44px; height: 44px; flex: none; border: 0; background: #d5deef; color: var(--navy-900); }
 .doc .dl::before { width: 14px; height: 14px; transform: none; -webkit-mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; }
 .doc:hover .dl { background: var(--modra-200); }
-@media (min-width: 1024px) { .pr-intro.ok-hero .p-hero-wave { top: -340px; } }
+@media (min-width: 1024px) { .wave-up .p-hero-wave { top: -340px; } }

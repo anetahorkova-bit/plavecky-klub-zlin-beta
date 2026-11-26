@@ -144,3 +144,4 @@
 .doc .dl { width: 44px; height: 44px; flex: none; border: 0; background: #d5deef; color: var(--navy-900); }
 .doc .dl::before { width: 14px; height: 14px; transform: none; -webkit-mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; }
 .doc:hover .dl { background: var(--modra-200); }
+@media (min-width: 1024px) { .pr-intro.ok-hero .p-hero-wave { top: -340px; } }

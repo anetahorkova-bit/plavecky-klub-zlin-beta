@@ -1,6 +1,6 @@
 /* Plavecký klub Zlín · prototyp
    Tokeny odpovídají kolekcím Barvy, Radius a Spacing ve Figmě. */
-:root { --sec: 32px;
+:root { --sec: clamp(40px, 4.5vw, 72px);
   --navy-950: #00236e;
   --navy-900: #002f94;
   --navy-700: #0a2fa8;

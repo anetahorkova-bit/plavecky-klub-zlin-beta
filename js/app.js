@@ -278,3 +278,24 @@
     window.addEventListener('resize', function () { if (Math.abs(window.innerWidth - w) > 50) { w = window.innerWidth; build(); } });
   });
 })();
+
+/* Lightbox: rozkliknutí fotek v detailech a galeriích */
+(function () {
+  var sel = '.art-split-ph img, .c-card.photo img';
+  var imgs = Array.prototype.slice.call(document.querySelectorAll(sel));
+  if (!imgs.length) return;
+  var box = document.createElement('div');
+  box.className = 'lb'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.hidden = true;
+  box.innerHTML = '<button class="lb-close" aria-label="Zavřít"></button><button class="lb-nav lb-prev" aria-label="Předchozí"></button><img alt=""><button class="lb-nav lb-next" aria-label="Další"></button>';
+  document.body.appendChild(box);
+  var im = box.querySelector('img'), i = 0;
+  function show(n) { i = (n + imgs.length) % imgs.length; im.src = imgs[i].currentSrc || imgs[i].src; }
+  function open(n) { show(n); box.hidden = false; document.documentElement.style.overflow = 'hidden'; box.querySelector('.lb-close').focus(); }
+  function close() { box.hidden = true; document.documentElement.style.overflow = ''; }
+  imgs.forEach(function (el, n) { el.style.cursor = 'zoom-in'; el.addEventListener('click', function (e) { e.preventDefault(); open(n); }); });
+  box.addEventListener('click', function (e) { if (e.target === box || e.target.classList.contains('lb-close')) close(); });
+  box.querySelector('.lb-prev').addEventListener('click', function () { show(i - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function () { show(i + 1); });
+  document.addEventListener('keydown', function (e) { if (box.hidden) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') show(i - 1); if (e.key === 'ArrowRight') show(i + 1); });
+  if (imgs.length < 2) box.querySelectorAll('.lb-nav').forEach(function (b) { b.hidden = true; });
+})();

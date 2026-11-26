@@ -192,7 +192,7 @@
 .art-split-text .t-karta { margin-top: 16px; }
 .art-split-text a:not(.btn) { text-decoration: underline; }
 .art-split-text a:not(.btn):hover { color: var(--oranzova-500); }
-.art-split-ph { margin: 0; position: sticky; top: calc(var(--nav-h, 96px) + 24px); border-radius: var(--r-lg); overflow: hidden; background: var(--modra-100); }
+.art-split-ph { margin: 0; position: sticky; top: calc(var(--nav-h, 96px) + 24px); border-radius: 16px; overflow: hidden; background: var(--modra-100); }
 .art-split-ph img { display: block; width: 100%; height: auto; max-height: 640px; object-fit: contain; }
 .art-list { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
 .art-cta { margin-top: 16px; }

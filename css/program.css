@@ -165,3 +165,16 @@
 .lane-animal img[src*="zvire-zelva"] { width: 184px !important; height: auto !important; }
 .lane-animal img[src*="zvire-ryba"] { width: 160px !important; height: auto !important; }
 .lane-animal img[src*="zvire-bobr"] { width: 170px !important; height: auto !important; }
+/* Závod: záložky Harmonogram / Výsledky / Další info */
+.ev-tabs { margin-bottom: 48px; }
+.ev-panel { display: flex; flex-direction: column; gap: 24px; }
+.ev-panel[hidden] { display: none; }
+.ev-panel .t-eyebrow { margin-bottom: -16px; }
+.ev-prog { border-top: 1px dashed var(--seda-200); }
+.ev-row { display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: center; padding: 24px 0; border-bottom: 1px dashed var(--seda-200); }
+.ev-time { font-size: 20px; font-weight: 600; color: var(--navy-900); font-variant-numeric: tabular-nums; }
+.ev-row .t-telo { color: var(--navy-900); }
+.ev-signup { display: flex; align-items: center; gap: 32px; padding-top: 24px; }
+.ev-signup p { max-width: 640px; }
+.ev-panel .docs { border-top: 1px dashed var(--seda-200); }
+@media (max-width: 767px) { .ev-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 0; } .ev-time { font-size: 17px; } .ev-signup { flex-direction: column; align-items: flex-start; gap: 16px; } .ev-tabs { margin-bottom: 32px; } }

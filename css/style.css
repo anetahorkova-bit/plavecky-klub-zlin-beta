@@ -129,10 +129,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-size: 14px; font-weight: 600; line-height: 1.4; position: relative;
   transition: background-color .2s var(--ease);
 }
-.nav-link:hover, .nav-link.is-active { color: var(--modra-300); }
+/* Hover v navigaci: vlnka se vykreslí pod odkazem, barva se nemění */
+.nav-link::after { content: ""; position: absolute; left: 20px; right: 20px; bottom: 4px; height: 6px; background: currentColor; -webkit-mask: url(../assets/vlnka-dlazdice.svg?v=3) left center / 12px 5px repeat-x; mask: url(../assets/vlnka-dlazdice.svg?v=3) left center / 12px 5px repeat-x; clip-path: inset(0 100% 0 0); transition: clip-path .45s var(--ease-out); pointer-events: none; }
+.nav-link:hover::after, .nav-link.is-active::after, .nav-link:focus-visible::after { clip-path: inset(0 0 0 0); }
 .nav.is-home .nav-link { font-weight: 400; }
 .nav.is-home:not(.is-scrolled) .nav-link { color: var(--bila); text-shadow: 0 1px 12px rgba(0, 31, 97, .6); font-weight: 500; }
-.nav.is-home:not(.is-scrolled) .nav-link:hover, .nav.is-home:not(.is-scrolled) .nav-link.is-active { color: var(--modra-100); }
+
 .nav.is-home:not(.is-scrolled) .nav-link .chev { filter: brightness(0) invert(1); }
 .nav-link { transition: background-color .2s var(--ease), color .35s var(--ease); }
 .nav-link .chev { width: 11px; transition: transform .3s var(--ease); }
@@ -305,7 +307,6 @@ button:focus:not(:focus-visible) { outline: none; }
   .drop-item { padding: 8px 0; }
   .drop-item:hover { background: none; }
   .drop-item .drop-txt > *, .drop-item .drop-txt .muted { transition: color .25s var(--ease); }
-  .drop-item:hover .drop-txt > * { color: var(--modra-300); }
 }
 
 /* Na úvodu: při otevřeném dropdownu se navigace přepne do bílé, aby s pásem tvořila jeden celek */
@@ -315,7 +316,6 @@ button:focus:not(:focus-visible) { outline: none; }
   .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .logo-light { opacity: 0; }
   .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .nav-link { color: var(--navy-900); text-shadow: none; }
   .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .nav-link .chev { filter: none; }
-  .nav.is-home:has(.nav-drop:hover, .nav-drop:focus-within) .nav-drop > .nav-link { color: var(--modra-300); }
   .nav.is-home { transition: background-color .25s var(--ease), padding .3s var(--ease), box-shadow .3s var(--ease); }
 }
 

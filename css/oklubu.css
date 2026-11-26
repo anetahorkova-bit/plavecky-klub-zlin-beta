@@ -76,9 +76,9 @@
 
 /* Partneři */
 .logos { display: flex; flex-wrap: wrap; gap: 16px; }
-.logo-box { width: 264px; height: 128px; border: 1.5px solid var(--seda-200); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; background: var(--bila); transition: border-color .3s, transform .4s var(--ease-out), box-shadow .4s var(--ease-out); }
+.logo-box { width: 264px; height: 128px; border: 1.5px solid var(--seda-200); border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; background: var(--bila); transition: border-color .3s, background-color .3s, transform .4s var(--ease-out), box-shadow .4s var(--ease-out); }
 .logo-box img { width: 200px; height: 72px; object-fit: contain; filter: grayscale(1); opacity: .75; transition: filter .4s, opacity .4s; }
-.logo-box:hover { border-color: var(--modra-300); }
+.logo-box:hover { border-color: var(--navy-900); background: var(--modra-100); }
 .logo-box:hover img { filter: none; opacity: 1; }
 
 /* Dokumenty */

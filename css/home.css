@@ -184,3 +184,4 @@
 .chip-4 { color: var(--navy-900); }
 .home-intro { margin-bottom: 0; }
 section.home-130 { padding-top: clamp(56px, 7vw, 112px); }
+section.home-intro { padding-top: clamp(56px, 7vw, 112px); padding-bottom: clamp(56px, 7vw, 112px); }

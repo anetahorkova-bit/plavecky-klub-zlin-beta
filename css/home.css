@@ -173,3 +173,12 @@
 
 /* Číslo kurzu uvnitř čipu */
 .chip-n { font-size: .42em; font-weight: 600; letter-spacing: .04em; opacity: .55; margin-right: .2em; align-self: center; }
+
+/* Plavecké kurzy: podbarvená sekce podle Figmy */
+.home-kurzy { background: var(--modra-150); padding-bottom: 0; }
+.home-lanes { padding-bottom: 48px; }
+.home-kurzy { --dash: repeating-linear-gradient(90deg, var(--modra-300) 0 16px, transparent 16px 28px); }
+.home-kurzy .hl-axis, .home-kurzy .hl-axis::before, .home-kurzy .hl-axis::after { background: var(--modra-300); }
+.chip-3 { background: #79d2da; }
+.chip-4 { color: var(--navy-900); }
+.home-intro { margin-bottom: 0; }

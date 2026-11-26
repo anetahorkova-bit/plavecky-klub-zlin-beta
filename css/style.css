@@ -128,7 +128,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .nav-menu { display: flex; align-items: center; gap: 8px; padding: 8px; border-radius: var(--r-full); background: transparent; }
 .nav-link {
   display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: var(--r-full);
-  font-size: 14px; font-weight: 600; line-height: 1.4; position: relative;
+  font-size: 16px; font-weight: 600; line-height: 1.4; position: relative;
   transition: background-color .2s var(--ease);
 }
 /* Hover s vlnkou (navigace, patička, drobečky): vlnka se vykreslí pod odkazem, barva se nemění */

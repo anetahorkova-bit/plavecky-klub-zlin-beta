@@ -246,4 +246,16 @@
     }
     window.addEventListener('scroll', upd, {passive:true}); window.addEventListener('resize', upd); upd();
   });
+
+  /* Vlnka pod odkazy: po odjetí myši odjede doprava */
+  document.addEventListener('mouseout', (e) => {
+    const a = e.target.closest && e.target.closest('.nav-link, .footer-col a, .footer-bottom a, .crumbs a');
+    if (!a || a.contains(e.relatedTarget) || a.classList.contains('is-active')) return;
+    a.classList.remove('wave-out'); void a.offsetWidth; a.classList.add('wave-out');
+    a.addEventListener('animationend', () => a.classList.remove('wave-out'), { once: true });
+  });
+  document.addEventListener('mouseover', (e) => {
+    const a = e.target.closest && e.target.closest('.wave-out');
+    if (a && !a.contains(e.relatedTarget)) a.classList.remove('wave-out');
+  });
 })();

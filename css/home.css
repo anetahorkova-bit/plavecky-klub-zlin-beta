@@ -19,11 +19,12 @@
 @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
 
 .marquee { position: absolute; left: 0; right: 0; top: var(--ph); height: 92px; display: flex; align-items: center; overflow: hidden; z-index: 2; }
-.marquee-track { display: flex; align-items: center; gap: 28px; width: max-content; animation: marquee 28s linear infinite; padding-left: 28px; }
+.marquee-track { display: flex; align-items: center; width: max-content; animation: marquee var(--mq-dur, 28s) linear infinite; will-change: transform; backface-visibility: hidden; }
+.marquee-track > * { margin-right: 28px; }
 .marquee-track span { font-size: 20px; letter-spacing: .04em; font-weight: 600; line-height: 1.2; white-space: nowrap; }
 .marquee-track img { width: 40px; height: 14px; flex: none; display: block; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes marquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
 
 /* Kurzy */
 .home-kurzy { padding-top: 130px; }
@@ -182,3 +183,4 @@
 .chip-3 { background: #79d2da; }
 .chip-4 { color: var(--navy-900); }
 .home-intro { margin-bottom: 0; }
+section.home-130 { padding-top: clamp(56px, 7vw, 112px); }

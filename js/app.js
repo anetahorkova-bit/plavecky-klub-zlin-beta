@@ -259,3 +259,22 @@
     if (a && !a.contains(e.relatedTarget)) a.classList.remove('wave-out');
   });
 })();
+
+/* Běžící lišta: naklonuje skupinu tak, aby polovina pásu vždy pokryla celou šířku okna (plynulá smyčka bez mezery). */
+(function () {
+  document.querySelectorAll('.marquee-track').forEach(function (track) {
+    var kids = Array.prototype.slice.call(track.children);
+    var group = kids.slice(0, kids.length / 2).map(function (n) { return n.cloneNode(true); });
+    function build() {
+      track.innerHTML = '';
+      var half = [];
+      do { group.forEach(function (n) { var c = n.cloneNode(true); track.appendChild(c); half.push(c); }); }
+      while (track.scrollWidth < window.innerWidth + 200);
+      half.forEach(function (n) { track.appendChild(n.cloneNode(true)); });
+      track.style.setProperty('--mq-dur', Math.round(track.scrollWidth / 2 / 40) + 's');
+    }
+    build();
+    var w = window.innerWidth;
+    window.addEventListener('resize', function () { if (Math.abs(window.innerWidth - w) > 50) { w = window.innerWidth; build(); } });
+  });
+})();

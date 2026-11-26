@@ -17,7 +17,7 @@
   const navHost = document.querySelector('[data-nav]');
   if (navHost) {
     const active = (p) => (page === p ? ' is-active' : '');
-    const isProgram = ['pripravka', 'klubove', 'sportovni', 'vrcholove'].includes(page);
+    const isProgram = ['kurzy', 'pripravka', 'klubove', 'sportovni', 'vrcholove'].includes(page);
     navHost.outerHTML = `
     <header class="nav ${isHome ? 'is-home' : 'is-sub'}" id="nav">
       <a class="nav-logo" href="index.html" aria-label="Plavecký klub Zlín, úvod">
@@ -25,7 +25,7 @@
       </a>
       <nav class="nav-menu" aria-label="Hlavní menu">
         <div class="nav-drop">
-          <a class="nav-link${isProgram ? ' is-active' : ''}" href="index.html#kurzy">Kurzy <img class="chev" src="assets/chevron.svg" alt=""></a>
+          <a class="nav-link${isProgram ? ' is-active' : ''}" href="kurzy.html">Kurzy <img class="chev" src="assets/chevron.svg" alt=""></a>
           <div class="nav-drop-panel">
             ${programs.map(([h, t, c, ilu, age]) => `<a class="drop-item" href="${h}"><span class="drop-ilu"><img src="assets/${ilu}" alt=""></span><span class="drop-txt"><span class="t-telo-s">${t}</span><span class="t-maly muted">${age}</span></span></a>`).join('')}
           </div>

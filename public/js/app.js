@@ -3,7 +3,7 @@
   const page = document.body.dataset.page || '';
   const isHome = page === 'home';
 
-  const arrowSvg = '<svg viewBox="0 0 19 19" fill="none" aria-hidden="true"><path d="M3 9.5h13M10.5 4l5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const arrowSvg = '<svg class="icon icon--arrow-right" aria-hidden="true"><use xlink:href="public/images/sprite.svg#arrow-right"></use></svg>';
   window.PKZ = { arrowSvg };
 
   const programs = [
@@ -25,7 +25,7 @@
       </a>
       <nav class="nav-menu" aria-label="Hlavní menu">
         <div class="nav-drop">
-          <a class="nav-link${isProgram ? ' is-active' : ''}" href="kurzy.html">Kurzy <img class="chev" src="public/images/chevron.svg" alt=""></a>
+          <a class="nav-link${isProgram ? ' is-active' : ''}" href="kurzy.html">Kurzy <svg class="icon icon--chevron-down chev" aria-hidden="true"><use xlink:href="public/images/sprite.svg#chevron-down"></use></svg></a>
           <div class="nav-drop-panel">
             ${programs.map(([h, t, c, ilu, age]) => `<a class="drop-item" href="${h}"><span class="drop-ilu"><img src="public/images/${ilu}" alt=""></span><span class="drop-txt"><span class="t-telo-s">${t}</span><span class="t-maly muted">${age}</span></span></a>`).join('')}
           </div>

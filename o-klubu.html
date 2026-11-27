@@ -204,7 +204,7 @@ Ať už jde o první plavecké krůčky, nebo přípravu na významné závody, 
   document.getElementById('docs').innerHTML = G.map(([t, c, files], i) => `
     <div class="doc-group">
       <button class="doc-head"><span class="t-karta">${t}</span><span class="tag">${c}</span><span class="count"></span><span class="pm">+</span></button>
-      <div class="doc-body"><div><div class="doc-list">${(files || [[t, 'Seznam souborů doplní klub']]).map(([n, m]) => `<a class="doc" href="#" data-todo><span class="t-telo-s">${n}</span><span class="meta"><span class="t-stitek muted">${m}</span><span class="dl"></span></span></a>`).join('')}</div></div></div>
+      <div class="doc-body"><div><div class="doc-list">${(files || [[t, 'Seznam souborů doplní klub']]).map(([n, m]) => `<a class="doc" href="#" data-todo><span class="t-telo-s">${n}</span><span class="meta"><span class="t-stitek muted">${m}</span><span class="dl"><svg class="icon icon--download" aria-hidden="true"><use xlink:href="public/images/sprite.svg#download"></use></svg></span></span></a>`).join('')}</div></div></div>
     </div>`).join('');
   document.querySelectorAll('.doc-head').forEach((h) => h.addEventListener('click', () => h.parentElement.classList.toggle('is-open')));
 

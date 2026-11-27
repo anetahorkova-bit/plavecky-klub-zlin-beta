@@ -144,7 +144,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .nav.is-home:not(.is-scrolled) .nav-link .chev { filter: brightness(0) invert(1); }
 .nav-link { transition: background-color .2s var(--ease), color .35s var(--ease); }
-.nav-link .chev { width: 11px; transition: transform .3s var(--ease); }
+.nav-link .chev { width: 11px; height: 6.35px; transition: transform .3s var(--ease); }
 .nav-drop { position: relative; }
 .nav-drop:hover .chev, .nav-drop:focus-within .chev { transform: rotate(180deg); }
 .nav-drop-panel {
@@ -395,3 +395,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .lb-next { right: 20px; --ic: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4.1l5.9 5.9-5.9 5.9M15.9 10H4.1' stroke='black' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
 .lb-nav[hidden] { display: none; }
 @media (max-width: 600px) { .lb { padding: 72px 12px; } .lb-prev, .lb-next { top: auto; bottom: 16px; } }
+
+/* SVG sprite ikony */
+.icon { display: inline-block; flex-shrink: 0; width: 1em; height: 1em; }
+.icon--chevron-down, .icon--arrow-chip { color: #002F94; }
+.icon--arrow-right { width: 19px; height: 19px; }

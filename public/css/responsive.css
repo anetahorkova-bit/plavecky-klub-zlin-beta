@@ -77,7 +77,7 @@ img, video, svg { max-width: 100%; }
   .home-lanes .chip { align-self: center !important; }
   .hl-lane { height: 132px; }
   .home-lanes .chip { font-size: 19px; height: 52px; padding: 0 20px; }
-  .home-lanes .chip img { width: 28px; }
+  .home-lanes .chip .icon { width: 28px; height: 28px; }
   .hl-lane:nth-of-type(2) .chip { margin-left: 4px; }
   .hl-lane:nth-of-type(4) .chip { margin-left: 44px; }
   .hl-lane:nth-of-type(6) .chip { margin-left: 18px; }

@@ -18,10 +18,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1795708101">
-  <link rel="stylesheet" href="css/program.css?v=1795708101">
-  <link rel="stylesheet" href="css/oklubu.css?v=1795708101">
-  <link rel="stylesheet" href="css/responsive.css?v=1795708101">
+  <link rel="stylesheet" href="public/css/style.css?v=1795708101">
+  <link rel="stylesheet" href="public/css/program.css?v=1795708101">
+  <link rel="stylesheet" href="public/css/oklubu.css?v=1795708101">
+  <link rel="stylesheet" href="public/css/responsive.css?v=1795708101">
   <!-- živá mapa dočasně vypnutá: <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"> -->
 </head>
 <body data-page="kontakt">
@@ -37,7 +37,7 @@
       <div><span class="t-eyebrow muted">Adresa klubu</span><span class="t-karta">Plavecký klub Zlín, z. s.</span><span class="t-telo-s">Hradská 854<br>760 01 Zlín</span></div>
       <div><span class="t-eyebrow muted">Obecné dotazy</span><span class="t-karta">Výkonný výbor klubu</span><span class="t-telo-s"><a href="mailto:info@zlinswim.cz">info@zlinswim.cz</a></span></div>
     </div>
-    <div class="kt-mapimg reveal" id="kt-map" role="region" style="position:relative"><img src="assets/mapa.jpg" alt="Mapa: Městské lázně, Hradská 854, Zlín" style="width:100%;height:100%;object-fit:cover;display:block"><img src="assets/kolo.svg" alt="" aria-hidden="true" style="position:absolute;left:38%;top:36%;width:64px;height:56px;transform:translate(-50%,-50%)"></div>
+    <div class="kt-mapimg reveal" id="kt-map" role="region" style="position:relative"><img src="public/images/mapa.jpg" alt="Mapa: Městské lázně, Hradská 854, Zlín" style="width:100%;height:100%;object-fit:cover;display:block"><img src="public/images/kolo.svg" alt="" aria-hidden="true" style="position:absolute;left:38%;top:36%;width:64px;height:56px;transform:translate(-50%,-50%)"></div>
   </section>
   <section class="kt-sec">
     <div class="kt-head reveal"><span class="t-eyebrow muted">Kurzy a skupiny</span><h2 class="t-h2">Trenéři kurzů</h2></div>
@@ -49,7 +49,7 @@
   </section>
   <div data-footer></div>
 </div>
-<script src="js/app.js?v=1795708101"></script>
+<script src="public/js/app.js?v=1795708101"></script>
 <!-- živá mapa dočasně vypnutá
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -57,10 +57,10 @@
 var GMAPS_KEY = ''; // sem vložit Google Maps API klíč klubu
 var KT_POS = {lat:49.22198, lng:17.66835}; // Městské lázně (vstup do bazénu)
 var KT_PIN = '<svg width="40" height="51" viewBox="-12 -12 355 450" xmlns="http://www.w3.org/2000/svg"><path d="M153.779 6.49238C161.906 -2.16413 170.032 -2.16413 178.159 6.49238L275.677 112.368C313.184 153.32 331 194.272 331 247.21C331 346.094 256.924 426 165.969 426C74.0765 426 0 347.093 0 248.209C0 195.271 17.8159 153.32 55.3229 112.368L153.779 6.49238Z" fill="#002f94" stroke="#fff" stroke-width="22"/><circle cx="166" cy="262" r="62" fill="#fcdc08"/></svg>';
-var KT_STYLE = [{"elementType": "geometry", "stylers": [{"color": "#eef5fa"}]}, {"elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"elementType": "labels.text.fill", "stylers": [{"color": "#4a6394"}]}, {"elementType": "labels.text.stroke", "stylers": [{"color": "#ffffff"}, {"weight": 3}]}, {"featureType": "administrative", "elementType": "geometry", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative.land_parcel", "stylers": [{"visibility": "off"}]}, {"featureType": "landscape.natural", "elementType": "geometry", "stylers": [{"color": "#eef5fa"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{"color": "#e6f0f7"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.stroke", "stylers": [{"color": "#4f8fd1"}, {"weight": 2}]}, {"featureType": "landscape.man_made", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "poi", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.park", "stylers": [{"visibility": "on"}]}, {"featureType": "poi.park", "elementType": "geometry", "stylers": [{"color": "#bfe9d8"}]}, {"featureType": "poi.park", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.sports_complex", "stylers": [{"visibility": "on"}]}, {"featureType": "poi.sports_complex", "elementType": "geometry", "stylers": [{"color": "#c8e7fd"}]}, {"featureType": "poi.sports_complex", "elementType": "labels.text.fill", "stylers": [{"color": "#002f94"}]}, {"featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "road", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.local", "elementType": "labels", "stylers": [{"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#7fd6e8"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "off"}]}]; /* = assets/mapa-styl.json */
+var KT_STYLE = [{"elementType": "geometry", "stylers": [{"color": "#eef5fa"}]}, {"elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"elementType": "labels.text.fill", "stylers": [{"color": "#4a6394"}]}, {"elementType": "labels.text.stroke", "stylers": [{"color": "#ffffff"}, {"weight": 3}]}, {"featureType": "administrative", "elementType": "geometry", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative.land_parcel", "stylers": [{"visibility": "off"}]}, {"featureType": "landscape.natural", "elementType": "geometry", "stylers": [{"color": "#eef5fa"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{"color": "#e6f0f7"}]}, {"featureType": "landscape.man_made", "elementType": "geometry.stroke", "stylers": [{"color": "#4f8fd1"}, {"weight": 2}]}, {"featureType": "landscape.man_made", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "poi", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.park", "stylers": [{"visibility": "on"}]}, {"featureType": "poi.park", "elementType": "geometry", "stylers": [{"color": "#bfe9d8"}]}, {"featureType": "poi.park", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.sports_complex", "stylers": [{"visibility": "on"}]}, {"featureType": "poi.sports_complex", "elementType": "geometry", "stylers": [{"color": "#c8e7fd"}]}, {"featureType": "poi.sports_complex", "elementType": "labels.text.fill", "stylers": [{"color": "#002f94"}]}, {"featureType": "poi.sports_complex", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "road", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.local", "elementType": "labels", "stylers": [{"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#7fd6e8"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "off"}]}]; /* = public/data/mapa-styl.json */
 function ktGoogle(){
   var m=new google.maps.Map(document.getElementById('kt-map'),{center:KT_POS,zoom:16,styles:KT_STYLE,disableDefaultUI:true,zoomControl:true,gestureHandling:'cooperative'});
-  new google.maps.Marker({position:KT_POS,map:m,title:'Městské lázně · Hradská 854',icon:{url:'assets/kolo.svg',scaledSize:new google.maps.Size(64,56),anchor:new google.maps.Point(32,28)}});
+  new google.maps.Marker({position:KT_POS,map:m,title:'Městské lázně · Hradská 854',icon:{url:'public/images/kolo.svg',scaledSize:new google.maps.Size(64,56),anchor:new google.maps.Point(32,28)}});
 }
 (function(){
   if (GMAPS_KEY) {
@@ -71,7 +71,7 @@ function ktGoogle(){
   var pos=[KT_POS.lat,KT_POS.lng];
   var m=L.map('kt-map',{scrollWheelZoom:false,zoomControl:true}).setView(pos,16);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);
-  var pin=L.divIcon({className:'kt-pin',html:'<img src="assets/kolo.svg" alt="" width="64" height="56">',iconSize:[64,56],iconAnchor:[32,28]});
+  var pin=L.divIcon({className:'kt-pin',html:'<img src="public/images/kolo.svg" alt="" width="64" height="56">',iconSize:[64,56],iconAnchor:[32,28]});
   L.marker(pos,{icon:pin,title:'Městské lázně · Hradská 854'}).addTo(m).bindTooltip('Městské lázně · Hradská 854',{permanent:true,direction:'right',offset:[34,0],className:'kt-tip'});
 })();
 </script>

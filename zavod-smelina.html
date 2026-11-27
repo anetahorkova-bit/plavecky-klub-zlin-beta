@@ -18,10 +18,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1795708101">
-  <link rel="stylesheet" href="css/program.css?v=1795708101">
-  <link rel="stylesheet" href="css/oklubu.css?v=1795708101">
-    <link rel="stylesheet" href="css/responsive.css?v=1795708101">
+  <link rel="stylesheet" href="public/css/style.css?v=1795708101">
+  <link rel="stylesheet" href="public/css/program.css?v=1795708101">
+  <link rel="stylesheet" href="public/css/oklubu.css?v=1795708101">
+    <link rel="stylesheet" href="public/css/responsive.css?v=1795708101">
 </head>
 <body data-page="oklubu">
 <div data-nav></div>
@@ -49,7 +49,7 @@
   </section>
   <section class="c-section" data-carousel>
     <div class="c-head reveal"><h2 class="t-h2">Fotky ze závodu</h2><div class="carousel-ctrl"><button class="icon-btn prev" data-prev aria-label="Předchozí"></button><button class="icon-btn" data-next aria-label="Další"></button></div></div>
-    <div class="carousel-track c-track"><div class="c-card photo"><img src="assets/sp-foto-1.jpg" alt=""></div><div class="c-card photo"><img src="assets/news-1.png" alt=""></div><div class="c-card photo"><img src="assets/sp-foto-2.jpg" alt=""></div><div class="c-card photo"><img src="assets/news-3.png" alt=""></div><div class="c-card photo"><img src="assets/sp-foto-3.jpg" alt=""></div></div>
+    <div class="carousel-track c-track"><div class="c-card photo"><img src="public/images/sp-foto-1.jpg" alt=""></div><div class="c-card photo"><img src="public/images/news-1.png" alt=""></div><div class="c-card photo"><img src="public/images/sp-foto-2.jpg" alt=""></div><div class="c-card photo"><img src="public/images/news-3.png" alt=""></div><div class="c-card photo"><img src="public/images/sp-foto-3.jpg" alt=""></div></div>
     <div class="dots"></div>
   </section>
   <div data-footer></div>
@@ -58,6 +58,6 @@
 document.querySelectorAll('.ev-tabs [data-tab]').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.ev-tabs [data-tab]').forEach(function(x){x.classList.toggle('is-active',x===b);x.setAttribute('aria-selected',x===b);});document.querySelectorAll('.ev-panel').forEach(function(p){p.hidden=p.dataset.panel!==b.dataset.tab;});});});
 document.querySelectorAll('.ev-panel .doc-head').forEach(function(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('is-open');});});
 </script>
-<script src="js/app.js?v=1795708101"></script>
+<script src="public/js/app.js?v=1795708101"></script>
 </body>
 </html>

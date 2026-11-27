@@ -251,10 +251,10 @@ img, video, svg { max-width: 100%; }
 @media (max-width: 1023px) {
   .home-join-panel, .faq-wave .bg { display: none; }
   .home-join, .faq-wave { --vh: calc(max(870px, 100vw) * 81 / 1600); background:
-      url(../assets/vlna-horni-B.svg) center top / max(870px, 100%) var(--vh) no-repeat,
-      url(../assets/vlna-dolni-B.svg) center bottom / max(870px, 100%) var(--vh) no-repeat,
+      url(../images/vlna-horni-B.svg) center top / max(870px, 100%) var(--vh) no-repeat,
+      url(../images/vlna-dolni-B.svg) center bottom / max(870px, 100%) var(--vh) no-repeat,
       linear-gradient(var(--c), var(--c)) left calc(var(--vh) - 2px) / 100% calc(100% - 2 * var(--vh) + 4px) no-repeat; }
-  .home-join { --c: #FCDC08; background-image: url(../assets/vlna-horni-zluta.svg), url(../assets/vlna-dolni-zluta.svg), linear-gradient(#FCDC08, #FCDC08); }
-  .faq-wave { --c: #002F94; background-image: url(../assets/vlna-horni-modra.svg), url(../assets/vlna-dolni-modra.svg), linear-gradient(#002F94, #002F94); padding-top: calc(var(--vh) + 48px); padding-bottom: calc(var(--vh) + 48px); min-height: 0; }
+  .home-join { --c: #FCDC08; background-image: url(../images/vlna-horni-zluta.svg), url(../images/vlna-dolni-zluta.svg), linear-gradient(#FCDC08, #FCDC08); }
+  .faq-wave { --c: #002F94; background-image: url(../images/vlna-horni-modra.svg), url(../images/vlna-dolni-modra.svg), linear-gradient(#002F94, #002F94); padding-top: calc(var(--vh) + 48px); padding-bottom: calc(var(--vh) + 48px); min-height: 0; }
   .home-join-inner { padding-top: calc(var(--vh) + 48px); padding-bottom: calc(var(--vh) + 48px); }
 }

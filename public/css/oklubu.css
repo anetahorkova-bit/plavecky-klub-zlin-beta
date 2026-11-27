@@ -144,6 +144,6 @@
 .doc .t-telo-s { font-size: 16px; font-weight: 600; color: var(--navy-900); }
 .doc .meta .t-maly, .doc .meta .t-stitek { font-size: 14px; font-weight: 600; color: #4b5f93; text-transform: none; letter-spacing: 0; }
 .doc .dl { width: 44px; height: 44px; flex: none; border: 0; background: #d5deef; color: var(--navy-900); }
-.doc .dl::before { width: 14px; height: 14px; transform: none; -webkit-mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; mask: url("../assets/ikona-stahnout.svg") center / contain no-repeat; }
+.doc .dl::before { width: 14px; height: 14px; transform: none; -webkit-mask: url("../images/ikona-stahnout.svg") center / contain no-repeat; mask: url("../images/ikona-stahnout.svg") center / contain no-repeat; }
 .doc:hover .dl { background: #d5deef; }
 @media (min-width: 1024px) { .wave-up .p-hero-wave { top: -340px; } }

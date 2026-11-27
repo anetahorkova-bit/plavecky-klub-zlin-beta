@@ -21,13 +21,13 @@
     navHost.outerHTML = `
     <header class="nav ${isHome ? 'is-home' : 'is-sub'}" id="nav">
       <a class="nav-logo" href="index.html" aria-label="Plavecký klub Zlín, úvod">
-        <img class="logo-light" src="assets/logo-white.svg" alt="Plavecký klub Zlín"><img class="logo-dark" src="assets/logo-navy.svg" alt="">
+        <img class="logo-light" src="public/images/logo-white.svg" alt="Plavecký klub Zlín"><img class="logo-dark" src="public/images/logo-navy.svg" alt="">
       </a>
       <nav class="nav-menu" aria-label="Hlavní menu">
         <div class="nav-drop">
-          <a class="nav-link${isProgram ? ' is-active' : ''}" href="kurzy.html">Kurzy <img class="chev" src="assets/chevron.svg" alt=""></a>
+          <a class="nav-link${isProgram ? ' is-active' : ''}" href="kurzy.html">Kurzy <img class="chev" src="public/images/chevron.svg" alt=""></a>
           <div class="nav-drop-panel">
-            ${programs.map(([h, t, c, ilu, age]) => `<a class="drop-item" href="${h}"><span class="drop-ilu"><img src="assets/${ilu}" alt=""></span><span class="drop-txt"><span class="t-telo-s">${t}</span><span class="t-maly muted">${age}</span></span></a>`).join('')}
+            ${programs.map(([h, t, c, ilu, age]) => `<a class="drop-item" href="${h}"><span class="drop-ilu"><img src="public/images/${ilu}" alt=""></span><span class="drop-txt"><span class="t-telo-s">${t}</span><span class="t-maly muted">${age}</span></span></a>`).join('')}
           </div>
         </div>
         <a class="nav-link${active('tabory')}" href="tabory.html">Tábory a kempy</a>
@@ -52,11 +52,11 @@
   const footHost = document.querySelector('[data-footer]');
   if (footHost) {
     footHost.outerHTML = `
-    <img class="footer-wave" src="assets/vlna-nova.svg" alt="">
+    <img class="footer-wave" src="public/images/vlna-nova.svg" alt="">
     <footer class="footer" id="kontakt">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="index.html"><img src="assets/logo-white-footer.svg" alt="Plavecký klub Zlín"></a>
+          <a href="index.html"><img src="public/images/logo-white-footer.svg" alt="Plavecký klub Zlín"></a>
           <p class="t-telo">Hradská 854<br>760 01 Zlín<br>info@zlinswim.cz</p>
           <div class="footer-social"><a href="#" data-todo aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></a><a href="#" data-todo aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9z"/></svg></a></div>
         </div>
@@ -69,7 +69,7 @@
             <a href="https://zlinswim.rajce.idnes.cz/" target="_blank" rel="noopener">Fotogalerie Rajče.net</a><a href="https://www.czechswimming.cz/" target="_blank" rel="noopener">ČSPS</a></div>
         </div>
       </div>
-      <img class="footer-lettering" src="assets/plav-v-tom-s-nami.svg" alt="Plav v tom s námi!">
+      <img class="footer-lettering" src="public/images/plav-v-tom-s-nami.svg" alt="Plav v tom s námi!">
       <div class="footer-bottom"><div class="footer-legal"><span>© 2026 Plavecký klub Zlín, z. s.</span><a href="gdpr.html">Ochrana osobních údajů</a><a href="#" data-todo>Nastavení soukromí</a></div><span>Webdesign: <a href="#" data-todo>Studio 9</a></span></div>
     </footer>`;
   }

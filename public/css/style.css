@@ -132,7 +132,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: background-color .2s var(--ease);
 }
 /* Hover s vlnkou (navigace, patička, drobečky): vlnka se vykreslí pod odkazem, barva se nemění */
-.nav-link::after, .footer-col a::after, .footer-bottom a::after, .crumbs a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 7px; background: currentColor; -webkit-mask: url(../assets/vlnka-hover.svg?v=2) left center / 16px 7px repeat-x; mask: url(../assets/vlnka-hover.svg?v=2) left center / 16px 7px repeat-x; clip-path: inset(0 100% 0 0); transition: clip-path .45s var(--ease-out); pointer-events: none; }
+.nav-link::after, .footer-col a::after, .footer-bottom a::after, .crumbs a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 7px; background: currentColor; -webkit-mask: url(../images/vlnka-hover.svg?v=2) left center / 16px 7px repeat-x; mask: url(../images/vlnka-hover.svg?v=2) left center / 16px 7px repeat-x; clip-path: inset(0 100% 0 0); transition: clip-path .45s var(--ease-out); pointer-events: none; }
 .nav-link::after { left: 20px; right: 20px; bottom: 6px; }
 .footer-col a, .footer-bottom a, .crumbs a { position: relative; }
 .nav-link:hover::after, .nav-link.is-active::after, .nav-link:focus-visible::after, .footer-col a:hover::after, .footer-bottom a:hover::after, .crumbs a:hover::after, .footer-col a:focus-visible::after, .crumbs a:focus-visible::after { clip-path: inset(0 0 0 0); }
@@ -330,8 +330,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .faq-wave > .bg { display: none; }
 .faq-wave { min-height: 0 !important; padding-top: calc(5.0625vw + 120px); padding-bottom: 160px;
   padding-bottom: 200px;
-  background: url(../assets/vlna-nova.svg) center top / 100% auto no-repeat,
-              url(../assets/faq-vlna.svg) center bottom / 100% auto no-repeat,
+  background: url(../images/vlna-nova.svg) center top / 100% auto no-repeat,
+              url(../images/faq-vlna.svg) center bottom / 100% auto no-repeat,
               linear-gradient(#002F94, #002F94) left calc(5.0625vw - 4px) / 100% calc(100% - 25vw + 6px) no-repeat; }
 @media (max-width: 760px) { .faq-wave { padding-top: calc(5.0625vw + 64px); padding-bottom: calc(20vw + 64px); } }
 .footer-tag { font-size: clamp(32px, 4.5vw, 64px); font-weight: 600; line-height: 1.1; color: var(--modra-300); text-align: center; margin: 0 0 64px; }
